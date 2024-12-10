@@ -1,3 +1,33 @@
+// Calendly Integration
+function initCalendly() {
+    // Initialize Calendly buttons
+    document.querySelectorAll('[data-calendly]').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            Calendly.initPopupWidget({
+                url: 'https://calendly.com/your-calendly-link',
+                text: 'Schedule time with us',
+                color: '#153739',
+                textColor: '#ffffff',
+                branding: true
+            });
+        });
+    });
+}
+
+// Initialize Calendly when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Calendly !== 'undefined') {
+        initCalendly();
+    } else {
+        // If Calendly hasn't loaded yet, wait for it
+        const calendlyScript = document.querySelector('script[src*="calendly"]');
+        if (calendlyScript) {
+            calendlyScript.addEventListener('load', initCalendly);
+        }
+    }
+});
+
 // Initialize AOS
 AOS.init({
     duration: 800,
