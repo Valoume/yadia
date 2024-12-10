@@ -34,7 +34,10 @@ def generate_ai_audit_report(form_data):
                 "human_only": "Pourcentage des tâches nécessitant 100% d'intervention humaine",
                 "hybrid": "Pourcentage des tâches pouvant être effectuées en collaboration IA-humain"
             }},
-            "next_steps": ["Specific action items in French"]
+            "next_steps": [
+                "Réservez votre consultation gratuite pour valider ces résultats avec nos experts",
+                "Accélérez votre transformation digitale avec notre e-book complet (29,99€)"
+            ]
         }}
         """
 

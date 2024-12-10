@@ -71,11 +71,24 @@
 
                         <div class="mt-5">
                             <h4>Prochaines Étapes</h4>
-                            <ul class="list-group list-group-flush">
+                            <div class="card bg-light border-0 p-4">
                                 {% for step in report.next_steps %}
-                                <li class="list-group-item">{{ step }}</li>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="fs-4 me-3 text-primary">{{ loop.index }}</div>
+                                    <div>{{ step }}</div>
+                                </div>
                                 {% endfor %}
-                            </ul>
+                                <div class="mt-4 d-flex gap-3 justify-content-center">
+                                    <a href="{{ url_for('contact') }}" class="btn btn-book">
+                                        <i class="fas fa-calendar-check me-2"></i>
+                                        Réserver Ma Consultation Gratuite
+                                    </a>
+                                    <a href="{{ url_for('ebook') }}" class="btn btn-outline-primary">
+                                        <i class="fas fa-book me-2"></i>
+                                        Acheter l'E-book (29,99€)
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
