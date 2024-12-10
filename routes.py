@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, session
 from app import app, db
 from models import BlogPost, Contact, Appointment
 from datetime import datetime
@@ -38,9 +38,40 @@ def blog():
     posts = BlogPost.query.order_by(BlogPost.created_at.desc()).all()
     return render_template('blog.html', posts=posts)
 
-@app.route('/formulaire')
+from ai_audit import generate_ai_audit_report
+
+@app.route('/formulaire', methods=['GET', 'POST'])
 def formulaire():
+    if request.method == 'POST':
+        form_data = {
+            'industry': request.form.get('industry'),
+            'current_tech': request.form.getlist('tech'),
+            'challenges': request.form.get('challenges'),
+            'goals': request.form.getlist('goals'),
+            'company_name': request.form.get('company-name'),
+            'contact_name': request.form.get('contact-name'),
+            'contact_email': request.form.get('contact-email')
+        }
+        
+        # Generate AI recommendations
+        audit_report = generate_ai_audit_report(form_data)
+        
+        # Store in session for display
+        session['audit_report'] = audit_report
+        session['form_data'] = form_data
+        
+        return redirect(url_for('audit_results'))
+        
     return render_template('formulaire.html')
+
+@app.route('/audit-results')
+def audit_results():
+    if 'audit_report' not in session:
+        return redirect(url_for('formulaire'))
+        
+    return render_template('audit_results.html',
+                         report=session.get('audit_report'),
+                         form_data=session.get('form_data'))
 @app.route('/ebook')
 def ebook():
     return render_template('ebook.html')
