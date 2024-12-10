@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Yadia AI Solutions{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h1 class="display-4 fw-bold">Contact Us</h1>
+                <p class="lead">Get in touch with our team to discuss your AI needs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h2>Get In Touch</h2>
+                <p class="lead mb-4">We're here to help you transform your business with AI solutions.</p>
+                
+                <div class="mb-4">
+                    <h4>Office Location</h4>
+                    <p>123 Tech Square<br>Silicon Valley, CA 94025</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h4>Contact Information</h4>
+                    <p>Email: info@yadia.ai<br>Phone: (555) 123-4567</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM PST<br>Saturday - Sunday: Closed</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Send Us a Message</h3>
+                        <form action="{{ url_for('contact') }}" method="POST" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-book w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 data-aos="fade-up">Ready to Get Started?</h2>
+                <p class="lead mb-4" data-aos="fade-up">Book a free consultation to discuss your AI implementation needs.</p>
+                <div data-aos="fade-up">
+                    <a href="{{ url_for('formulaire') }}" class="btn btn-book btn-lg">Book a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if get_flashed_messages() %}
+<div class="alert-container position-fixed bottom-0 end-0 p-3">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

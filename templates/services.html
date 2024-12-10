@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Services - Yadia AI Solutions{% endblock %}
+
+{% block content %}
+<section class="hero" style="background-image: url('https://images.unsplash.com/photo-1496096265110-f83ad7f96608');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h1 class="display-4 fw-bold">Our Services</h1>
+                <p class="lead">Comprehensive AI Solutions for Your Business</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4" data-aos="fade-up">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">AI Automation</h3>
+                        <p class="card-text">Automate repetitive tasks and streamline workflows using advanced AI algorithms.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Process Automation</li>
+                            <li>✓ Workflow Optimization</li>
+                            <li>✓ Custom AI Solutions</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-book mt-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Data Analytics</h3>
+                        <p class="card-text">Transform raw data into actionable insights using AI-powered analytics.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Predictive Analytics</li>
+                            <li>✓ Business Intelligence</li>
+                            <li>✓ Data Visualization</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-book mt-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">AI Consulting</h3>
+                        <p class="card-text">Expert guidance on implementing AI solutions in your business.</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Strategy Development</li>
+                            <li>✓ Implementation Support</li>
+                            <li>✓ Training & Education</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-book mt-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Our Process</h2>
+        <div class="row g-4">
+            <div class="col-md-3" data-aos="fade-up">
+                <div class="text-center">
+                    <div class="fs-1 mb-3">1</div>
+                    <h4>Assessment</h4>
+                    <p>Evaluate your current processes and identify opportunities for AI integration.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <div class="fs-1 mb-3">2</div>
+                    <h4>Strategy</h4>
+                    <p>Develop a customized AI implementation plan tailored to your needs.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <div class="fs-1 mb-3">3</div>
+                    <h4>Implementation</h4>
+                    <p>Execute the plan with our expert team's guidance and support.</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <div class="fs-1 mb-3">4</div>
+                    <h4>Optimization</h4>
+                    <p>Continuously monitor and improve your AI solutions for optimal results.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="ebook-banner" data-aos="fade-up">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2>Ready to Transform Your Business?</h2>
+                    <p class="lead mb-0">Schedule a free consultation to discuss your AI needs.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="{{ url_for('formulaire') }}" class="btn btn-book btn-lg">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

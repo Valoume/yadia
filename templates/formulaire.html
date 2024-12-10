@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}AI Audit Form - Yadia{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h1 class="display-4 fw-bold">AI Readiness Assessment</h1>
+                <p class="lead">Complete this form to receive a personalized evaluation of your AI implementation needs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card" data-aos="fade-up">
+                    <div class="card-body">
+                        <form class="needs-validation" novalidate>
+                            <!-- Company Information -->
+                            <h3 class="mb-4">Company Information</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="company-name" class="form-label">Company Name *</label>
+                                        <input type="text" class="form-control" id="company-name" required>
+                                        <div class="invalid-feedback">Please enter your company name.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="industry" class="form-label">Industry *</label>
+                                        <select class="form-select" id="industry" required>
+                                            <option value="">Select Industry</option>
+                                            <option value="technology">Technology</option>
+                                            <option value="finance">Finance</option>
+                                            <option value="healthcare">Healthcare</option>
+                                            <option value="retail">Retail</option>
+                                            <option value="manufacturing">Manufacturing</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your industry.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Current Technology Assessment -->
+                            <h3 class="mb-4">Current Technology Assessment</h3>
+                            <div class="mb-4">
+                                <label class="form-label">What technologies are you currently using? (Select all that apply)</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="tech-crm">
+                                    <label class="form-check-label" for="tech-crm">CRM Software</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="tech-erp">
+                                    <label class="form-check-label" for="tech-erp">ERP System</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="tech-analytics">
+                                    <label class="form-check-label" for="tech-analytics">Analytics Tools</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="tech-automation">
+                                    <label class="form-check-label" for="tech-automation">Automation Tools</label>
+                                </div>
+                            </div>
+
+                            <!-- Business Challenges -->
+                            <h3 class="mb-4">Business Challenges</h3>
+                            <div class="mb-4">
+                                <label for="challenges" class="form-label">What are your main business challenges? *</label>
+                                <textarea class="form-control" id="challenges" rows="4" required></textarea>
+                                <div class="invalid-feedback">Please describe your business challenges.</div>
+                            </div>
+
+                            <!-- AI Implementation Goals -->
+                            <h3 class="mb-4">AI Implementation Goals</h3>
+                            <div class="mb-4">
+                                <label class="form-label">What are your primary goals for AI implementation? (Select all that apply)</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="goal-automation">
+                                    <label class="form-check-label" for="goal-automation">Process Automation</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="goal-analytics">
+                                    <label class="form-check-label" for="goal-analytics">Data Analytics</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="goal-customer">
+                                    <label class="form-check-label" for="goal-customer">Customer Experience</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="goal-efficiency">
+                                    <label class="form-check-label" for="goal-efficiency">Operational Efficiency</label>
+                                </div>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <h3 class="mb-4">Contact Information</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="contact-name" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="contact-name" required>
+                                        <div class="invalid-feedback">Please enter your name.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="contact-email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="contact-email" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-book btn-lg">Submit Assessment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 data-aos="fade-up">What Happens Next?</h2>
+                <p class="lead mb-4" data-aos="fade-up">After submitting your assessment, our team will review your responses and contact you within 24 hours to schedule a detailed consultation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

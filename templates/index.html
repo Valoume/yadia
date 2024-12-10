@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}Yadia - AI Solutions for Business{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="display-4 fw-bold mb-4">Transform Your Business with AI</h1>
+                <p class="lead mb-4">Leverage the power of artificial intelligence to automate tasks, improve decision-making, and gain a competitive edge.</p>
+                <div class="d-flex gap-3">
+                    <a href="{{ url_for('formulaire') }}" class="btn btn-book btn-lg">Start Free Audit</a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a" 
+                     alt="AI Technology Visualization" 
+                     class="img-fluid rounded-3"
+                     loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="section section-light">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">AI Automation</h3>
+                        <p class="card-text">Streamline your operations with intelligent automation solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Data Analytics</h3>
+                        <p class="card-text">Transform raw data into actionable business insights.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">AI Consulting</h3>
+                        <p class="card-text">Expert guidance on implementing AI in your business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- E-book Promotion -->
+<section class="section">
+    <div class="container">
+        <div class="ebook-banner" data-aos="fade-up">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2>Download Our Free E-book</h2>
+                    <p class="lead mb-0">Learn how to leverage AI for business growth with our comprehensive guide.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <button class="btn btn-book btn-lg ebook-cta">Get the E-book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section section-light">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Why Choose Yadia?</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <i class="fas fa-brain fs-1 text-primary mb-3"></i>
+                    <h4>Expert Team</h4>
+                    <p>Experienced AI specialists and data scientists.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center">
+                    <i class="fas fa-cogs fs-1 text-primary mb-3"></i>
+                    <h4>Custom Solutions</h4>
+                    <p>Tailored AI solutions for your specific needs.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center">
+                    <i class="fas fa-chart-line fs-1 text-primary mb-3"></i>
+                    <h4>Proven Results</h4>
+                    <p>Track record of successful implementations.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center">
+                    <i class="fas fa-headset fs-1 text-primary mb-3"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Continuous assistance and maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- E-book Modal -->
+<div class="modal fade" id="ebookModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Get Your Free E-book</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="ebookForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-book w-100">Download Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
