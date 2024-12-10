@@ -1,0 +1,37 @@
+I am building a website for my company Yadia, which specializes in artificial intelligence (AI) solutions. The website’s main goals are:
+	1.	Present the company and its services: Highlight Yadia’s expertise in AI, what differentiates it from competitors, and how it can help clients automate tasks, improve decision-making, and gain a competitive edge.
+	2.	Encourage engagement: Prompt visitors to either book an appointment or complete an AI-powered audit form. The audit form will later be automated, but for now it will be a basic version to gather preliminary data from users.
+	3.	Sell my e-book: I also want to introduce and promote an e-book related to AI strategies or best practices in business. This should feel seamlessly integrated, not forced. A dedicated CTA or a small banner mentioning the e-book on relevant pages (e.g., Home, Blog, or Services) would be beneficial.
+
+Design and Branding:
+	•	The design should be modern, minimalist, professional, premium, and futuristic to align with the AI theme.
+	•	Use #153739 (dark green) as the main background color and #BDA056 (gold) for accents (titles, buttons, hover states).
+	•	Consider adding a neutral tone (light gray or off-white) behind text sections for better readability.
+
+Structure and Pages:
+	•	Home (index.html): A hero section with a strong, concise message and a clear CTA (book an appointment or access the audit form), a brief overview of services, testimonials or “Why Choose Yadia?” section to build trust, a mention of the e-book to encourage visitors to learn more, and a mid-page CTA reinforcing the appointment booking.
+	•	About (about.html): Company story, mission, and values to establish credibility and brand personality.
+	•	Services (services.html): Detailed descriptions of services, including how they integrate AI solutions, along with “Learn More” links and potential upsells to the e-book if relevant.
+	•	FAQ (faq.html): Common questions about AI, Yadia’s processes, and outcomes visitors can expect.
+	•	Contact (contact.html): A contact form (name, email, message), encouraging direct inquiries.
+	•	Blog (blog.html): A space to publish AI-related articles, insights, and updates, and to highlight the e-book as an additional resource.
+	•	Form (formulaire.html): A basic audit form allowing users to assess their needs before booking an appointment. Later, this form will be integrated with AI automation.
+
+Navigation and Layout:
+	•	Implement a sticky navigation bar with the Yadia logo on the left, main links (Home, About, Services, FAQ, Contact, Blog, Form) centered, and a prominent “Book an Appointment” button on the right. Ensure that the e-book offer is easily accessible from the Home or Blog page.
+	•	Sections on the Home page should be clearly defined, guiding visitors’ eyes naturally through the content. The footer can include quick links, social media icons (if any), contact info, and possibly a newsletter signup for ongoing tips or updates.
+
+Interactions and Animations:
+	•	Hover animations for buttons: Subtle color changes or a slight enlargement/glow on hover to feel premium and engaging.
+	•	Scroll animations: Use a library like AOS (Animate On Scroll) to fade elements in as users scroll, giving a dynamic, high-tech feel.
+	•	Micro-interactions: Small icon animations on hover or clickable elements to underscore the futuristic, tech-savvy vibe.
+
+Responsive and Technical Considerations:
+	•	Ensure fully responsive design across devices, leveraging Flexbox or CSS Grid to make layouts adapt seamlessly.
+	•	Compress and optimize images to maintain fast loading speeds (using TinyPNG or Squoosh) and improve user experience and SEO.
+	•	For the contact and audit forms, consider a simple backend service like Formspree initially, and later integrate more sophisticated features.
+	•	Track user engagement via Google Analytics once the site is live on GitHub Pages, and use these insights to refine which CTAs (appointments, form completion, or e-book interest) perform best.
+
+E-Book Promotion Strategy:
+	•	Include a small banner or a highlighted section on the Home and Blog pages that briefly describes the e-book’s value (e.g., “Download our guide to leverage AI in your business”).
+	•	Provide a prominent CTA such as “Get the E-Book” or “Learn More” that leads to a dedicated landing section or a popup with more details.
