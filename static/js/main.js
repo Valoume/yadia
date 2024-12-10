@@ -1,30 +1,30 @@
 // Calendly Integration
-function initCalendly() {
-    // Initialize Calendly buttons
-    document.querySelectorAll('[data-calendly]').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            Calendly.initPopupWidget({
-                url: 'https://calendly.com/valentin-chevaux/30min',
-                text: 'Schedule time with us',
-                color: '#153739',
-                textColor: '#ffffff',
-                branding: true
+document.addEventListener('DOMContentLoaded', function() {
+    function initCalendly() {
+        document.querySelectorAll('[data-calendly]').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (typeof Calendly !== 'undefined') {
+                    Calendly.initPopupWidget({
+                        url: 'https://calendly.com/valentin-chevaux/30min'
+                    });
+                }
             });
         });
-    });
-}
+    }
 
-// Initialize Calendly when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+    // Try to initialize immediately if Calendly is loaded
     if (typeof Calendly !== 'undefined') {
         initCalendly();
-    } else {
-        // If Calendly hasn't loaded yet, wait for it
-        const calendlyScript = document.querySelector('script[src*="calendly"]');
-        if (calendlyScript) {
-            calendlyScript.addEventListener('load', initCalendly);
-        }
+    }
+
+    // Also wait for Calendly script to load if it hasn't yet
+    const calendlyScript = document.querySelector('script[src*="calendly"]');
+    if (calendlyScript) {
+        calendlyScript.addEventListener('load', function() {
+            // Wait a brief moment for Calendly to fully initialize
+            setTimeout(initCalendly, 100);
+        });
     }
 });
 
