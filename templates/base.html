@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     
+    <!-- Calendly Integration -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -28,10 +31,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                        <a class="nav-link" href="{{ url_for('index') }}">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                        <a class="nav-link" href="{{ url_for('about') }}">À Propos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('services') }}">Services</a>
@@ -46,7 +49,7 @@
                         <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
                     </li>
                 </ul>
-                <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/your-calendly-link'});" class="btn btn-book">Book Appointment</button>
+                <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/your-calendly-link'});" class="btn btn-book">Obtenir un Devis Gratuit</button>
             </div>
         </div>
     </nav>
