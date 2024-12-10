@@ -9,8 +9,9 @@ client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 def generate_ai_audit_report(form_data):
     """Generate an AI-powered audit report based on form submissions."""
     try:
-        prompt = f"""Analyze the following business information and provide specific AI implementation recommendations:
+        prompt = f"""Analyze the following business information and provide specific AI implementation recommendations with a focus on time savings:
         Industry: {form_data.get('industry')}
+        Current Job: {form_data.get('current-job')}
         Current Technologies: {', '.join(form_data.get('current_tech', []))}
         Business Challenges: {form_data.get('challenges')}
         Implementation Goals: {', '.join(form_data.get('goals', []))}
@@ -27,7 +28,7 @@ def generate_ai_audit_report(form_data):
                     "priority": "haute/moyenne/basse"
                 }}
             ],
-            "estimated_roi": "Projected ROI range in French",
+            "time_savings": "Estimated time savings per week in hours in French",
             "next_steps": ["Specific action items in French"]
         }}
         """
