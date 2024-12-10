@@ -79,10 +79,10 @@
                                 </div>
                                 {% endfor %}
                                 <div class="mt-4 d-flex gap-3 justify-content-center">
-                                    <a href="{{ url_for('contact') }}" class="btn btn-book">
+                                    <button type="button" class="btn btn-book" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/your-calendly-link'});">
                                         <i class="fas fa-calendar-check me-2"></i>
                                         Réserver Ma Consultation Gratuite
-                                    </a>
+                                    </button>
                                     <a href="{{ url_for('ebook') }}" class="btn btn-outline-primary">
                                         <i class="fas fa-book me-2"></i>
                                         Acheter l'E-book (29,99€)
