@@ -41,6 +41,10 @@ def blog():
 @app.route('/formulaire')
 def formulaire():
     return render_template('formulaire.html')
+@app.route('/ebook')
+def ebook():
+    return render_template('ebook.html')
+
 
 @app.route('/book-appointment', methods=['POST'])
 def book_appointment():
