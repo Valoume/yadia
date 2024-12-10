@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Contact Us - Yadia AI Solutions{% endblock %}
+{% block title %}Contactez-nous - Yadia AI Solutions{% endblock %}
 
 {% block content %}
 <section class="hero">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
-                <h1 class="display-4 fw-bold">Contact Us</h1>
-                <p class="lead">Get in touch with our team to discuss your AI needs</p>
+                <h1 class="display-4 fw-bold">Contactez-nous</h1>
+                <p class="lead">Échangez avec notre équipe pour discuter de vos besoins en IA</p>
             </div>
         </div>
     </div>
@@ -18,54 +18,54 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6" data-aos="fade-right">
-                <h2>Get In Touch</h2>
-                <p class="lead mb-4">We're here to help you transform your business with AI solutions.</p>
+                <h2>Contactez-nous</h2>
+                <p class="lead mb-4">Nous sommes là pour vous aider à transformer votre entreprise avec des solutions IA.</p>
                 
                 <div class="mb-4">
-                    <h4>Office Location</h4>
+                    <h4>Notre Bureau</h4>
                     <p>123 Tech Square<br>Silicon Valley, CA 94025</p>
                 </div>
                 
                 <div class="mb-4">
-                    <h4>Contact Information</h4>
-                    <p>Email: info@yadia.ai<br>Phone: (555) 123-4567</p>
+                    <h4>Informations de Contact</h4>
+                    <p>Email: info@yadia.ai<br>Téléphone: (555) 123-4567</p>
                 </div>
                 
                 <div class="mb-4">
-                    <h4>Business Hours</h4>
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM PST<br>Saturday - Sunday: Closed</p>
+                    <h4>Horaires d'Ouverture</h4>
+                    <p>Lundi - Vendredi: 9h00 - 18h00<br>Samedi - Dimanche: Fermé</p>
                 </div>
             </div>
             
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title mb-4">Send Us a Message</h3>
+                        <h3 class="card-title mb-4">Envoyez-nous un Message</h3>
                         <form action="{{ url_for('contact') }}" method="POST" class="needs-validation" novalidate>
                             <div class="mb-3">
-                                <label for="name" class="form-label">Full Name *</label>
+                                <label for="name" class="form-label">Nom Complet *</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
-                                <div class="invalid-feedback">Please enter your name.</div>
+                                <div class="invalid-feedback">Veuillez entrer votre nom.</div>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email Address *</label>
+                                <label for="email" class="form-label">Adresse Email *</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
-                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                                <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
                             </div>
                             
                             <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
+                                <label for="subject" class="form-label">Sujet</label>
                                 <input type="text" class="form-control" id="subject" name="subject">
                             </div>
                             
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message *</label>
                                 <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                                <div class="invalid-feedback">Please enter your message.</div>
+                                <div class="invalid-feedback">Veuillez entrer votre message.</div>
                             </div>
                             
-                            <button type="submit" class="btn btn-book w-100">Send Message</button>
+                            <button type="submit" class="btn btn-book w-100">Envoyer le Message</button>
                         </form>
                     </div>
                 </div>
