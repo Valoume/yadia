@@ -5,7 +5,7 @@ function initCalendly() {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             Calendly.initPopupWidget({
-                url: 'https://calendly.com/your-calendly-link',
+                url: 'https://calendly.com/valentin-chevaux/30min',
                 text: 'Schedule time with us',
                 color: '#153739',
                 textColor: '#ffffff',
