@@ -64,11 +64,11 @@
         <div class="ebook-banner" data-aos="fade-up">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h2>Download Our Free E-book</h2>
-                    <p class="lead mb-0">Learn how to leverage AI for business growth with our comprehensive guide.</p>
+                    <h2>Transform Your Business with Our E-book</h2>
+                    <p class="lead mb-0">Get our comprehensive guide to leveraging AI for business growth - $29.99</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                    <button class="btn btn-book btn-lg ebook-cta">Get the E-book</button>
+                    <button class="btn btn-book btn-lg ebook-cta">Purchase Now</button>
                 </div>
             </div>
         </div>
@@ -117,20 +117,34 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Get Your Free E-book</h5>
+                <h5 class="modal-title">Purchase Our E-book ($29.99)</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <form id="ebookForm">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
+                        <label for="name" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="name" required>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
+                        <label for="email" class="form-label">Email Address</label>
                         <input type="email" class="form-control" id="email" required>
                     </div>
-                    <button type="submit" class="btn btn-book w-100">Download Now</button>
+                    <div class="mb-3">
+                        <label for="card-number" class="form-label">Card Number</label>
+                        <input type="text" class="form-control" id="card-number" required pattern="[0-9]{16}" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="expiry" class="form-label">Expiry Date</label>
+                            <input type="text" class="form-control" id="expiry" required pattern="[0-9]{2}/[0-9]{2}" placeholder="MM/YY">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cvv" required pattern="[0-9]{3,4}" placeholder="123">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-book w-100">Purchase Now ($29.99)</button>
                 </form>
             </div>
         </div>
