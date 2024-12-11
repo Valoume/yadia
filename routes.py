@@ -80,17 +80,18 @@ def formulaire():
         else:
             flash('Erreur lors de la soumission du formulaire. Veuillez réessayer.', 'error')
             return redirect(url_for('formulaire'))
-        
-    return render_template('formulaire.html')
 
 @app.route('/audit-results')
 def audit_results():
     if 'audit_report' not in session:
+        flash('Veuillez d\'abord remplir le formulaire.', 'warning')
         return redirect(url_for('formulaire'))
         
+    report = session.get('audit_report')
+    form_data = session.get('form_data')
     return render_template('audit_results.html',
-                         report=session.get('audit_report'),
-                         form_data=session.get('form_data'))
+                         report=report,
+                         form_data=form_data)
 @app.route('/ebook', methods=['GET', 'POST'])
 def ebook():
     if request.method == 'POST':
