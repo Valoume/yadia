@@ -117,14 +117,12 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     background-color: var(--primary-color);
     color: var(--text-light);
-    padding: 8rem 0;
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid rgba(189, 160, 86, 0.2);
-    min-height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-bottom: 0;
 }
 
