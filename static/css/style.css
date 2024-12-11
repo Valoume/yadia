@@ -120,9 +120,12 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid rgba(189, 160, 86, 0.2);
-    height: 100vh;
+    min-height: calc(100vh - 76px);
+    padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 76px;
     margin-bottom: 0;
 }
 
