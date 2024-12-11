@@ -12,7 +12,7 @@ class Base(DeclarativeBase):
     pass
 
 db = SQLAlchemy(model_class=Base)
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 
 # Configuration
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or "yadia_secret_key_2024"
