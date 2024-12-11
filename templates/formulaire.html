@@ -41,41 +41,80 @@
                                             <select class="form-select" id="industry" name="industry" required>
                                                 <option value="">Sélectionnez votre secteur</option>
                                                 <!-- Technologies -->
-                                                <option value="tech_software">Technologie - Développement Logiciel</option>
-                                                <option value="tech_hardware">Technologie - Matériel Informatique</option>
-                                                <option value="tech_ai">Technologie - Intelligence Artificielle</option>
-                                                <option value="tech_telecom">Technologie - Télécommunications</option>
+                                                <optgroup label="Technologies">
+                                                    <option value="tech_software">Développement Logiciel & Applications</option>
+                                                    <option value="tech_hardware">Matériel Informatique & IoT</option>
+                                                    <option value="tech_ai">Intelligence Artificielle & Machine Learning</option>
+                                                    <option value="tech_cloud">Cloud Computing & Services Web</option>
+                                                    <option value="tech_telecom">Télécommunications & Réseaux</option>
+                                                    <option value="tech_cybersec">Cybersécurité & Protection des Données</option>
+                                                    <option value="tech_robotics">Robotique & Automatisation</option>
+                                                </optgroup>
                                                 <!-- Finance -->
-                                                <option value="finance_banking">Finance - Banque</option>
-                                                <option value="finance_insurance">Finance - Assurance</option>
-                                                <option value="finance_investment">Finance - Investissement</option>
-                                                <option value="finance_fintech">Finance - FinTech</option>
+                                                <optgroup label="Finance">
+                                                    <option value="finance_banking">Banque de Détail & Services Bancaires</option>
+                                                    <option value="finance_investment">Banque d'Investissement</option>
+                                                    <option value="finance_insurance">Assurance & Réassurance</option>
+                                                    <option value="finance_fintech">FinTech & Services Financiers Innovants</option>
+                                                    <option value="finance_asset">Gestion d'Actifs & Patrimoine</option>
+                                                    <option value="finance_crypto">Cryptomonnaies & Blockchain</option>
+                                                </optgroup>
                                                 <!-- Santé -->
-                                                <option value="health_hospital">Santé - Hôpitaux & Cliniques</option>
-                                                <option value="health_pharma">Santé - Industrie Pharmaceutique</option>
-                                                <option value="health_biotech">Santé - Biotechnologie</option>
-                                                <option value="health_equipment">Santé - Équipement Médical</option>
+                                                <optgroup label="Santé & Sciences de la Vie">
+                                                    <option value="health_hospital">Hôpitaux & Cliniques</option>
+                                                    <option value="health_pharma">Industrie Pharmaceutique</option>
+                                                    <option value="health_biotech">Biotechnologie & Recherche</option>
+                                                    <option value="health_equipment">Équipement Médical & Diagnostic</option>
+                                                    <option value="health_digital">Santé Numérique & Télémédecine</option>
+                                                    <option value="health_wellness">Bien-être & Santé Préventive</option>
+                                                </optgroup>
                                                 <!-- Commerce -->
-                                                <option value="retail_ecommerce">Commerce - E-commerce</option>
-                                                <option value="retail_store">Commerce - Grande Distribution</option>
-                                                <option value="retail_luxury">Commerce - Luxe</option>
-                                                <option value="retail_food">Commerce - Alimentation</option>
+                                                <optgroup label="Commerce & Distribution">
+                                                    <option value="retail_ecommerce">E-commerce & Commerce Digital</option>
+                                                    <option value="retail_store">Grande Distribution & Commerce de Détail</option>
+                                                    <option value="retail_luxury">Mode & Luxe</option>
+                                                    <option value="retail_food">Alimentation & Boissons</option>
+                                                    <option value="retail_specialized">Commerce Spécialisé</option>
+                                                    <option value="retail_marketplace">Marketplaces & Plateformes</option>
+                                                </optgroup>
                                                 <!-- Industrie -->
-                                                <option value="industry_auto">Industrie - Automobile</option>
-                                                <option value="industry_aero">Industrie - Aéronautique</option>
-                                                <option value="industry_energy">Industrie - Énergie</option>
-                                                <option value="industry_construction">Industrie - Construction</option>
+                                                <optgroup label="Industrie & Manufacturing">
+                                                    <option value="industry_auto">Automobile & Mobilité</option>
+                                                    <option value="industry_aero">Aéronautique & Défense</option>
+                                                    <option value="industry_energy">Énergie & Utilities</option>
+                                                    <option value="industry_construction">Construction & BTP</option>
+                                                    <option value="industry_chemical">Chimie & Matériaux</option>
+                                                    <option value="industry_agri">Agroalimentaire</option>
+                                                    <option value="industry_green">Industrie Verte & Cleantech</option>
+                                                </optgroup>
                                                 <!-- Services -->
-                                                <option value="service_consulting">Services - Conseil</option>
-                                                <option value="service_education">Services - Éducation</option>
-                                                <option value="service_hospitality">Services - Hôtellerie</option>
-                                                <option value="service_transport">Services - Transport & Logistique</option>
-                                                <!-- Médias & Divertissement -->
-                                                <option value="media_entertainment">Médias - Divertissement</option>
-                                                <option value="media_gaming">Médias - Jeux Vidéo</option>
-                                                <option value="media_advertising">Médias - Publicité</option>
+                                                <optgroup label="Services Professionnels">
+                                                    <option value="service_consulting">Conseil & Stratégie</option>
+                                                    <option value="service_legal">Services Juridiques</option>
+                                                    <option value="service_hr">Ressources Humaines & Recrutement</option>
+                                                    <option value="service_education">Éducation & Formation</option>
+                                                    <option value="service_research">R&D & Innovation</option>
+                                                </optgroup>
+                                                <!-- Transport & Logistique -->
+                                                <optgroup label="Transport & Logistique">
+                                                    <option value="transport_logistics">Logistique & Supply Chain</option>
+                                                    <option value="transport_delivery">Transport & Livraison</option>
+                                                    <option value="transport_urban">Mobilité Urbaine</option>
+                                                </optgroup>
+                                                <!-- Médias & Communication -->
+                                                <optgroup label="Médias & Communication">
+                                                    <option value="media_entertainment">Divertissement & Streaming</option>
+                                                    <option value="media_gaming">Jeux Vidéo & eSport</option>
+                                                    <option value="media_advertising">Publicité & Marketing Digital</option>
+                                                    <option value="media_content">Production de Contenu</option>
+                                                </optgroup>
                                                 <!-- Autre -->
-                                                <option value="other">Autre Secteur</option>
+                                                <optgroup label="Autres Secteurs">
+                                                    <option value="other_tourism">Tourisme & Hospitalité</option>
+                                                    <option value="other_ngo">Associations & ONG</option>
+                                                    <option value="other_public">Secteur Public</option>
+                                                    <option value="other">Autre Secteur</option>
+                                                </optgroup>
                                             </select>
                                             <label for="industry">Secteur d'activité *</label>
                                             <div class="invalid-feedback">Veuillez sélectionner votre secteur d'activité.</div>

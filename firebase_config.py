@@ -52,9 +52,17 @@ def save_form_data(collection_name, data):
     """Save form data to Firestore"""
     try:
         db = firestore.client()
+        if not db:
+            raise Exception("Firestore client not initialized")
+            
+        # Add timestamp if not present
+        if 'timestamp' not in data:
+            data['timestamp'] = datetime.utcnow().isoformat()
+            
         doc_ref = db.collection(collection_name).document()
         doc_ref.set(data)
+        print(f"Successfully saved document with ID: {doc_ref.id}")
         return True, doc_ref.id
     except Exception as e:
-        print(f"Error saving to Firestore: {e}")
+        print(f"Error saving to Firestore: {str(e)}")
         return False, str(e)
