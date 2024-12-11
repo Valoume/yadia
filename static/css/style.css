@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-book {
     background: linear-gradient(135deg, var(--accent-color), #d4b978);
-    color: var(--text-light);
+    color: var(--text-light) !important;
     padding: 1rem 2.5rem;
     border-radius: 50px;
     font-weight: 700;
@@ -89,6 +89,10 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 20px rgba(189, 160, 86, 0.3);
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .btn-book:hover {

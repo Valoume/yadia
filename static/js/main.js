@@ -58,16 +58,27 @@ document.addEventListener('DOMContentLoaded', function() {
             form.classList.add('was-validated');
         });
     });
-});
 
-// Micro-interactions
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('mouseover', function() {
-        this.style.transform = 'scale(1.05)';
+    // Micro-interactions for buttons (excluding links)
+    document.querySelectorAll('button.btn').forEach(button => {
+        button.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+        
+        button.addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+        });
     });
-    
-    button.addEventListener('mouseout', function() {
-        this.style.transform = 'scale(1)';
+
+    // Add hover effect for link buttons without preventing clicks
+    document.querySelectorAll('a.btn').forEach(link => {
+        link.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+        
+        link.addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+        });
     });
 });
 
