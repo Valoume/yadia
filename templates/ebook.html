@@ -27,12 +27,16 @@
             </div>
             <div class="col-lg-5" data-aos="fade-left">
                 <div class="position-relative">
-                    <img src="{{ url_for('static', filename='images/Voyage et Mode de vie E-book Couverture.png') }}" 
+                    <img src="{{ url_for('static', filename='images/ebook-cover.png') }}" 
                          alt="Guide Expert IA pour Entreprise" 
-                         class="img-fluid rounded-4"
-                         style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; transform: perspective(1000px) rotateY(-15deg); transition: all 0.5s ease;"
-                         onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.02)'; this.style.boxShadow='rgba(50, 50, 93, 0.35) 0px 60px 120px -20px, rgba(0, 0, 0, 0.4) 0px 40px 70px -30px'"
-                         onmouseout="this.style.transform='perspective(1000px) rotateY(-15deg)'; this.style.boxShadow='rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px'"
+                         class="img-fluid rounded-4 ebook-cover"
+                         style="filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));
+                                transform: perspective(1000px) rotateY(-15deg);
+                                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
+                         onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)';
+                                    this.style.filter='drop-shadow(0 30px 40px rgba(0,0,0,0.3))'"
+                         onmouseout="this.style.transform='perspective(1000px) rotateY(-15deg)';
+                                   this.style.filter='drop-shadow(0 20px 30px rgba(0,0,0,0.2))'"
                          loading="lazy">
                     <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-10 rounded-4"></div>
                 </div>
