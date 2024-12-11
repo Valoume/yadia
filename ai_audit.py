@@ -7,36 +7,51 @@ from openai import OpenAI
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 def generate_ai_audit_report(form_data):
-    """Generate an AI-powered audit report based on form submissions."""
+    """Generate an AI-powered audit report based on form submissions with company analysis."""
     try:
-        prompt = f"""Analyze the following business information and provide specific AI implementation recommendations with a focus on time savings and task automation potential:
-        Industry: {form_data.get('industry')}
-        Current Job: {form_data.get('current-job')}
-        Current Technologies: {', '.join(form_data.get('current_tech', []))}
-        Business Challenges: {form_data.get('challenges')}
-        Implementation Goals: {', '.join(form_data.get('goals', []))}
+        prompt = f"""Analysez d'abord l'entreprise suivante et fournissez des recommandations d'implémentation IA adaptées au poste spécifique :
+
+        Entreprise: {form_data.get('company-name')}
+        Secteur: {form_data.get('industry')}
+        Poste Actuel: {form_data.get('current-job')}
+        Technologies Actuelles: {', '.join(form_data.get('current_tech', []))}
+        Défis Business: {form_data.get('challenges')}
+        Objectifs d'Implémentation: {', '.join(form_data.get('goals', []))}
         
-        Please provide recommendations in French. Respond in JSON format with the following structure:
+        Répondez en français au format JSON avec la structure suivante:
         {{
-            "summary": "Brief overview of the analysis in French",
-            "recommendations": [
+            "analyse_entreprise": {{
+                "présentation": "Description détaillée de l'entreprise basée sur le secteur et les informations fournies",
+                "objectifs_stratégiques": "Analyse des objectifs stratégiques de l'entreprise",
+                "positionnement_marché": "Positionnement sur le marché et avantages concurrentiels potentiels"
+            }},
+            "analyse_poste": {{
+                "description": "Analyse du poste et de ses responsabilités principales",
+                "défis_quotidiens": "Défis spécifiques liés au poste",
+                "potentiel_optimisation": "Potentiel d'optimisation par l'IA"
+            }},
+            "recommandations": [
                 {{
-                    "area": "Area of improvement in French",
-                    "solution": "Recommended AI solution in French",
-                    "impact": "Expected business impact in French",
-                    "timeline": "Estimated implementation timeline in French",
-                    "priority": "haute/moyenne/basse"
+                    "domaine": "Domaine d'amélioration spécifique au poste",
+                    "solution": "Solution IA recommandée avec détails d'implémentation",
+                    "impact": "Impact attendu sur les performances du poste",
+                    "délai": "Délai estimé de mise en œuvre",
+                    "priorité": "haute/moyenne/basse",
+                    "adaptation_poste": "Comment la solution s'adapte spécifiquement au poste"
                 }}
             ],
-            "time_savings": "Estimated time savings per week in hours in French",
-            "task_breakdown": {{
-                "ai_automation": "Pourcentage des tâches automatisables à 100% par l'IA",
-                "human_only": "Pourcentage des tâches nécessitant 100% d'intervention humaine",
-                "hybrid": "Pourcentage des tâches pouvant être effectuées en collaboration IA-humain"
+            "gains_productivité": {{
+                "temps_économisé": "Estimation des gains de temps hebdomadaires",
+                "répartition_tâches": {{
+                    "automatisation_complete": "Pourcentage des tâches automatisables à 100%",
+                    "intervention_humaine": "Pourcentage des tâches nécessitant intervention humaine",
+                    "collaboration_ia": "Pourcentage des tâches en mode collaboratif IA-humain"
+                }},
+                "impact_performance": "Impact global sur la performance du poste"
             }},
-            "next_steps": [
-                "Réservez votre consultation gratuite pour valider ces résultats avec nos experts",
-                "Accélérez votre transformation digitale avec notre e-book complet (29,99€)"
+            "prochaines_étapes": [
+                "Réservez votre consultation gratuite pour approfondir ces recommandations",
+                "Téléchargez notre guide d'implémentation IA personnalisé (29,99€)"
             ]
         }}
         """
