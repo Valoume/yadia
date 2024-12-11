@@ -11,4 +11,5 @@ dependencies = [
     "psycopg2-binary",
     "email-validator",
     "flask-session>=0.8.0",
+    "firebase-admin>=6.6.0",
 ]

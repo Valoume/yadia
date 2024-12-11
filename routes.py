@@ -40,6 +40,8 @@ def blog():
 
 from ai_audit import generate_ai_audit_report
 
+from firebase_config import save_form_data
+
 @app.route('/formulaire', methods=['GET', 'POST'])
 def formulaire():
     if request.method == 'POST':
@@ -50,17 +52,28 @@ def formulaire():
             'goals': request.form.getlist('goals'),
             'company_name': request.form.get('company-name'),
             'contact_name': request.form.get('contact-name'),
-            'contact_email': request.form.get('contact-email')
+            'contact_email': request.form.get('contact-email'),
+            'timestamp': firestore.SERVER_TIMESTAMP
         }
         
         # Generate AI recommendations
         audit_report = generate_ai_audit_report(form_data)
         
-        # Store in session for display
-        session['audit_report'] = audit_report
-        session['form_data'] = form_data
+        # Store in Firebase
+        success, result = save_form_data('form_submissions', {
+            **form_data,
+            'audit_report': audit_report
+        })
         
-        return redirect(url_for('audit_results'))
+        if success:
+            # Store in session for display
+            session['audit_report'] = audit_report
+            session['form_data'] = form_data
+            flash('Formulaire soumis avec succès!', 'success')
+            return redirect(url_for('audit_results'))
+        else:
+            flash('Erreur lors de la soumission du formulaire. Veuillez réessayer.', 'error')
+            return redirect(url_for('formulaire'))
         
     return render_template('formulaire.html')
 
