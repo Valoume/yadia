@@ -80,6 +80,9 @@ def formulaire():
         else:
             flash('Erreur lors de la soumission du formulaire. Veuillez réessayer.', 'error')
             return redirect(url_for('formulaire'))
+    
+    # GET request - afficher le formulaire
+    return render_template('formulaire.html')
 
 @app.route('/audit-results')
 def audit_results():
