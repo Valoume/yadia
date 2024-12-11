@@ -39,12 +39,16 @@ def blog():
     return render_template('blog.html', posts=posts)
 
 from ai_audit import generate_ai_audit_report
+from firebase_admin import firestore
+from firebase_config import save_form_data, initialize_firebase
 
-from firebase_config import save_form_data
+# Initialize Firebase
+firebase_db = initialize_firebase()
 
 @app.route('/formulaire', methods=['GET', 'POST'])
 def formulaire():
     if request.method == 'POST':
+        current_time = datetime.utcnow()
         form_data = {
             'industry': request.form.get('industry'),
             'current_tech': request.form.getlist('tech'),
@@ -53,7 +57,7 @@ def formulaire():
             'company_name': request.form.get('company-name'),
             'contact_name': request.form.get('contact-name'),
             'contact_email': request.form.get('contact-email'),
-            'timestamp': firestore.SERVER_TIMESTAMP
+            'timestamp': firestore.SERVER_TIMESTAMP if firebase_db else current_time
         }
         
         # Generate AI recommendations
