@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #2c3e50;
+    --primary-color: #153739;
     --accent-color: #BDA056;
     --light-bg: #f8f9fa;
     --dark-bg: #0a1b1c;
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation */
 .navbar {
-    background-color: rgba(44, 62, 80, 0.98);
+    background-color: rgba(21, 55, 57, 0.98);
     backdrop-filter: blur(10px);
     padding: 1rem 2rem;
     transition: var(--transition);
@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(10, 27, 28, 0.98));
+    background: linear-gradient(135deg, rgba(21, 55, 57, 0.95), rgba(10, 27, 28, 0.98));
 }
 
 .hero::after {
