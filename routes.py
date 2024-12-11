@@ -72,8 +72,16 @@ def audit_results():
     return render_template('audit_results.html',
                          report=session.get('audit_report'),
                          form_data=session.get('form_data'))
-@app.route('/ebook')
+@app.route('/ebook', methods=['GET', 'POST'])
 def ebook():
+    if request.method == 'POST':
+        # Handle the e-book purchase form submission
+        name = request.form.get('name')
+        email = request.form.get('email')
+        # Here you would typically handle payment processing
+        # For now, we'll just redirect to the e-book page
+        flash('Merci pour votre achat! Vous recevrez votre e-book par email.')
+        return redirect(url_for('ebook'))
     return render_template('ebook.html')
 
 
