@@ -117,14 +117,15 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     background-color: var(--primary-color);
     color: var(--text-light);
-    padding: 15rem 0;
+    padding: 0;
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid rgba(189, 160, 86, 0.2);
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
-    margin-bottom: 4rem;
+    justify-content: center;
+    margin-bottom: 0;
 }
 
 .hero::before {
@@ -174,10 +175,34 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sections */
 .section {
-    padding: 12rem 0;
+    padding: 6rem 0;
     position: relative;
     overflow: hidden;
-    margin: 4rem 0;
+    margin: 0;
+}
+
+/* FAQ Specific Styles */
+.accordion-item {
+    margin-bottom: 1rem;
+    border: 1px solid rgba(189, 160, 86, 0.2);
+    border-radius: var(--border-radius);
+}
+
+.accordion-button {
+    padding: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    line-height: 1.8;
+}
+
+.faq-section h3 {
+    margin: 3rem 0 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 .section-light {
