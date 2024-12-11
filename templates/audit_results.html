@@ -20,20 +20,36 @@
             <div class="col-lg-8 mx-auto">
                 <div class="card" data-aos="fade-up">
                     <div class="card-body">
-                        <h3 class="card-title">Aperçu de l'Analyse</h3>
-                        <p class="lead">{{ report.summary }}</p>
+                        <h3 class="card-title">Analyse de l'Entreprise</h3>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p><strong>Présentation:</strong> {{ report.analyse_entreprise.présentation }}</p>
+                                <p><strong>Objectifs Stratégiques:</strong> {{ report.analyse_entreprise.objectifs_stratégiques }}</p>
+                                <p><strong>Positionnement Marché:</strong> {{ report.analyse_entreprise.positionnement_marché }}</p>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-5">Analyse du Poste</h4>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p><strong>Description:</strong> {{ report.analyse_poste.description }}</p>
+                                <p><strong>Défis Quotidiens:</strong> {{ report.analyse_poste.défis_quotidiens }}</p>
+                                <p><strong>Potentiel d'Optimisation:</strong> {{ report.analyse_poste.potentiel_optimisation }}</p>
+                            </div>
+                        </div>
 
                         <h4 class="mt-5">Recommandations</h4>
-                        {% for rec in report.recommendations %}
-                        <div class="card mb-4 {% if rec.priority == 'high' %}border-danger{% elif rec.priority == 'medium' %}border-warning{% else %}border-info{% endif %}">
+                        {% for rec in report.recommandations %}
+                        <div class="card mb-4 {% if rec.priorité == 'haute' %}border-danger{% elif rec.priorité == 'moyenne' %}border-warning{% else %}border-info{% endif %}">
                             <div class="card-body">
-                                <h5>{{ rec.area }}</h5>
+                                <h5>{{ rec.domaine }}</h5>
                                 <p><strong>Solution Proposée:</strong> {{ rec.solution }}</p>
                                 <p><strong>Impact Attendu:</strong> {{ rec.impact }}</p>
-                                <p><strong>Timeline:</strong> {{ rec.timeline }}</p>
+                                <p><strong>Délai:</strong> {{ rec.délai }}</p>
+                                <p><strong>Adaptation au Poste:</strong> {{ rec.adaptation_poste }}</p>
                                 <div class="mt-2">
-                                    <span class="badge {% if rec.priority == 'high' %}bg-danger{% elif rec.priority == 'medium' %}bg-warning{% else %}bg-info{% endif %}">
-                                        Priorité {{ rec.priority }}
+                                    <span class="badge {% if rec.priorité == 'haute' %}bg-danger{% elif rec.priorité == 'moyenne' %}bg-warning{% else %}bg-info{% endif %}">
+                                        Priorité {{ rec.priorité }}
                                     </span>
                                 </div>
                             </div>
@@ -41,9 +57,9 @@
                         {% endfor %}
 
                         <div class="mt-5">
-                            <h4>Gain de Temps Estimé</h4>
-                            <p class="lead">{{ report.time_savings }}</p>
-                            <small class="text-muted">Estimation des heures économisées par semaine grâce à l'implémentation des solutions IA</small>
+                            <h4>Gains de Productivité</h4>
+                            <p class="lead">{{ report.gains_productivité.temps_économisé }}</p>
+                            <p class="text-muted">Impact global: {{ report.gains_productivité.impact_performance }}</p>
                         </div>
 
                         <div class="mt-5">
@@ -52,17 +68,17 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h5 class="text-primary">Automatisation IA</h5>
-                                        <p class="lead">{{ report.task_breakdown.ai_automation }}</p>
+                                        <p class="lead">{{ report.gains_productivité.répartition_tâches.automatisation_complete }}</p>
                                         <small class="text-muted">Tâches automatisables à 100% par l'IA</small>
                                     </div>
                                     <div class="col-md-4">
                                         <h5 class="text-primary">Intervention Humaine</h5>
-                                        <p class="lead">{{ report.task_breakdown.human_only }}</p>
+                                        <p class="lead">{{ report.gains_productivité.répartition_tâches.intervention_humaine }}</p>
                                         <small class="text-muted">Tâches nécessitant 100% d'intervention humaine</small>
                                     </div>
                                     <div class="col-md-4">
                                         <h5 class="text-primary">Collaboration IA-Humain</h5>
-                                        <p class="lead">{{ report.task_breakdown.hybrid }}</p>
+                                        <p class="lead">{{ report.gains_productivité.répartition_tâches.collaboration_ia }}</p>
                                         <small class="text-muted">Tâches hybrides IA-humain</small>
                                     </div>
                                 </div>
