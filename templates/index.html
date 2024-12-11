@@ -13,7 +13,7 @@
                 <p class="text-light mb-4">Yadia rend l'IA accessible et abordable pour toutes les entreprises. Notre expertise vous accompagne dans cette transformation vitale pour votre survie et votre croissance.</p>
                 <div class="d-flex gap-3">
                     <a href="/formulaire" class="btn btn-book btn-lg">Obtenez Votre Audit IA Gratuit</a>
-                    <a href="/ebook" class="btn btn-outline-light btn-lg">Télécharger l'E-book (29,99€)</a>
+                    <a href="/ebook" class="btn btn-outline-light btn-lg">Télécharger l'E-book (45€ au lieu de 219€)</a>
                 </div>
             </div>
         </div>
@@ -85,7 +85,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 text-lg-end mt-4 mt-lg-0">
-                    <div class="h3 fw-bold text-primary mb-3">29,99€</div>
+                    <div class="h3 fw-bold text-primary mb-2">45€</div>
+                    <div class="text-decoration-line-through text-muted mb-2">219€</div>
+                    <div class="text-danger small mb-2">⚡ Offre de Noël - Jusqu'au 1er janvier uniquement!</div>
                     <a href="{{ url_for('ebook') }}" class="btn btn-book btn-lg w-100">
                         Télécharger Maintenant
                     </a>
@@ -137,7 +139,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Achetez Notre E-book (29,99€)</h5>
+                <h5 class="modal-title">Achetez Notre E-book - Offre Spéciale Noël (45€ au lieu de 219€)</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
@@ -164,7 +166,10 @@
                             <input type="text" class="form-control" id="cvv" required pattern="[0-9]{3,4}" placeholder="123">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-book w-100">Acheter Maintenant (29,99€)</button>
+                    <button type="submit" class="btn btn-book w-100">
+                        <span class="d-block">Acheter Maintenant (45€)</span>
+                        <small class="d-block text-warning">⚡ Prix normal: 219€ - Offre jusqu'au 1er janvier!</small>
+                    </button>
                 </form>
             </div>
         </div>
