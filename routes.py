@@ -75,14 +75,11 @@ def audit_results():
 @app.route('/ebook', methods=['GET', 'POST'])
 def ebook():
     if request.method == 'POST':
-        # Handle the e-book purchase form submission
         name = request.form.get('name')
         email = request.form.get('email')
-        # Here you would typically handle payment processing
-        # For now, we'll just redirect to the e-book page
         flash('Merci pour votre achat! Vous recevrez votre e-book par email.')
         return redirect(url_for('ebook'))
-    return render_template('ebook.html')
+    return render_template('ebook.html', title="E-book - Yadia AI Solutions")
 
 
 @app.route('/book-appointment', methods=['POST'])
