@@ -35,7 +35,7 @@ from ai_audit import generate_ai_audit_report
 
 @app.route('/')
 def index():
-    return redirect(url_for('blog.blog_index'))
+    return render_template('index.html')
 
 @app.route('/about')
 def about():
@@ -60,6 +60,10 @@ def contact():
 @app.route('/blog')
 def blog():
     return redirect(url_for('blog.blog_index'))
+
+@app.route('/ebook')
+def ebook():
+    return render_template('ebook.html')
 
 @app.route('/generate_audit', methods=['POST'])
 def generate_audit():
