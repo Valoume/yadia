@@ -336,6 +336,55 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     box-shadow: var(--box-shadow);
+/* Mission Cards */
+.mission-card {
+    background: white;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: 1px solid rgba(189, 160, 86, 0.1);
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color);
+}
+
+.mission-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.5rem;
+}
+
+.mission-icon .rounded-circle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 4px 6px rgba(189, 160, 86, 0.1);
+}
+
+.mission-icon i {
+    color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.mission-card:hover .mission-icon i {
+    transform: scale(1.1);
+}
+
+.mission-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.mission-card p {
+    color: var(--text-color);
+    opacity: 0.9;
+    line-height: 1.6;
+}
 }
 
 .promotion-badge {

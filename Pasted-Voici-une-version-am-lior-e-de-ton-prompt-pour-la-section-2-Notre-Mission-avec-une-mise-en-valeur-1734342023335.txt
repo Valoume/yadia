@@ -1,0 +1,63 @@
+Voici une version améliorée de ton prompt pour la section 2 “Notre Mission”, avec une mise en valeur du design pour un rendu plus moderne, dynamique et visuellement engageant.
+
+Prompt :
+
+“Améliore la Section 2 : Notre Mission avec un design moderne et épuré pour une présentation visuellement impactante. Voici les instructions précises :
+
+Structure Générale
+	•	Crée une section pleine largeur avec un fond gris clair (#f8f9fa) pour contraster avec le reste du site.
+	•	Place les éléments dans une grille à deux colonnes (carrés alignés horizontalement).
+	•	Chaque carré doit être conçu en style “card” moderne avec :
+	•	Coins arrondis (border-radius : 12px)
+	•	Ombre subtile (box-shadow : 0 4px 6px rgba(0, 0, 0, 0.1)) pour l’effet flottant.
+	•	Transition douce sur le hover : élévation légère et changement de couleur de fond.
+
+Détails des deux “Cards” (Carrés)
+
+Carré 1 : “Rendre l’information accessible”
+	•	Titre : Affiche en haut un titre en gras, grand et clair :
+“1. Rendre l’information accessible”
+	•	Style : Police sans-serif moderne (par exemple Montserrat ou Poppins), taille 24px.
+	•	Texte :
+“Nous avons mis en place un audit automatique et instantané pour que chaque entreprise sache ce qui est possible avec l’IA, à quel prix, et où se situe la frontière entre l’humain et l’IA.”
+	•	Style : Police plus petite (16px), couleur texte #555.
+	•	Icône en haut du carré :
+	•	Ajoute une icône informative (ex : une loupe ou une icône “data”) en haut du carré.
+	•	Style : Icône dorée (#BDA056) dans un cercle blanc, centrée (taille : 48px).
+
+Carré 2 : “Intégrer l’IA rapidement et efficacement”
+	•	Titre : Même style que le Carré 1 :
+“2. Intégrer l’IA rapidement et efficacement”
+	•	Texte :
+“Nos solutions d’intégration sont en moyenne 30 à 40% moins chères que la concurrence, pour une adoption rapide et abordable de l’IA.”
+	•	Icône en haut du carré :
+	•	Ajoute une icône de vitesse ou d’engrenage pour représenter l’efficacité.
+	•	Style : Identique au Carré 1 (icône dorée dans un cercle blanc, taille 48px).
+	•	Bouton en bas :
+	•	Crée un bouton interactif centré avec le texte : “Faire un devis”.
+	•	Style du bouton :
+	•	Couleur dorée (#BDA056) avec texte blanc.
+	•	Coins arrondis et effet hover dynamique : changement de teinte légèrement plus foncée.
+	•	Taille : large pour bien s’intégrer au carré (padding : 10px 20px).
+
+Effets de Hover
+	•	Au survol des carrés :
+	•	Applique une élévation (translateY(-5px)) avec une légère transition (duration : 0.3s).
+	•	Change légèrement la couleur de fond pour un effet plus dynamique (par exemple, un blanc pur avec une ombre plus marquée).
+	•	Au survol du bouton :
+	•	Accentue le bouton en augmentant légèrement sa taille (scale(1.05)).
+	•	Change la couleur du fond pour un doré plus lumineux.
+
+Responsivité (Mobile & Desktop)
+	•	Assure-toi que les deux carrés restent alignés horizontalement sur desktop (écran > 768px).
+	•	Sur mobile (écran < 768px) :
+	•	Les carrés doivent s’empiler verticalement avec un espacement de 20px entre eux.
+	•	Le texte, les icônes et les boutons doivent s’adapter à toutes les tailles d’écran.
+
+Code Optimisé et Accessibilité
+	•	Utilise des balises sémantiques (section, div, h2, p, button) pour le SEO et l’accessibilité.
+	•	Ajoute un aria-label sur le bouton “Faire un devis” pour une meilleure navigation.
+	•	Utilise CSS optimisé pour limiter les répétitions et maintenir la performance du site.
+
+“Crée cette section avec un design propre, moderne et engageant pour capter immédiatement l’attention des visiteurs et encourager l’interaction. Teste et ajuste pour un affichage parfait sur tous les appareils.”
+
