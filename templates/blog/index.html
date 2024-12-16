@@ -48,7 +48,7 @@
                                     {{ post.reading_time }} min
                                 </small>
                                 <small class="text-muted">
-                                    {{ post.created_at.strftime('%d/%m/%Y') }}
+                                    {{ post.created_at.strftime('%d/%m/%Y') if post.created_at }}
                                 </small>
                             </div>
                         </div>

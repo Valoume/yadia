@@ -7,6 +7,7 @@ from models.blog import BlogPost
 import slugify
 
 def generate_seo_blog_posts():
+    print("Starting blog post generation...")
     posts = [
         {
             "sector": "RH",
