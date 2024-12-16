@@ -256,7 +256,8 @@
                 const translateY = Math.sin(angle) * moveRange;
                 
                 const duration = 25 + Math.random() * 15;
-                const delay = Math.random() * duration;
+                const floatDelay = Math.random() * duration;
+                const fadeDelay = Math.random() * 5; // Délai aléatoire pour l'apparition entre 0 et 5 secondes
                 const rotation = 360 + Math.random() * 720;
                 
                 logo.style.left = `${startX}%`;
@@ -265,7 +266,8 @@
                 logo.style.setProperty('--ty', `${translateY}%`);
                 logo.style.setProperty('--rotation', `${rotation}deg`);
                 logo.style.setProperty('--duration', `${duration}s`);
-                logo.style.setProperty('--delay', `${delay}s`);
+                logo.style.setProperty('--delay', `${floatDelay}s`);
+                logo.style.setProperty('--fade-delay', `${fadeDelay}s`);
                 
                 container.appendChild(logo);
             }
