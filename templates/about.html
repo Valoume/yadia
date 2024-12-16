@@ -40,31 +40,31 @@
     </div>
 </section>
 
-<section id="notre-mission" style="position: relative; overflow: hidden;">
-    <video class="video-bg" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+<section id="notre-mission" style="position: relative; overflow: hidden; min-height: 100vh;">
+    <video class="video-bg" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
         <source src="{{ url_for('static', filename='videos/background.mp4') }}" type="video/mp4">
         Votre navigateur ne supporte pas la lecture de vidéos.
     </video>
-    <div class="container position-relative" style="z-index: 2;">
+    <div class="container position-relative">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <div class="text-box mb-5">
-                    <span class="text-white-50 text-uppercase mb-3 d-block">Le Constat</span>
-                    <h2 class="display-4 fw-bold mb-4 text-white">Notre Mission</h2>
-                    <p class="lead mb-0">Chaque semaine, des entreprises perdent leur avantage concurrentiel faute d'avoir su intégrer l'IA à temps. Cette technologie n'est plus un luxe, c'est un impératif stratégique.</p>
+                <div class="mb-5">
+                    <span class="text-white text-uppercase mb-3 d-block" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Le Constat</span>
+                    <h2 class="display-4 fw-bold mb-4 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Notre Mission</h2>
+                    <p class="lead mb-0 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Chaque semaine, des entreprises perdent leur avantage concurrentiel faute d'avoir su intégrer l'IA à temps. Cette technologie n'est plus un luxe, c'est un impératif stratégique.</p>
                 </div>
                 
-                <div class="text-box mb-5">
-                    <p class="mb-0">En 2024, seulement 15% des PME utilisent l'IA, alors que 76% des grandes entreprises l'ont déjà adoptée. Cette disparité crée un fossé qui s'élargit chaque jour. Notre mission est de combler cet écart.</p>
+                <div class="mb-5">
+                    <p class="mb-4 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">En 2024, seulement 15% des PME utilisent l'IA, alors que 76% des grandes entreprises l'ont déjà adoptée. Cette disparité crée un fossé qui s'élargit chaque jour. Notre mission est de combler cet écart.</p>
                 </div>
                 
-                <blockquote>
-                    <p class="mb-0">"L'innovation distingue les leaders des suiveurs."</p>
-                    <footer>Steve Jobs</footer>
+                <blockquote class="mb-5">
+                    <p class="mb-2 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">"L'innovation distingue les leaders des suiveurs."</p>
+                    <footer class="text-white-50" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Steve Jobs</footer>
                 </blockquote>
                 
-                <div class="text-box">
-                    <p class="lead mb-0">La vraie question n'est plus de savoir si vous devez adopter l'IA, mais quand et comment le faire efficacement.</p>
+                <div>
+                    <p class="lead mb-0 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">La vraie question n'est plus de savoir si vous devez adopter l'IA, mais quand et comment le faire efficacement.</p>
                 </div>
             </div>
         </div>
