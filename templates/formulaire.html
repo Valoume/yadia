@@ -4,6 +4,9 @@
 
 {% block head %}
 {{ super() }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <style>
     .hero {
         background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);
@@ -185,18 +188,40 @@
 <section id="resultats" class="section py-5" style="display: none;">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="card shadow-sm">
+            <div class="col-lg-10 mx-auto">
+                <div class="card shadow-lg border-0" data-aos="fade-up">
                     <div class="card-body p-4">
-                        <h2 class="h3 mb-4">Résultats de votre audit IA</h2>
-                        <div id="analyse-description" class="mb-4">
-                            <!-- La description sera injectée ici -->
+                        <div class="context-header mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <h2 class="h3 mb-3">Résultats de votre audit IA personnalisé</h2>
+                            <div id="analyse-description" class="lead text-muted">
+                                <!-- La description contextuelle sera injectée ici -->
+                            </div>
                         </div>
-                        <div id="possibilites-integration" class="mb-4">
-                            <!-- Les possibilités seront injectées ici -->
+                        
+                        <div id="possibilites-integration" class="recommendations-grid mb-4">
+                            <!-- Les recommandations seront injectées ici -->
                         </div>
-                        <div id="estimation" class="mb-4">
-                            <!-- L'estimation sera injectée ici -->
+
+                        <!-- Baromètre de complexité -->
+                        <div class="complexity-meter mt-5" data-aos="fade-up" data-aos-delay="200">
+                            <h4 class="h5 mb-3">Guide de complexité des projets</h4>
+                            <div class="d-flex justify-content-between gap-3">
+                                <div class="complexity-level simple p-3 rounded-3 flex-1 text-center">
+                                    <div class="complexity-dot bg-success mb-2"></div>
+                                    <h5 class="h6">Simple</h5>
+                                    <small>Projet rapide à déployer avec des bénéfices immédiats</small>
+                                </div>
+                                <div class="complexity-level medium p-3 rounded-3 flex-1 text-center">
+                                    <div class="complexity-dot bg-warning mb-2"></div>
+                                    <h5 class="h6">Intermédiaire</h5>
+                                    <small>Projet nécessitant un travail d'adaptation</small>
+                                </div>
+                                <div class="complexity-level complex p-3 rounded-3 flex-1 text-center">
+                                    <div class="complexity-dot bg-danger mb-2"></div>
+                                    <h5 class="h6">Complexe</h5>
+                                    <small>Projet avancé nécessitant une intégration sur mesure</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,8 +230,43 @@
     </div>
 </section>
 
+<!-- Styles pour la section résultats -->
+<style>
+    .complexity-dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    .complexity-level {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        flex: 1;
+    }
+    .recommendations-grid {
+        display: grid;
+        gap: 1.5rem;
+    }
+    .recommendation-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .recommendation-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .bg-success { background-color: #27AE60 !important; }
+    .bg-warning { background-color: #F39C12 !important; }
+    .bg-danger { background-color: #E74C3C !important; }
+</style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
     const form = document.getElementById('auditForm');
     const loader = document.getElementById('loader');
     const submitBtn = document.getElementById('submitBtn');
@@ -262,23 +322,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Afficher les recommandations
             possibilitesInt.innerHTML = `
-                <h4 class="mb-3">Recommandations personnalisées</h4>
-                <div class="row g-4">
-                    ${data.recommandations.map(rec => `
-                        <div class="col-12">
-                            <div class="card border-0 shadow-sm">
-                                <div class="card-body">
-                                    <h5 class="card-title">${rec.titre}</h5>
-                                    <p class="card-text">${rec.description}</p>
-                                    <div class="d-flex justify-content-between text-muted">
-                                        <small>Temps estimé: ${rec.temps_estime}</small>
-                                        <small>Coût estimé: ${rec.cout_estime}</small>
+                <h4 class="mb-4" data-aos="fade-up">Recommandations personnalisées</h4>
+                ${data.recommandations.map((rec, index) => {
+                    // Déterminer la complexité
+                    let complexityClass = '';
+                    let complexityText = '';
+                    if (rec.temps_estime.includes('10-20')) {
+                        complexityClass = 'bg-success';
+                        complexityText = 'Simple';
+                    } else if (rec.temps_estime.includes('20-40')) {
+                        complexityClass = 'bg-warning';
+                        complexityText = 'Intermédiaire';
+                    } else {
+                        complexityClass = 'bg-danger';
+                        complexityText = 'Complexe';
+                    }
+                    
+                    return `
+                        <div class="recommendation-card" data-aos="fade-up" data-aos-delay="${100 * (index + 1)}">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="card-title mb-0">${rec.titre}</h5>
+                                        <span class="badge ${complexityClass} rounded-pill">${complexityText}</span>
+                                    </div>
+                                    <p class="card-text mb-4">${rec.description}</p>
+                                    <div class="mt-auto">
+                                        <div class="d-flex justify-content-between align-items-center text-muted">
+                                            <div>
+                                                <i class="fas fa-clock me-2"></i>
+                                                ${rec.temps_estime}
+                                            </div>
+                                            <div>
+                                                <i class="fas fa-euro-sign me-2"></i>
+                                                ${rec.cout_estime}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    `).join('')}
-                </div>
+                    `;
+                }).join('')}
             `;
 
             // Afficher la section des résultats

@@ -1,0 +1,47 @@
+Prompt :
+
+	Améliore le design de la page des résultats d’audit IA pour la rendre plus professionnelle, vendeuse et engageante tout en prenant en compte les besoins spécifiques des clients et les exigences suivantes :	1. Contextualisation et Introduction
+		•	Ajoute une section d’introduction en haut de la page qui résume les objectifs et problématiques du client, identifiés via le formulaire (objectifs, défis, utilisation actuelle de l’IA).
+	•	Cette section doit montrer que l’audit est personnalisé, que nous avons compris les enjeux spécifiques et qu’une solution adaptée est proposée.
+	•	Exemple :
+	“Nous avons analysé vos besoins en intégration de l’IA dans le secteur [secteur]. Votre objectif est de [objectif principal], tout en faisant face à [défi clé]. Voici les solutions que nous vous recommandons pour répondre à ces enjeux.”	2. Design Amélioré des Recommandations
+		•	Présente les recommandations sous forme de cartes modernes et stylisées avec des animations légères (fade-in lors du scroll).
+	•	Chaque carte doit inclure :
+	•	Titre clair et percutant : Exemple - “Personnalisation client”.
+	•	Description enrichie : Ajoute des bénéfices spécifiques liés aux objectifs du client. Exemple :
+	“Cette solution vous permettra d’améliorer vos taux de conversion en adaptant chaque campagne marketing au profil de vos clients.”
+	•	Temps estimé : Affiche les heures estimées en texte clair.
+	•	Coût estimé : Affiche les fourchettes basses et hautes de manière visuelle. Exemple :
+	“Coût estimé : 1 500€ - 3 000€”
+	•	Complexité du projet : Ajoute une pastille de couleur pour indiquer la complexité :
+	•	Vert : Projet simple.
+	•	Orange : Projet moyennement complexe.
+	•	Rouge : Projet complexe.
+	•	Ajoute un petit baromètre en légende qui explique les couleurs et justifie les coûts élevés si nécessaire. Exemple :
+	“Les projets complexes nécessitent un haut niveau d’intégration et un travail sur mesure, ce qui explique un temps et un coût plus élevés.”	3. Organisation de l’Affichage
+		•	Utilise une grille adaptative pour les cartes avec espacement régulier et effet d’ombre légère pour un rendu premium.
+	•	Assure-toi que chaque carte reste responsive et agréable sur mobile et desktop.
+	•	Applique les couleurs suivantes pour le design :
+	•	Fond général : Blanc cassé ou gris très clair pour la lisibilité.
+	•	Accent : Couleur principale #153739 (bleu foncé) et secondaire #BDA056 (doré).
+	•	Pastilles de complexité : Vert #27AE60, Orange #F39C12, Rouge #E74C3C.
+	•	Utilise des icônes pertinentes (FontAwesome) pour renforcer visuellement chaque solution.
+	•	Exemple : Une icône “💡” pour les recommandations stratégiques ou “🔧” pour les solutions techniques.	4. Explication des Couleurs et Complexité
+		•	Ajoute en bas de la page un baromètre de complexité visuel :
+	•	Vert (Simple) : “Projet rapide à déployer avec des bénéfices immédiats.”
+	•	Orange (Moyen) : “Projet intermédiaire nécessitant un travail d’adaptation.”
+	•	Rouge (Complexe) : “Projet avancé nécessitant une intégration complète et sur mesure.”	5. Effets et Animations
+		•	Animation légère : Utilise AOS (Animate On Scroll) pour les cartes et le baromètre.
+	•	Micro-interactions :
+	•	Survol des cartes : Légère augmentation de la taille (scale 1.03).
+	•	Survol des boutons : Changement de couleur avec un effet d’ombre.	6. Résultat Final (Exemple)
+
+	Carte Recommandation :
+		•	Personnalisation client
+Améliorez vos campagnes marketing avec une segmentation fine adaptée à chaque profil client.
+Complexité : 🔴 (Projet complexe)
+Temps estimé : 40+ heures
+Coût estimé : 3 500€ - 7 000€
+(Icône 💡 - Marketing et Communication)	Objectif :
+		•	Assure-toi que la page des résultats d’audit IA soit esthétique, vendeuse, et surtout contextualisée aux besoins du client.
+	•	La présentation doit valoriser les recommandations tout en expliquant clairement les coûts et la complexité.
