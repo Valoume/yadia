@@ -1,0 +1,58 @@
+Ajoute une fonctionnalité supplémentaire à la page d’audit précédemment développée. Voici les étapes et les consignes :	1. Lien avec la liste des intégrations IA
+		•	Une fois que le formulaire est soumis et que les données sont envoyées à l’API (nom, poste, secteur, objectifs), l’IA doit :
+	1.	Analyser les données du secteur, du poste et des objectifs.
+	2.	Comparer ces données avec la liste des intégrations IA fournie ci-dessous.
+	3.	Identifier les solutions IA pertinentes en se basant sur le secteur, le poste et les objectifs.
+	4.	Classer les résultats par ordre de pertinence, avec un minimum de 3 recommandations et un maximum de 5 recommandations.	2. Format des recommandations (Output)
+
+	L’IA doit retourner un bloc de texte structuré pour afficher :
+		1.	Titre de l’intégration : Exemple – “Automatisation du tri des emails entrants”.
+	2.	Description courte : Explique pourquoi cette solution est adaptée à l’entreprise (relie aux objectifs et défis saisis).
+	3.	Temps estimé : Choisir parmi :
+	•	Projets Simples (10-20 heures)
+	•	Projets Moyens (20-40 heures)
+	•	Projets Complexes (40+ heures)
+	4.	Fourchette de coût estimée :
+	•	Projets Simples : 500€ - 1 000€
+	•	Projets Moyens : 1 500€ - 3 000€
+	•	Projets Complexes : 3 500€ - 7 000€	3. Ajout d’une logique conditionnelle (IA - Liste)
+
+	L’IA doit appliquer les règles suivantes pour la comparaison :
+		•	Secteur = Ressources Humaines → Solutions liées au recrutement, turnover, et plans de formation.
+	•	Secteur = Marketing et Communication → Solutions liées à la personnalisation, contenu automatisé, et analyse des clients.
+	•	Secteur = Service Client → Chatbots, feedbacks clients, et priorisation des tickets.
+	•	Secteur = Finance et Comptabilité → Automatisation des factures, détection de fraudes, flux de trésorerie.
+	•	Secteur = Logistique → Optimisation des itinéraires, suivi des stocks, prédictions.
+	•	Secteur = Production et Opérations → Contrôle qualité, maintenance prédictive, optimisation des workflows.
+	•	Secteur = Juridique → Analyse de contrats, gestion documentaire, conformité.
+	•	Secteur = IT et Cybersécurité → Détection des anomalies, performances réseau, sécurité.
+	•	Secteur = Vente et Prospection → Leads, CRM, préparation de devis.
+	•	Secteur = Stratégie → Tableaux de bord IA et simulation de scénarios.	4. Affichage des résultats dynamiques
+		•	Une fois les recommandations reçues, elles doivent s’afficher sous forme de cartes individuelles.
+	•	Chaque carte contiendra :
+	•	Titre de la recommandation
+	•	Description
+	•	Temps estimé (simple, moyen, complexe)
+	•	Fourchette de coût estimée
+	•	Ajoute une animation légère (fade-in) au chargement des cartes pour une meilleure expérience utilisateur.	5. Sécurité et UX
+		•	Désactive le bouton de soumission après envoi pour éviter les soumissions multiples.
+	•	Affiche un loader (spinner) pendant le traitement de l’IA.
+	•	Ajoute un message temporaire “Analyse en cours, veuillez patienter…” avant d’afficher les résultats.	6. Design
+		•	Utilise des cards modernes avec un léger effet d’ombre.
+	•	Les couleurs suivent la charte : #153739 pour le fond, #BDA056 pour les boutons et accents.
+	•	Police : Poppins ou Open Sans.
+	•	Animation avec AOS pour les transitions (ex : apparition des cartes au scroll).	Exemple de Résultat Attendu :
+
+	Après analyse, voici les solutions IA recommandées pour vous :
+		•	1. Tri automatique des CV
+Temps estimé : 20 heures
+Coût estimé : 1 500€ - 3 000€
+Cette solution permet de filtrer efficacement les candidatures pour optimiser le recrutement.
+	•	2. Analyse des feedbacks clients
+Temps estimé : 10-15 heures
+Coût estimé : 1 000€ - 1 500€
+Identifiez les points d’amélioration grâce à l’analyse des avis clients.
+	•	3. Automatisation des factures
+Temps estimé : 25 heures
+Coût estimé : 2 000€ - 3 500€
+Optimisez vos processus de facturation pour réduire les erreurs et gagner du temps.

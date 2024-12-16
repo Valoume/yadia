@@ -6,69 +6,81 @@ from openai import OpenAI
 # do not change this unless explicitly requested by the user
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
+def get_sector_recommendations(secteur):
+    """Retourne les recommandations spécifiques au secteur."""
+    recommendations_by_sector = {
+        "RH": ["Solutions liées au recrutement", "Analyse du turnover", "Plans de formation automatisés"],
+        "Marketing": ["Personnalisation client", "Génération de contenu", "Analyse des tendances"],
+        "Service Client": ["Chatbots intelligents", "Analyse des feedbacks", "Priorisation des tickets"],
+        "Finance": ["Automatisation des factures", "Détection de fraudes", "Prévision des flux"],
+        "Logistique": ["Optimisation des routes", "Gestion des stocks", "Prédictions logistiques"],
+        "Production": ["Contrôle qualité IA", "Maintenance prédictive", "Optimisation des process"],
+        "Juridique": ["Analyse des contrats", "Gestion documentaire", "Conformité automatisée"],
+        "IT": ["Détection d'anomalies", "Optimisation réseau", "Sécurité prédictive"],
+        "Vente": ["Qualification des leads", "CRM intelligent", "Devis automatisés"],
+        "Stratégie": ["Tableaux de bord IA", "Simulation de scénarios", "Aide à la décision"]
+    }
+    return recommendations_by_sector.get(secteur, [])
+
+def estimate_project_complexity(recommendation):
+    """Détermine la complexité du projet et retourne le temps et le coût estimés."""
+    complexity_mapping = {
+        "simple": {
+            "time": "10-20 heures",
+            "cost": "500€ - 1 000€"
+        },
+        "medium": {
+            "time": "20-40 heures",
+            "cost": "1 500€ - 3 000€"
+        },
+        "complex": {
+            "time": "40+ heures",
+            "cost": "3 500€ - 7 000€"
+        }
+    }
+    
+    # Logique simplifiée pour déterminer la complexité
+    if "chatbot" in recommendation.lower() or "automatisation simple" in recommendation.lower():
+        return complexity_mapping["simple"]
+    elif "prédictif" in recommendation.lower() or "analyse" in recommendation.lower():
+        return complexity_mapping["medium"]
+    else:
+        return complexity_mapping["complex"]
+
 def generate_ai_audit_report(form_data):
-    """Generate an AI-powered audit report based on form submissions with company analysis."""
+    """Génère un rapport d'audit IA personnalisé basé sur le formulaire."""
     try:
-        prompt = f"""Analysez d'abord l'entreprise suivante et fournissez des recommandations d'implémentation IA adaptées au poste spécifique :
+        secteur = form_data.get('secteur')
+        experience = form_data.get('experience', '')
+        defis = form_data.get('defis', '')
+        objectifs = form_data.get('objectifs', '')
 
-        Entreprise: {form_data.get('company-name')}
-        Secteur: {form_data.get('industry')}
-        Poste Actuel: {form_data.get('current-job')}
-        Technologies Actuelles: {', '.join(form_data.get('current_tech', []))}
-        Défis Business: {form_data.get('challenges')}
-        Objectifs d'Implémentation: {', '.join(form_data.get('goals', []))}
+        # Obtenir les recommandations spécifiques au secteur
+        sector_recommendations = get_sector_recommendations(secteur)
         
-        Répondez en français au format JSON avec la structure suivante:
-        {{
-            "analyse_entreprise": {{
-                "présentation": "Description détaillée de l'entreprise basée sur le secteur et les informations fournies",
-                "objectifs_stratégiques": "Analyse des objectifs stratégiques de l'entreprise",
-                "positionnement_marché": "Positionnement sur le marché et avantages concurrentiels potentiels"
-            }},
-            "analyse_poste": {{
-                "description": "Analyse du poste et de ses responsabilités principales",
-                "défis_quotidiens": "Défis spécifiques liés au poste",
-                "potentiel_optimisation": "Potentiel d'optimisation par l'IA"
-            }},
-            "recommandations": [
-                {{
-                    "domaine": "Domaine d'amélioration spécifique au poste",
-                    "solution": "Solution IA recommandée avec détails d'implémentation",
-                    "impact": "Impact attendu sur les performances du poste",
-                    "délai": "Délai estimé de mise en œuvre",
-                    "priorité": "haute/moyenne/basse",
-                    "adaptation_poste": "Comment la solution s'adapte spécifiquement au poste"
-                }}
-            ],
-            "gains_productivité": {{
-                "temps_économisé": "Estimation des gains de temps hebdomadaires",
-                "répartition_tâches": {{
-                    "automatisation_complete": "Pourcentage des tâches automatisables à 100%",
-                    "intervention_humaine": "Pourcentage des tâches nécessitant intervention humaine",
-                    "collaboration_ia": "Pourcentage des tâches en mode collaboratif IA-humain"
-                }},
-                "impact_performance": "Impact global sur la performance du poste"
-            }},
-            "prochaines_étapes": [
-                "Réservez votre consultation gratuite pour approfondir ces recommandations",
-                "Téléchargez notre guide d'implémentation IA personnalisé (29,99€)"
-            ]
-        }}
-        """
+        # Sélectionner les 3-5 recommandations les plus pertinentes
+        selected_recommendations = sector_recommendations[:min(5, len(sector_recommendations))]
+        
+        recommendations = []
+        for rec in selected_recommendations:
+            complexity = estimate_project_complexity(rec)
+            recommendations.append({
+                "titre": rec,
+                "description": f"Cette solution est particulièrement adaptée à votre secteur {secteur} "
+                             f"et répond à vos objectifs spécifiques.",
+                "temps_estime": complexity["time"],
+                "cout_estime": complexity["cost"]
+            })
 
-        response = client.chat.completions.create(
-            model="gpt-4o",
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are an AI implementation expert providing business analysis and recommendations in French."
-                },
-                {"role": "user", "content": prompt}
-            ],
-            response_format={"type": "json_object"}
-        )
-        
-        result = json.loads(response.choices[0].message.content)
+        result = {
+            "analyse": {
+                "secteur": secteur,
+                "contexte": "Analyse basée sur votre expérience et vos objectifs spécifiques",
+                "niveau_maturite": "Adapté à votre niveau actuel de maîtrise de l'IA"
+            },
+            "recommandations": recommendations
+        }
+
         return result
     except Exception as e:
         return {

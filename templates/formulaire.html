@@ -223,15 +223,74 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.disabled = true;
         loader.style.display = 'flex';
 
-        // Simuler l'appel API (à remplacer par l'appel réel)
-        setTimeout(() => {
+        // Appel à l'API d'audit
+        const formData = {
+            secteur: document.getElementById('secteur').value,
+            experience: document.getElementById('experience').value,
+            defis: document.getElementById('defis').value,
+            objectifs: document.getElementById('objectifs').value
+        };
+
+        try {
+            const response = await fetch('/generate_audit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await response.json();
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+
+            // Afficher les résultats
+            const analyseDesc = document.getElementById('analyse-description');
+            const possibilitesInt = document.getElementById('possibilites-integration');
+            const estimation = document.getElementById('estimation');
+
+            // Afficher l'analyse
+            analyseDesc.innerHTML = `
+                <h4 class="mb-3">Analyse de votre situation</h4>
+                <p>${data.analyse.contexte}</p>
+            `;
+
+            // Afficher les recommandations
+            possibilitesInt.innerHTML = `
+                <h4 class="mb-3">Recommandations personnalisées</h4>
+                <div class="row g-4">
+                    ${data.recommandations.map(rec => `
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">${rec.titre}</h5>
+                                    <p class="card-text">${rec.description}</p>
+                                    <div class="d-flex justify-content-between text-muted">
+                                        <small>Temps estimé: ${rec.temps_estime}</small>
+                                        <small>Coût estimé: ${rec.cout_estime}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            // Afficher la section des résultats
             loader.style.display = 'none';
             resultatsSection.style.display = 'block';
             submitBtn.disabled = false;
             
             // Scroll vers les résultats
             resultatsSection.scrollIntoView({ behavior: 'smooth' });
-        }, 2000);
+        } catch (error) {
+            console.error('Erreur:', error);
+            alert('Une erreur est survenue lors de la génération de l\'audit. Veuillez réessayer.');
+            loader.style.display = 'none';
+            submitBtn.disabled = false;
+        }
     });
 });
 </script>
