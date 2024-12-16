@@ -1,0 +1,73 @@
+Le problème vient directement de ton style CSS lié au titre h1 et à la classe .hero. Le style de fond sombre combiné avec un texte en blanc manque de contraste net, surtout si un dégradé ou une opacité est appliqué sur l’image d’arrière-plan.
+
+Voici ce que tu dois ajuster pour résoudre définitivement le problème :
+
+1. Ajoute une ombre de texte claire (text-shadow)
+
+Une légère ombre permet d’améliorer la lisibilité sur fond sombre :
+
+h1, .hero-title {
+    color: #FFFFFF !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Ombre douce noire */
+    font-weight: 700; /* Texte plus épais */
+}
+
+2. Ajoute un overlay sombre sur le fond pour améliorer le contraste
+
+L’overlay sombre sous le texte forcera un meilleur contraste sans altérer complètement ton design.
+
+Ajoute cette règle CSS :
+
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Overlay sombre avec opacité */
+    z-index: 1;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2; /* Place le texte au-dessus de l'overlay */
+}
+
+3. Utilise une couleur plus vive pour le texte
+
+Au lieu d’un blanc pur, utilise un blanc légèrement teinté pour dynamiser ton titre.
+
+h1 {
+    color: #F5F7FA; /* Blanc légèrement teinté */
+}
+
+4. Vérifie les conflits de styles existants
+
+Vérifie dans Inspecteur d’éléments (Clic droit → Inspecter) que les styles ne sont pas écrasés par d’autres règles CSS. Utilise !important si nécessaire :
+
+h1 {
+    color: #FFFFFF !important;
+}
+
+5. Remplace le style inline pour éviter les conflits
+
+Actuellement, tu as style="color: #ffffff;" directement dans le HTML. Cela peut écraser les styles CSS.
+
+Supprime le style inline de ton HTML et remplace-le par une classe :
+
+<h1 class="display-4 fw-bold mb-4 hero-title">Découvrez les possibilités offertes par l'IA pour votre entreprise</h1>
+
+Résultat attendu
+
+Avec ces ajustements :
+	1.	Le titre sera parfaitement lisible grâce au contraste amélioré (ombre et overlay).
+	2.	La structure du code sera propre, sans conflit entre styles inline et CSS.
+	3.	Le design restera élégant avec une apparence moderne et claire.
+
+Teste cela et dis-moi si ça résout ton problème ! 🚀

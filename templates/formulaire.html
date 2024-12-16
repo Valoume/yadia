@@ -11,9 +11,37 @@
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <style>
     .hero {
+        position: relative;
         background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);
         padding: 6rem 0;
-        color: white;
+    }
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+
+    .hero h1, .hero p {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero h1 {
+        color: #F5F7FA !important;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        font-weight: 700;
+    }
+
+    .hero p {
+        color: rgba(255, 255, 255, 0.85);
+        position: relative;
+        z-index: 2;
     }
     .form-control:focus {
         border-color: #BDA056;
@@ -100,8 +128,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-4 fw-bold mb-4" style="color: #ffffff;">Découvrez les possibilités offertes par l'IA pour votre entreprise</h1>
-                <p class="lead mb-4" style="color: rgba(255, 255, 255, 0.85);">Chez YADIA, notre mission est claire : démocratiser l'IA. Nous vous offrons un audit gratuit et automatisé, car nous croyons que chaque entreprise mérite de comprendre comment l'IA peut révolutionner ses process.</p>
+                <h1 class="display-4 fw-bold mb-4 hero-title">Découvrez les possibilités offertes par l'IA pour votre entreprise</h1>
+                <p class="lead mb-4">Chez YADIA, notre mission est claire : démocratiser l'IA. Nous vous offrons un audit gratuit et automatisé, car nous croyons que chaque entreprise mérite de comprendre comment l'IA peut révolutionner ses process.</p>
             </div>
         </div>
     </div>
