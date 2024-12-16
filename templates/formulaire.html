@@ -198,38 +198,51 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <div class="card shadow-lg border-0" data-aos="fade-up">
-                    <div class="card-body p-4">
-                        <div class="context-header mb-4" data-aos="fade-up" data-aos-delay="100">
+                <!-- Introduction contextualisée -->
+                <div class="context-header mb-4" data-aos="fade-up">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
                             <h2 class="h3 mb-3">Résultats de votre audit IA personnalisé</h2>
-                            <div id="analyse-description" class="lead text-muted">
+                            <div id="analyse-description" class="lead">
                                 <!-- La description contextuelle sera injectée ici -->
                             </div>
                         </div>
-                        
-                        <div id="possibilites-integration" class="recommendations-grid mb-4">
-                            <!-- Les recommandations seront injectées ici -->
-                        </div>
+                    </div>
+                </div>
 
-                        <!-- Baromètre de complexité -->
-                        <div class="complexity-meter mt-5" data-aos="fade-up" data-aos-delay="200">
-                            <h4 class="h5 mb-3">Guide de complexité des projets</h4>
-                            <div class="d-flex justify-content-between gap-3">
-                                <div class="complexity-level simple p-3 rounded-3 flex-1 text-center">
-                                    <div class="complexity-dot bg-success mb-2"></div>
-                                    <h5 class="h6">Simple</h5>
-                                    <small>Projet rapide à déployer avec des bénéfices immédiats</small>
+                <!-- Recommandations -->
+                <div class="recommendations-section">
+                    <h3 class="h4 mb-4" data-aos="fade-up">Solutions recommandées pour votre entreprise</h3>
+                    <div id="possibilites-integration" class="recommendations-grid mb-4">
+                        <!-- Les recommandations seront injectées ici -->
+                    </div>
+                </div>
+
+                <!-- Baromètre de complexité -->
+                <div class="card shadow-sm border-0 mt-5" data-aos="fade-up">
+                    <div class="card-body p-4">
+                        <h4 class="h5 mb-4">Guide de complexité des projets</h4>
+                        <div class="d-flex flex-wrap justify-content-between gap-4">
+                            <div class="complexity-level simple">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="complexity-dot bg-success"></div>
+                                    <h5 class="h6 mb-0 ms-2">Simple</h5>
                                 </div>
-                                <div class="complexity-level medium p-3 rounded-3 flex-1 text-center">
-                                    <div class="complexity-dot bg-warning mb-2"></div>
-                                    <h5 class="h6">Intermédiaire</h5>
-                                    <small>Projet nécessitant un travail d'adaptation</small>
+                                <p class="mb-0 text-muted-light">Projet rapide à déployer avec des bénéfices immédiats</p>
+                            </div>
+                            <div class="complexity-level medium">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="complexity-dot bg-warning"></div>
+                                    <h5 class="h6 mb-0 ms-2">Intermédiaire</h5>
                                 </div>
-                                <div class="complexity-level complex p-3 rounded-3 flex-1 text-center">
-                                    <div class="complexity-dot bg-danger mb-2"></div>
-                                    <h5 class="h6">Complexe</h5>
-                                    <small>Projet avancé nécessitant une intégration sur mesure</small>
+                                <p class="mb-0 text-muted-light">Projet nécessitant un travail d'adaptation</p>
+                            </div>
+                            <div class="complexity-level complex">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="complexity-dot bg-danger"></div>
+                                    <h5 class="h6 mb-0 ms-2">Complexe</h5>
                                 </div>
+                                <p class="mb-0 text-muted-light">Projet avancé nécessitant une intégration sur mesure</p>
                             </div>
                         </div>
                     </div>
@@ -254,18 +267,85 @@
     }
     .recommendations-grid {
         display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
+        margin-top: 1rem;
     }
     .recommendation-card {
+        height: 100%;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
     }
     .recommendation-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
-    .bg-success { background-color: #27AE60 !important; }
-    .bg-warning { background-color: #F39C12 !important; }
-    .bg-danger { background-color: #E74C3C !important; }
+    .recommendation-card .card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .recommendation-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+    .recommendation-title {
+        margin: 0;
+        color: #153739;
+        font-weight: 600;
+    }
+    .complexity-badge {
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+    .recommendation-content {
+        margin-bottom: 1.5rem;
+        color: #4a5568;
+        flex-grow: 1;
+    }
+    .recommendation-footer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .recommendation-metric {
+        display: flex;
+        align-items: center;
+        color: #718096;
+        font-size: 0.9rem;
+    }
+    .recommendation-metric i {
+        margin-right: 0.5rem;
+    }
+    .bg-success { 
+        background-color: #27AE60 !important;
+        color: white;
+    }
+    .bg-warning { 
+        background-color: #F39C12 !important;
+        color: white;
+    }
+    .bg-danger { 
+        background-color: #E74C3C !important;
+        color: white;
+    }
+    .complexity-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+    .complexity-level {
+        flex: 1;
+        min-width: 200px;
+    }
 </style>
 
 <script>
@@ -329,51 +409,51 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p>${data.analyse.contexte}</p>
             `;
 
+            // Afficher l'analyse contextualisée
+            analyseDesc.innerHTML = `
+                <p class="mb-0">${data.analyse.contexte}</p>
+            `;
+
             // Afficher les recommandations
-            possibilitesInt.innerHTML = `
-                <h4 class="mb-4" data-aos="fade-up">Recommandations personnalisées</h4>
-                ${data.recommandations.map((rec, index) => {
-                    // Déterminer la complexité
-                    let complexityClass = '';
-                    let complexityText = '';
-                    if (rec.temps_estime.includes('10-20')) {
-                        complexityClass = 'bg-success';
-                        complexityText = 'Simple';
-                    } else if (rec.temps_estime.includes('20-40')) {
-                        complexityClass = 'bg-warning';
-                        complexityText = 'Intermédiaire';
-                    } else {
-                        complexityClass = 'bg-danger';
-                        complexityText = 'Complexe';
-                    }
-                    
-                    return `
-                        <div class="recommendation-card" data-aos="fade-up" data-aos-delay="${100 * (index + 1)}">
-                            <div class="card border-0 shadow-sm h-100">
-                                <div class="card-body p-4">
-                                    <div class="d-flex justify-content-between align-items-start mb-3">
-                                        <h5 class="card-title mb-0">${rec.titre}</h5>
-                                        <span class="badge ${complexityClass} rounded-pill">${complexityText}</span>
-                                    </div>
-                                    <p class="card-text mb-4">${rec.description}</p>
-                                    <div class="mt-auto">
-                                        <div class="d-flex justify-content-between align-items-center text-muted">
-                                            <div>
-                                                <i class="fas fa-clock me-2"></i>
-                                                ${rec.temps_estime}
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-euro-sign me-2"></i>
-                                                ${rec.cout_estime}
-                                            </div>
-                                        </div>
-                                    </div>
+            possibilitesInt.innerHTML = data.recommandations.map((rec, index) => {
+                // Déterminer la complexité
+                let complexityClass = '';
+                let complexityText = '';
+                if (rec.temps_estime.includes('10-20')) {
+                    complexityClass = 'bg-success';
+                    complexityText = 'Simple';
+                } else if (rec.temps_estime.includes('20-40')) {
+                    complexityClass = 'bg-warning';
+                    complexityText = 'Intermédiaire';
+                } else {
+                    complexityClass = 'bg-danger';
+                    complexityText = 'Complexe';
+                }
+                
+                return `
+                    <div class="recommendation-card" data-aos="fade-up" data-aos-delay="${100 * (index + 1)}">
+                        <div class="card-body p-4">
+                            <div class="recommendation-header">
+                                <h5 class="recommendation-title">${rec.titre}</h5>
+                                <span class="complexity-badge ${complexityClass}">${complexityText}</span>
+                            </div>
+                            <div class="recommendation-content">
+                                <p class="mb-0">${rec.description}</p>
+                            </div>
+                            <div class="recommendation-footer">
+                                <div class="recommendation-metric">
+                                    <i class="fas fa-clock"></i>
+                                    ${rec.temps_estime}
+                                </div>
+                                <div class="recommendation-metric">
+                                    <i class="fas fa-euro-sign"></i>
+                                    ${rec.cout_estime}
                                 </div>
                             </div>
                         </div>
-                    `;
-                }).join('')}
-            `;
+                    </div>
+                `;
+            }).join('');
 
             // Afficher la section des résultats
             loader.style.display = 'none';
