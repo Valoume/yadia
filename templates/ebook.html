@@ -36,14 +36,14 @@
                     </div>
                     <a href="#extrait" class="btn btn-lg px-5 py-3 me-3 mb-3" 
                        style="background: #BDA056; color: white; border: none;"
-                       onclick="document.getElementById('extrait').scrollIntoView({behavior: 'smooth'});">
+                       onclick="event.preventDefault(); document.querySelector('#extrait').scrollIntoView({behavior: 'smooth', block: 'start'});">
                         Recevoir un extrait gratuit
                     </a>
                 </div>
             </div>
             <div class="col-lg-5" data-aos="fade-left">
                 <div class="position-relative">
-                    <img src="{{ url_for('static', filename='images/guide-ultime-ia.png') }}" 
+                    <img src="{{ url_for('static', filename='images/E-book.png') }}" 
                          alt="Guide Expert IA pour Entreprise" 
                          class="img-fluid"
                          style="max-width: 100%;
