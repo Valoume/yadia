@@ -151,8 +151,176 @@
     </div>
 </section>
 
+<!-- Pourquoi intégrer l'IA ? -->
+<section class="section section-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-4 fw-bold mb-4">Pourquoi intégrer l'IA ?</h2>
+            </div>
+        </div>
+        <div class="row g-4 mb-5">
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-card text-center p-4">
+                    <div class="display-3 fw-bold text-primary mb-2">35%</div>
+                    <p class="mb-0 text-muted">gain de productivité</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-card text-center p-4">
+                    <div class="display-3 fw-bold text-primary mb-2">3</div>
+                    <p class="mb-0 text-muted">jours de travail gagnés par an</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-card text-center p-4">
+                    <div class="display-3 fw-bold text-primary mb-2">25%</div>
+                    <p class="mb-0 text-muted">d'erreurs en moins</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-card text-center p-4">
+                    <div class="display-3 fw-bold text-primary mb-2">100%</div>
+                    <p class="mb-0 text-muted">personnalisable</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <p class="lead">L'IA n'est plus une option. Elle est un levier essentiel pour se développer, rester compétitif et innover sur un marché en pleine évolution.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- E-book Promotion -->
+<section class="section bg-gradient">
+    <div class="container">
+        <div class="ebook-banner rounded-4 p-5 bg-white shadow-lg" data-aos="fade-up">
+            <div class="row align-items-center">
+                <div class="col-lg-3 text-center mb-4 mb-lg-0">
+                    <img src="{{ url_for('static', filename='img/ebook-cover.png') }}" 
+                         alt="Guide Expert IA pour Entreprise"
+                         class="img-fluid rounded-4 ebook-cover"
+                         style="max-height: 300px; 
+                                filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));
+                                transform: perspective(1000px) rotateY(-15deg);
+                                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
+                         onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)';
+                                    this.style.filter='drop-shadow(0 30px 40px rgba(0,0,0,0.3))'"
+                         onmouseout="this.style.transform='perspective(1000px) rotateY(-15deg)';
+                                   this.style.filter='drop-shadow(0 20px 30px rgba(0,0,0,0.2))'"
+                         loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-6 fw-bold mb-3 text-white">Guide Expert IA pour Entreprise</h2>
+                    <p class="lead mb-0 text-white">Découvrez comment transformer votre entreprise grâce à l'IA avec notre guide pratique et complet</p>
+                    <div class="mt-3">
+                        <span class="badge bg-light text-primary me-2">200+ Pages</span>
+                        <span class="badge bg-light text-primary me-2">Cas Pratiques</span>
+                        <span class="badge bg-light text-primary">Accès Immédiat</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-lg-end mt-4 mt-lg-0">
+                    <div class="h3 fw-bold text-primary mb-2">42€</div>
+                    <div class="text-decoration-line-through text-white mb-2">109€</div>
+                    <div class="text-danger small mb-2">⚡ Offre de Noël - Jusqu'au 1er janvier uniquement!</div>
+                    <a href="{{ url_for('ebook') }}" class="btn btn-book btn-lg w-100">
+                        Télécharger Maintenant
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Services Overview -->
 <section class="section section-light parallax-section">
+    <div class="parallax-bg"></div>
+    <div class="container parallax-content">
+        <div class="row mb-5">
+            <div class="col-lg-6 mx-auto text-center scroll-animate">
+                <span class="badge bg-primary-subtle text-primary mb-3">Nos Services</span>
+                <h2 class="display-5 fw-bold mb-3">Solutions IA sur mesure pour votre croissance</h2>
+                <p class="lead text-muted">Des solutions innovantes qui s'adaptent à vos besoins spécifiques</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card card border-0 bg-white shadow-sm h-100 position-relative overflow-hidden parallax-item scroll-animate">
+                    <div class="card-body p-4">
+                        <div class="service-icon mb-4">
+                            <div class="rounded-circle bg-primary-subtle p-3 d-inline-block">
+                                <i class="fas fa-robot text-primary fa-2x"></i>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3">Automatisation IA</h3>
+                        <p class="mb-4">Réduisez vos coûts opérationnels jusqu'à 40% avec nos solutions d'automatisation intelligente.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Workflows automatisés</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Réduction des erreurs</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Gain de productivité</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center">
+                                <div class="h4 mb-0 text-primary">+40%</div>
+                                <span class="ms-2 text-muted">d'efficacité</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card card border-0 bg-white shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="card-body p-4">
+                        <div class="service-icon mb-4">
+                            <div class="rounded-circle bg-primary-subtle p-3 d-inline-block">
+                                <i class="fas fa-chart-line text-primary fa-2x"></i>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3">Analyse Prédictive</h3>
+                        <p class="mb-4">Prenez des décisions éclairées grâce à nos modèles prédictifs de pointe.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Prévisions précises</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Insights en temps réel</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Optimisation continue</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center">
+                                <div class="h4 mb-0 text-primary">85%</div>
+                                <span class="ms-2 text-muted">de précision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card card border-0 bg-white shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="card-body p-4">
+                        <div class="service-icon mb-4">
+                            <div class="rounded-circle bg-primary-subtle p-3 d-inline-block">
+                                <i class="fas fa-brain text-primary fa-2x"></i>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3">Conseil IA Stratégique</h3>
+                        <p class="mb-4">Bénéficiez de notre expertise pour une transformation digitale réussie.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Stratégie personnalisée</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Accompagnement expert</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>ROI mesurable</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center">
+                                <div class="h4 mb-0 text-primary">200+</div>
+                                <span class="ms-2 text-muted">projets réussis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <div class="parallax-bg"></div>
     <div class="container parallax-content">
         <div class="row mb-5">
