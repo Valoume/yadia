@@ -1,41 +1,49 @@
 import os
 import logging
 from datetime import timedelta
-from flask import Flask, render_template, request, jsonify, session
+from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from flask_session import Session
+from flask_migrate import Migrate
+from models import db
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
-# Initialize Flask app
-app = Flask(__name__, static_url_path='/static', static_folder='static')
+app = Flask(__name__)
 
-# Configuration
-app.secret_key = os.environ.get("FLASK_SECRET_KEY") or "yadia_secret_key_2024"
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL") or "sqlite:///yadia.db"
-app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
-    "pool_recycle": 300,
-    "pool_pre_ping": True,
-}
-app.config["SESSION_TYPE"] = "filesystem"
-app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
-app.config["SESSION_FILE_DIR"] = "./.flask_session/"
-
-# Ensure the session directory exists
-os.makedirs(app.config["SESSION_FILE_DIR"], exist_ok=True)
+# Configure app
+app.config.update(
+    SECRET_KEY=os.urandom(24),
+    SESSION_TYPE='filesystem',
+    SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URL'),
+    SQLALCHEMY_TRACK_MODIFICATIONS=False,
+    PERMANENT_SESSION_LIFETIME=timedelta(minutes=30)
+)
 
 # Initialize Flask-Session
 Session(app)
 
-with app.app_context():
-    from models import db
-    db.init_app(app)
-    # Create database tables
-    db.create_all()
-    # Register blueprints after database initialization
-    from routes.blog import blog
-    app.register_blueprint(blog)
-    from ai_audit import generate_ai_audit_report
+# Initialize database and migrations
+db.init_app(app)
+migrate = Migrate(app, db)
+
+# Register blueprints
+from routes.blog import blog
+app.register_blueprint(blog)
+from ai_audit import generate_ai_audit_report
+
+@app.route('/')
+def index():
+    return redirect(url_for('blog.blog_index'))
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/services')
+def services():
+    return render_template('services.html')
 
 @app.route('/generate_audit', methods=['POST'])
 def generate_audit():
@@ -46,4 +54,8 @@ def generate_audit():
     except Exception as e:
         app.logger.error(f"Error generating audit: {str(e)}")
         return jsonify({"error": str(e)}), 500
-    db.create_all()
+
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
+    app.run(host='0.0.0.0', port=5000, debug=True)
