@@ -61,33 +61,33 @@
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="p-5 bg-white rounded-4 shadow-sm">
                     <div class="table-responsive">
-                        <table class="table table-borderless">
+                        <table class="table">
                             <thead>
-                                <tr class="text-center" style="background: rgba(21, 55, 57, 0.1);">
-                                    <th scope="col" class="py-4" style="font-size: 1.1rem;">Type de projet</th>
-                                    <th scope="col" class="py-4" style="font-size: 1.1rem;">Durée estimée<br>(heures)</th>
-                                    <th scope="col" class="py-4" style="font-size: 1.1rem;">Prix moyens<br>sur le marché</th>
-                                    <th scope="col" class="py-4" style="background: rgba(21, 55, 57, 0.2); font-size: 1.2rem; color: #153739;">Prix Yadia</th>
+                                <tr class="text-center">
+                                    <th scope="col" class="py-3 border-0">Type de projet</th>
+                                    <th scope="col" class="py-3 border-0">Durée estimée<br><span class="fw-light">(heures)</span></th>
+                                    <th scope="col" class="py-3 border-0">Prix moyens<br><span class="fw-light">sur le marché</span></th>
+                                    <th scope="col" class="py-3 border-0" style="color: #153739;">Prix Yadia</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="text-center align-middle border-bottom">
-                                    <td class="py-4"><span class="fw-bold">Projet simple</span></td>
-                                    <td class="py-4">5-20</td>
-                                    <td class="py-4"><span style="text-decoration: line-through; color: #6c757d;">500-2000 €</span></td>
-                                    <td class="py-4" style="background: rgba(21, 55, 57, 0.05);"><span class="fw-bold" style="color: #153739; font-size: 1.2rem;">350-1400 €</span></td>
-                                </tr>
-                                <tr class="text-center align-middle border-bottom">
-                                    <td class="py-4"><span class="fw-bold">Projet moyen</span></td>
-                                    <td class="py-4">20-50</td>
-                                    <td class="py-4"><span style="text-decoration: line-through; color: #6c757d;">2500-5000 €</span></td>
-                                    <td class="py-4" style="background: rgba(21, 55, 57, 0.05);"><span class="fw-bold" style="color: #153739; font-size: 1.2rem;">1400-3500 €</span></td>
+                                <tr class="text-center align-middle">
+                                    <td class="py-3">Projet simple</td>
+                                    <td class="py-3">5-20</td>
+                                    <td class="py-3"><span class="text-muted" style="text-decoration: line-through;">500-2000 €</span></td>
+                                    <td class="py-3"><span style="color: #153739;">350-1400 €</span></td>
                                 </tr>
                                 <tr class="text-center align-middle">
-                                    <td class="py-4"><span class="fw-bold">Projet complexe</span></td>
-                                    <td class="py-4">50-100</td>
-                                    <td class="py-4"><span style="text-decoration: line-through; color: #6c757d;">6000-10000 €</span></td>
-                                    <td class="py-4" style="background: rgba(21, 55, 57, 0.05);"><span class="fw-bold" style="color: #153739; font-size: 1.2rem;">3500-7000 €</span></td>
+                                    <td class="py-3">Projet moyen</td>
+                                    <td class="py-3">20-50</td>
+                                    <td class="py-3"><span class="text-muted" style="text-decoration: line-through;">2500-5000 €</span></td>
+                                    <td class="py-3"><span style="color: #153739;">1400-3500 €</span></td>
+                                </tr>
+                                <tr class="text-center align-middle">
+                                    <td class="py-3">Projet complexe</td>
+                                    <td class="py-3">50-100</td>
+                                    <td class="py-3"><span class="text-muted" style="text-decoration: line-through;">6000-10000 €</span></td>
+                                    <td class="py-3"><span style="color: #153739;">3500-7000 €</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -199,16 +199,17 @@
             </div>
         </div>
         <div class="row g-4">
-            <div class="d-flex justify-content-between align-items-center position-relative" style="max-width: 1000px; margin: 0 auto;">
-                <div class="progress position-absolute" style="width: 100%; height: 2px; background: rgba(21, 55, 57, 0.1); z-index: 1;">
-                    <div class="progress-bar" style="width: 100%; background: #153739;"></div>
-                </div>
+            <div class="steps-timeline">
+                <div class="timeline-line"></div>
+                <div class="steps-container">
                 
-                <div class="step text-center position-relative" style="z-index: 2; flex: 1;" data-aos="fade-up" data-aos-delay="0">
-                    <div class="step-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: #153739; border-radius: 50%; color: white; font-weight: bold;">1</div>
-                    <h4 class="h5 mb-2">Prise de contact</h4>
-                    <p class="mb-0 text-muted small px-2">Premier échange gratuit pour comprendre vos besoins</p>
-                </div>
+                <div class="timeline-step" data-aos="fade-up" data-aos-delay="0">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4 class="h5 mb-2">Prise de contact</h4>
+                            <p class="mb-0 text-muted small">Premier échange gratuit pour comprendre vos besoins</p>
+                        </div>
+                    </div>
                 
                 <div class="step text-center position-relative" style="z-index: 2; flex: 1;" data-aos="fade-up" data-aos-delay="100">
                     <div class="step-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: #153739; border-radius: 50%; color: white; font-weight: bold;">2</div>

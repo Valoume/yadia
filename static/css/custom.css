@@ -267,3 +267,55 @@ blockquote footer {
         transform: scale(1);
     }
 }
+/* Timeline steps styling */
+.steps-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(21, 55, 57, 0.1);
+    transform: translateY(-50%);
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-step {
+    flex: 1;
+    text-align: center;
+    padding: 0 15px;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #153739;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.step-content {
+    max-width: 200px;
+    margin: 0 auto;
+}
