@@ -510,15 +510,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
 
+            // Ajouter des solutions fondamentales
+            const solutionsBase = [
+                {
+                    titre: "Chatbots intelligents",
+                    description: "Cette solution est particulièrement adaptée à votre secteur Service Client et répond à vos objectifs spécifiques.",
+                    temps_estime: "10-20 heures",
+                    cout_estime: "500€ - 1000€",
+                    type: "simple"
+                },
+                {
+                    titre: "Analyse des feedbacks",
+                    description: "Cette solution est particulièrement adaptée à votre secteur Service Client et répond à vos objectifs spécifiques.",
+                    temps_estime: "20-40 heures",
+                    cout_estime: "1500€ - 3000€",
+                    type: "intermediaire"
+                }
+            ];
+
+            // Fusionner les recommandations avec les solutions de base
+            const toutesRecommandations = [...solutionsBase, ...data.recommandations];
+
             // Afficher les recommandations
-            possibilitesInt.innerHTML = data.recommandations.map((rec, index) => {
+            possibilitesInt.innerHTML = toutesRecommandations.map((rec, index) => {
                 // Déterminer la complexité
                 let complexityClass = '';
                 let complexityText = '';
-                if (rec.temps_estime.includes('10-20')) {
+                if (rec.temps_estime.includes('10-20') || rec.type === 'simple') {
                     complexityClass = 'bg-success';
                     complexityText = 'Simple';
-                } else if (rec.temps_estime.includes('20-40')) {
+                } else if (rec.temps_estime.includes('20-40') || rec.type === 'intermediaire') {
                     complexityClass = 'bg-warning';
                     complexityText = 'Intermédiaire';
                 } else {
@@ -539,6 +560,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <div class="benefit-item">
                                         <i class="fas fa-check-circle text-success me-2"></i>
                                         Bénéfice direct : ${
+                                            rec.titre.includes('Chatbots intelligents') ? 'Amélioration immédiate des processus de support client' :
+                                            rec.titre.includes('Analyse des feedbacks') ? 'Compréhension approfondie des retours clients' :
                                             rec.titre.includes('Automatisation des factures') ? 'Transformation complète de votre workflow de facturation' :
                                             rec.titre.includes('Détection de fraudes') ? 'Sécurisation en temps réel de vos transactions' :
                                             rec.titre.includes('Prévision des flux') ? 'Anticipation précise de votre trésorerie' :
@@ -548,6 +571,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <div class="benefit-item">
                                         <i class="fas fa-chart-line text-primary me-2"></i>
                                         Impact mesurable : ${
+                                            rec.titre.includes('Chatbots intelligents') ? 'Réduction de 40% du temps de réponse aux clients' :
+                                            rec.titre.includes('Analyse des feedbacks') ? 'Augmentation de 60% du taux de satisfaction client' :
                                             rec.titre.includes('Automatisation des factures') ? 'Réduction de 75% du temps de traitement des factures' :
                                             rec.titre.includes('Détection de fraudes') ? 'Détection de 95% des tentatives de fraude' :
                                             rec.titre.includes('Prévision des flux') ? 'Précision de 90% dans les prévisions à 3 mois' :
