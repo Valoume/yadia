@@ -3,10 +3,29 @@
 {% block title %}Le Guide Ultime de l'IA Simplifiée au Travail - Yadia{% endblock %}
 
 {% block content %}
-<!-- Bandeau promo sous la navigation -->
-<div class="w-100 bg-danger text-white py-2 text-center sticky-top" style="margin-top: 60px; z-index: 1020;">
-    🎁 Promo de Noël : 45€ au lieu de 219€ ! Plus que <span id="countdown" class="fw-bold"></span>
+<!-- Modal Promo -->
+<div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="promoModalLabel">🎁 Offre Spéciale Noël</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center p-4">
+                <h4 class="mb-3">45€ au lieu de 219€ !</h4>
+                <p class="mb-2">Plus que <span id="countdown" class="fw-bold"></span> pour en profiter</p>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Script pour afficher le modal automatiquement -->
+<script>
+    window.addEventListener('load', function() {
+        var promoModal = new bootstrap.Modal(document.getElementById('promoModal'));
+        promoModal.show();
+    });
+</script>
 
 <section class="hero d-flex align-items-center" style="min-height: 100vh; padding-top: 2rem; background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);">
     <div class="container">
@@ -38,7 +57,7 @@
             </div>
             <div class="col-lg-5" data-aos="fade-left">
                 <div class="position-relative">
-                    <img src="{{ url_for('static', filename='images/E-book.png') }}" 
+                    <img src="/static/images/E-book.png" 
                          alt="Guide Expert IA pour Entreprise" 
                          class="img-fluid"
                          style="max-width: 100%;
@@ -320,6 +339,9 @@
         <div class="row g-4">
             <div class="col-md-6" data-aos="fade-up">
                 <div class="d-flex p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="progress" style="height: 8px; width: 100%; margin-bottom: 1rem; background: rgba(21, 55, 57, 0.1);">
+                        <div class="progress-bar" role="progressbar" style="width: 14.28%; background: #153739;" aria-valuenow="14.28" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                     <div class="step-number me-4 fs-4 fw-bold" style="color: #153739;">1</div>
                     <div>
                         <h4 class="h5 mb-3">Les fondamentaux de l'IA</h4>

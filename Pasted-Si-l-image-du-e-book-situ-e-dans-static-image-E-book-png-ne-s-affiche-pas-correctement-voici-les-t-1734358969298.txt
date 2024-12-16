@@ -1,0 +1,59 @@
+Si l’image du e-book située dans static/image/E-book.png ne s’affiche pas correctement, voici les étapes pour diagnostiquer et résoudre le problème :
+
+1. Vérifier le chemin de l’image
+
+Assurez-vous que l’image est bien dans le dossier static/image/ et que le chemin est correctement référencé dans votre code.
+
+Code correct en HTML :
+
+<img src="static/image/E-book.png" alt="Guide Expert IA pour Entreprise">
+
+Code correct en React (ou framework JS) :
+Si vous utilisez React, assurez-vous d’importer l’image correctement :
+
+import EbookImage from './static/image/E-book.png';
+
+function EbookComponent() {
+  return (
+    <img src={EbookImage} alt="Guide Expert IA pour Entreprise" />
+  );
+}
+
+2. Vérifier le nom et l’extension de l’image
+	•	Nom de fichier : Assurez-vous qu’il n’y a pas d’erreur dans le nom (majuscule/minuscule, tiret, extension).
+Exemple : Si l’image est E-book.png, le chemin doit exactement correspondre.
+	•	Extension : Vérifiez que l’image est bien .png et non .PNG ou autre format.
+
+3. Vérifier les permissions d’accès
+	•	Si vous travaillez localement, assurez-vous que le fichier E-book.png est accessible dans votre environnement de développement.
+	•	Si vous êtes sur un hébergement ou serveur :
+	•	Assurez-vous que le dossier static/image/ est public et accessible (permissions 644 sur le fichier).
+
+
+5. Vérifier le serveur Replit
+
+Si vous travaillez sur Replit :
+	•	Assurez-vous que le dossier static est correctement inclus dans votre configuration de serveur.
+	•	Exemple pour un serveur Node.js utilisant Express :
+
+const express = require('express');
+const app = express();
+
+// Servir les fichiers statiques
+app.use('/static', express.static('static'));
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+app.listen(3000, () => {
+  console.log('Serveur lancé sur http://localhost:3000');
+});
+
+
+7. Solution temporaire : Testez un chemin absolu
+
+Pour être sûr que le chemin est bon, testez avec un chemin absolu pour l’image :
+
+<img src="http://localhost:3000/static/image/E-book.png" alt="Guide Expert IA pour Entreprise">
+
