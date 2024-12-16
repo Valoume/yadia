@@ -49,18 +49,22 @@ if not db:
 
 @app.route('/formulaire', methods=['GET', 'POST'])
 def formulaire():
+    app.logger.info("Accessing formulaire route")
     if request.method == 'POST':
+        app.logger.info("Form submitted - Processing POST request")
         current_time = datetime.utcnow()
         form_data = {
             'industry': request.form.get('industry'),
             'current_tech': request.form.getlist('tech'),
             'challenges': request.form.get('challenges'),
             'goals': request.form.getlist('goals'),
-            'company_name': request.form.get('company-name'),
-            'contact_name': request.form.get('contact-name'),
-            'contact_email': request.form.get('contact-email'),
+            'company-name': request.form.get('company-name'),  # Changed to match form field name
+            'current-job': request.form.get('current-job'),    # Added missing field
+            'contact-name': request.form.get('contact-name'),  # Changed to match form field name
+            'contact-email': request.form.get('contact-email'), # Changed to match form field name
             'timestamp': current_time.isoformat()
         }
+        app.logger.info(f"Collected form data: {form_data}")
         
         # Generate AI recommendations
         audit_report = generate_ai_audit_report(form_data)
