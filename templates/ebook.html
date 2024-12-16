@@ -4,7 +4,7 @@
 
 {% block content %}
 <!-- Bandeau promo sous la navigation -->
-<div class="w-100 bg-danger text-white py-2 text-center" style="margin-top: 60px;">
+<div class="w-100 bg-danger text-white py-2 text-center sticky-top" style="margin-top: 60px; z-index: 1020;">
     🎁 Promo de Noël : 45€ au lieu de 219€ ! Plus que <span id="countdown" class="fw-bold"></span>
 </div>
 
@@ -43,7 +43,7 @@
             </div>
             <div class="col-lg-5" data-aos="fade-left">
                 <div class="position-relative">
-                    <img src="{{ url_for('static', filename='images/ebook-premium.png') }}" 
+                    <img src="{{ url_for('static', filename='images/guide-ultime-ia.png') }}" 
                          alt="Guide Expert IA pour Entreprise" 
                          class="img-fluid"
                          style="max-width: 100%;
@@ -156,8 +156,8 @@
                     <p>Analyses détaillées de réussites d'implémentation IA</p>
                 </div>
                 <div class="mb-4">
-                    <h5><i class="fas fa-video me-2"></i>Vidéos Tutoriels</h5>
-                    <p>Guides vidéo exclusifs pour approfondir les concepts clés</p>
+                    <h5><i class="fas fa-rocket me-2"></i>Accompagnement Premium</h5>
+                    <p>Accès prioritaire à nos experts pour vos questions sur l'implémentation</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
@@ -217,9 +217,12 @@
         <div class="row align-items-center">
             <div class="col-lg-8 mx-auto text-center">
                 <div class="position-relative">
-                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger px-4 py-2" style="transform: rotate(-5deg);">
-                        <i class="fas fa-gift me-1"></i> BONUS PREMIUM
-                    </span>
+                    <div class="position-absolute top-0 start-50 translate-middle px-4 py-2" style="transform: rotate(-5deg); z-index: 2;">
+                        <div class="badge bg-danger px-4 py-3" style="font-size: 1.2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                            <i class="fas fa-gift me-2"></i>
+                            <span class="fw-bold">BONUS PREMIUM</span>
+                        </div>
+                    </div>
                     <div class="card border-0 shadow-lg p-5 mt-4" style="background: rgba(255, 255, 255, 0.95);">
                         <h2 class="display-6 fw-bold mb-4">Newsletter IA Hebdomadaire Offerte</h2>
                         <p class="lead mb-4">En bonus avec votre guide, recevez notre newsletter premium qui analyse chaque semaine les dernières avancées en IA. Restez à jour dans un domaine qui évolue à vitesse grand V !</p>
