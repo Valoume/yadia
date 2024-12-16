@@ -1,0 +1,36 @@
+Optimise l'affichage des résultats de l'audit IA en suivant ces directives simples et précises :
+
+1. **Section d'Introduction :**  
+   - Récupère les informations fournies par le client (secteur, objectifs, défis, problèmes).  
+   - Génère une **courte description de l'entreprise** pour contextualiser les besoins, exemple :  
+     > "Votre entreprise dans le secteur X rencontre des défis liés à Y. Nos solutions IA sont conçues pour répondre à vos besoins de manière adaptée."
+
+2. **Analyse des Problèmes et Arguments :**  
+   - Utilise les réponses du client pour **identifier les principales difficultés** et les transformer en arguments pertinents.  
+   - Exemple :  
+     > "Vous avez mentionné des difficultés avec [problème]. Nos solutions IA automatisent cette tâche pour vous permettre de [bénéfice direct]."
+
+3. **Affichage des Solutions :**  
+   - Présente les solutions IA sous forme de **cartes claires et épurées** avec :  
+     - **Titre :** Solution (ex. : "Personnalisation Client").  
+     - **Description concise :** Ce que la solution apporte en fonction des besoins du client.  
+     - **Complexité du projet :**  
+       - Pastille verte 🟢 pour "Simple" avec note : "Projet rapide à déployer".  
+       - Pastille orange 🟠 pour "Intermédiaire" avec note : "Nécessite un travail d’adaptation".  
+       - Pastille rouge 🔴 pour "Complexe" avec note : "Implémentation complète sur mesure".  
+     - **Explication de la variation de prix :**  
+       > "Le prix inclut non seulement la création de l’IA, mais aussi une phase de compréhension des besoins, d’implémentation, de test et de suivi pour garantir un résultat optimal."  
+     - **Durée estimée :** Exemple : "20-40 heures".  
+     - **Prix estimé :** Exemple : "1 500€ - 3 000€".
+
+4. **Guide de Complexité des Projets :**  
+   - Insère une légende claire en bas de page avec les pastilles et leur signification.  
+   - Exemple :  
+     > 🟢 Simple : Déploiement rapide.  
+     > 🟠 Intermédiaire : Adaptation personnalisée.  
+     > 🔴 Complexe : Implémentation complète avec suivi.
+
+5. **Appel à l’Action (CTA) :**  
+   - Ajoute un bouton à la fin : **"Obtenir votre audit détaillé"**.  
+
+Optimise le design pour qu’il reste simple, lisible et agréable visuellement. Aère les sections avec des espaces, utilisez des icônes adaptées et des titres en gras pour une meilleure hiérarchisation.

@@ -264,6 +264,22 @@
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(0, 0, 0, 0.1);
         flex: 1;
+    .benefits {
+        background: rgba(21, 55, 57, 0.03);
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    .benefit-item {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        color: #2d3748;
+    }
+    .benefit-item:last-child {
+        margin-bottom: 0;
+    }
+    .recommendation-card .card-body {
+        background: linear-gradient(to bottom, #fff 0%, #f8f9fa 100%);
+    }
     }
     .recommendations-grid {
         display: grid;
@@ -411,7 +427,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Afficher l'analyse contextualisée
             analyseDesc.innerHTML = `
-                <p class="mb-0">${data.analyse.contexte}</p>
+                <div class="mb-4">
+                    <p class="mb-3">Dans le secteur ${formData.secteur}, votre entreprise cherche à optimiser ses processus grâce à l'IA.</p>
+                    <p class="mb-3">Vos principaux défis : <br>${formData.defis}</p>
+                    <p class="mb-0">Nos solutions IA sont spécifiquement conçues pour répondre à vos objectifs : <br>${formData.objectifs}</p>
+                </div>
             `;
 
             // Afficher les recommandations
@@ -438,17 +458,32 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <span class="complexity-badge ${complexityClass}">${complexityText}</span>
                             </div>
                             <div class="recommendation-content">
-                                <p class="mb-0">${rec.description}</p>
+                                <p class="mb-3">${rec.description}</p>
+                                <div class="benefits mb-3">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        Bénéfice direct : ${rec.benefices?.direct || 'Amélioration immédiate des processus'}
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-chart-line text-primary me-2"></i>
+                                        Impact mesurable : ${rec.benefices?.impact || 'Gains de productivité significatifs'}
+                                    </div>
+                                </div>
                             </div>
                             <div class="recommendation-footer">
                                 <div class="recommendation-metric">
                                     <i class="fas fa-clock"></i>
-                                    ${rec.temps_estime}
+                                    <span class="ms-2">${rec.temps_estime}</span>
                                 </div>
                                 <div class="recommendation-metric">
                                     <i class="fas fa-euro-sign"></i>
-                                    ${rec.cout_estime}
+                                    <span class="ms-2">${rec.cout_estime}</span>
                                 </div>
+                            </div>
+                            <div class="text-muted-light mt-3" style="font-size: 0.8rem;">
+                                ${complexityText === 'Simple' ? 'Déploiement rapide et bénéfices immédiats' : 
+                                  complexityText === 'Intermédiaire' ? 'Nécessite une phase d\'adaptation personnalisée' :
+                                  'Solution complète avec suivi et support'}
                             </div>
                         </div>
                     </div>
