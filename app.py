@@ -36,4 +36,15 @@ db.init_app(app)
 with app.app_context():
     import models
     import routes
+from ai_audit import generate_ai_audit_report
+
+@app.route('/generate_audit', methods=['POST'])
+def generate_audit():
+    try:
+        form_data = request.get_json()
+        result = generate_ai_audit_report(form_data)
+        return jsonify(result)
+    except Exception as e:
+        app.logger.error(f"Error generating audit: {str(e)}")
+        return jsonify({"error": str(e)}), 500
     db.create_all()
