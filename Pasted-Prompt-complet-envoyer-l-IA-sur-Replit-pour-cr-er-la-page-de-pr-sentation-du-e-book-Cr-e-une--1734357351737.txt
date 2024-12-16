@@ -1,0 +1,79 @@
+Prompt complet à envoyer à l’IA sur Replit pour créer la page de présentation du e-book
+
+	“Crée une page de présentation du e-book de Yadia sur l’intégration de l’IA en entreprise. Cette page doit être moderne, impactante et centrée sur la conversion des visiteurs en acheteurs. La stratégie de conversion repose sur deux leviers principaux :
+
+	1️⃣ Offrir l’accès à un extrait gratuit du e-book en échange de l’adresse e-mail
+2️⃣ Promouvoir l’offre de Noël avec un tarif réduit, en insistant sur l’urgence et la rareté de la promotion
+
+	🎨 Design & Apparence générale
+		•	Style visuel : Moderne, premium et épuré. Les couleurs principales sont #153739 (bleu) et #BDA056 (doré) avec des touches de blanc et de gris clair pour le fond.
+	•	Typographie : Utiliser une police moderne et lisible (Poppins, Roboto ou Montserrat).
+	•	Icônes et illustrations : Intègre des visuels de robot IA, d’humains et de concepts abstraits (réseaux, connexions, etc.).
+	•	Ajoute des éléments d’urgence et de rareté (comme des bannières “Promo de Noël” ou un compte à rebours).	🏗️ Structure de la page (en sections)
+
+	1️⃣ Section d’ouverture (Hero Section) – Impact immédiat
+
+	Objectif : Capturer l’attention et inciter à l’action.
+		•	Visuel principal : Un 3D mockup du e-book avec un effet premium et des ombres douces.
+	•	Titre principal : “Maîtrisez l’IA et transformez votre entreprise en 2024”
+	•	Sous-titre : “Découvrez la méthode complète, les feuilles de route et les outils actionnables pour intégrer l’IA dans votre entreprise.”
+	•	CTA principal (Call-to-Action) : “Recevoir un extrait gratuit” (couleur dorée #BDA056, hover en bleu #153739).
+	•	Bandeau de promotion de Noël : “🎁 Promo de Noël : Le guide complet à 42€ au lieu de 109€ !” (ce bandeau doit rester visible au scroll).
+	•	Ajoute un décompte (compte à rebours) jusqu’à la fin de la promo.	2️⃣ Section “Pourquoi ce e-book est indispensable ?”
+
+	Objectif : Expliquer pourquoi l’utilisateur a besoin de ce guide.
+		•	Titre de section : “Pourquoi ce guide est indispensable ?”
+	•	3 colonnes ou 3 blocs de contenu (avec icônes ou illustrations) présentant les 3 grands bénéfices du guide :
+	•	Maîtrisez l’IA en entreprise : “Découvrez comment l’IA peut transformer vos processus et automatiser vos tâches répétitives.”
+	•	Des outils concrets et actionnables : “Accédez à des templates, feuilles de route et exemples concrets prêts à l’emploi.”
+	•	Gagnez du temps et de l’argent : “Apprenez à automatiser les tâches chronophages et à optimiser vos ressources.”
+	•	Ajoute un bouton CTA secondaire : “Recevoir un extrait gratuit” (ancre vers le formulaire de capture d’e-mail).	3️⃣ Section “Aperçu du plan du e-book”
+
+	Objectif : Montrer ce que le lecteur va obtenir.
+		•	Titre de section : “Découvrez le contenu du guide”
+	•	Ajoute un visuel de sommaire stylisé (comme un aperçu du sommaire du e-book).
+	•	Affiche les 7 grandes parties du guide sous forme de cartes interactives ou blocs déroulants :
+	•	1️⃣ Les fondamentaux de l’IA (concepts, bases, machine learning)
+	•	2️⃣ La mise en place de l’IA dans l’entreprise (feuille de route, MVP, POC)
+	•	3️⃣ Les solutions techniques existantes (chatbots, agents IA, DAS)
+	•	4️⃣ Gestion et formation autour de l’IA (formation des équipes, stratégie d’adoption)
+	•	5️⃣ L’impact sur l’entreprise (productivité, ROI, impact sur les métiers)
+	•	6️⃣ Les étapes concrètes d’intégration (cartographie des processus, tests)
+	•	7️⃣ Les prochaines étapes et les erreurs à éviter (comment aller plus loin)	4️⃣ Section “Recevez un extrait gratuit” (Formulaire de capture d’e-mail)
+
+	Objectif : Capturer l’e-mail des visiteurs.
+		•	Visuel de l’extrait : Montre une image des premières pages du e-book pour attiser la curiosité.
+	•	Titre de section : “Un aperçu gratuit, ça vous tente ?”
+	•	Sous-titre : “Recevez les premières pages du guide et découvrez les bases de l’IA.”
+	•	Formulaire de capture simple :
+	•	Prénom (facultatif)
+	•	Adresse e-mail (obligatoire)
+	•	CTA principal : “Recevoir un extrait gratuit” (couleur dorée #BDA056).
+	•	Message de confidentialité (sous le formulaire) : “Pas de spam, juste du contenu de qualité.”	5️⃣ Section “Pourquoi 42€ au lieu de 109€ ? (Promo de Noël)”
+
+	Objectif : Justifier la promotion et créer un sentiment d’urgence.
+		•	Titre de section : “Offre de Noël : Profitez de -61% sur ce guide”
+	•	Mise en avant de la réduction (affiche l’ancien prix barré “109€” et le nouveau prix “42€”).
+	•	Message d’urgence : “Cette offre est valable jusqu’au 31 décembre seulement !”
+	•	Ajoute un décompte (compte à rebours) indiquant le temps restant avant la fin de la promo.
+	•	CTA clair : “Acheter le guide à 42€” (ajoute un effet “pulsation” sur le bouton pour attirer l’attention).	6️⃣ Section “Témoignages et avis clients”
+
+	Objectif : Rassurer les visiteurs avec des preuves sociales.
+		•	Titre de section : “Ils l’ont lu, voici ce qu’ils en pensent”
+	•	Affiche 3 témoignages clients sous forme de cartes de témoignages.
+	•	Chaque témoignage doit inclure : prénom, poste et logo de l’entreprise (optionnel).	7️⃣ Section “Foire aux questions (FAQ)”
+
+	Objectif : Lever les objections et répondre aux doutes des utilisateurs.
+		•	FAQ accordéon (contenu dépliable) avec 4 ou 5 questions, par exemple :
+	•	Que contient l’extrait du e-book ?
+	•	Ce guide est-il adapté aux débutants ?
+	•	Est-ce une version PDF ou un livre physique ?
+	•	Puis-je obtenir un remboursement ?	💻 Technologies et responsivité
+		•	Responsive design : La page doit s’adapter aux écrans mobiles et tablettes.
+	•	Vitesse de chargement optimisée.
+	•	Effets d’animation légers au scroll (pour les titres, images et CTA).	✨ Style d’écriture et ton de voix
+		•	Proximité et accessibilité (style conversationnel, humain).
+	•	Impact visuel fort (CTA visible, preuves sociales, témoignages réels).
+	•	Textes clairs et concis (pas de longs paragraphes).	En résumé, je veux une page de présentation claire, engageante et orientée conversion, avec des CTA visibles, des éléments de preuve sociale et une forte incitation à l’action (promo de Noël, téléchargement gratuit, etc.).”
+
+Avec ce prompt, l’IA devrait produire une page de vente moderne, claire et engageante, optimisée pour la conversion et la captation d’e-mails. N’hésite pas à me dire si tu veux des ajustements ! 🚀

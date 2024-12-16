@@ -1,45 +1,59 @@
 {% extends "base.html" %}
 
-{% block title %}Guide Expert IA pour Entreprise - Yadia{% endblock %}
+{% block title %}Le Guide Ultime de l'IA Simplifiée au Travail - Yadia{% endblock %}
 
 {% block content %}
-<section class="hero">
+<!-- Bandeau promo fixe -->
+<div class="position-fixed top-0 start-0 w-100 bg-danger text-white py-2 text-center" style="z-index: 1030;">
+    🎁 Promo de Noël : 45€ au lieu de 219€ ! Plus que <span id="countdown" class="fw-bold"></span>
+</div>
+
+<section class="hero d-flex align-items-center" style="min-height: 100vh; padding-top: 4rem; background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7" data-aos="fade-right">
-                <span class="badge bg-dark mb-3">Guide Expert</span>
-                <h1 class="display-3 fw-bold mb-4">Maîtrisez l'IA pour Transformer Votre Entreprise</h1>
-                <p class="lead mb-4">Alors que l'intégration de l'IA reste souvent inaccessible en raison de coûts prohibitifs, notre mission est de la démocratiser. Dans un marché en pleine mutation, les entreprises qui tardent à adopter l'IA risquent de perdre leur compétitivité. Ce guide vous accompagne dans cette transformation essentielle.</p>
-                <div class="d-flex flex-wrap gap-3 mb-4">
-                    <div class="feature-badge">
-                        <i class="fas fa-book-open me-2"></i>
-                        200+ Pages
+                <div class="p-4 rounded-4" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
+                    <span class="badge bg-primary-subtle text-primary mb-4 px-3 py-2">Guide Expert IA</span>
+                    <h1 class="display-3 fw-bold text-white mb-4">
+                        Maîtrisez l'IA et transformez votre entreprise en 2024
+                    </h1>
+                    <p class="lead text-white-50 mb-5">
+                        Découvrez la méthode complète, les feuilles de route et les outils actionnables pour intégrer l'IA dans votre entreprise de manière efficace et rentable.
+                    </p>
+                    <div class="d-flex flex-wrap gap-4 mb-5">
+                        <div class="feature-badge bg-white bg-opacity-10 text-white px-4 py-3 rounded-3">
+                            <i class="fas fa-book-open me-2"></i>
+                            200+ Pages
+                        </div>
+                        <div class="feature-badge bg-white bg-opacity-10 text-white px-4 py-3 rounded-3">
+                            <i class="fas fa-download me-2"></i>
+                            Accès Immédiat
+                        </div>
+                        <div class="feature-badge bg-white bg-opacity-10 text-white px-4 py-3 rounded-3">
+                            <i class="fas fa-sync me-2"></i>
+                            Mises à Jour Gratuites
+                        </div>
                     </div>
-                    <div class="feature-badge">
-                        <i class="fas fa-download me-2"></i>
-                        Accès Immédiat
-                    </div>
-                    <div class="feature-badge">
-                        <i class="fas fa-sync me-2"></i>
-                        Mises à Jour Gratuites
-                    </div>
+                    <a href="#extrait" class="btn btn-lg px-5 py-3 me-3 mb-3" 
+                       style="background: #BDA056; color: white; border: none;">
+                        Recevoir un extrait gratuit
+                    </a>
                 </div>
             </div>
             <div class="col-lg-5" data-aos="fade-left">
                 <div class="position-relative">
                     <img src="{{ url_for('static', filename='images/ebook-premium.png') }}" 
                          alt="Guide Expert IA pour Entreprise" 
-                         class="img-fluid rounded-4 ebook-cover"
-                         style="max-width: 90%;
-                                filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
-                                transform: perspective(1000px) rotateY(-10deg);
+                         class="img-fluid"
+                         style="max-width: 100%;
+                                filter: drop-shadow(0 30px 60px rgba(0,0,0,0.3));
+                                transform: perspective(1000px) rotateY(-15deg);
                                 transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
-                         onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.02)';
-                                    this.style.filter='drop-shadow(0 30px 40px rgba(0,0,0,0.2))'"
-                         onmouseout="this.style.transform='perspective(1000px) rotateY(-10deg)';
-                                   this.style.filter='drop-shadow(0 20px 30px rgba(0,0,0,0.15))'"
+                         onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)';
+                                    this.style.filter='drop-shadow(0 40px 80px rgba(0,0,0,0.4))'"
+                         onmouseout="this.style.transform='perspective(1000px) rotateY(-15deg)';
+                                   this.style.filter='drop-shadow(0 30px 60px rgba(0,0,0,0.3))'"
                          loading="lazy">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-10 rounded-4"></div>
                 </div>
             </div>
         </div>
@@ -210,4 +224,244 @@
         </div>
     </div>
 </section>
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-4">Pourquoi ce guide est indispensable ?</h2>
+                <p class="lead">Un guide complet qui vous accompagne de la théorie à la pratique, en passant par la stratégie et l'implémentation.</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4" data-aos="fade-up">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box rounded-3 p-3 me-3" style="background: rgba(21, 55, 57, 0.1);">
+                                <i class="fas fa-brain text-primary fs-4"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Maîtrisez l'IA</h3>
+                        </div>
+                        <p class="text-muted mb-0">Découvrez comment l'IA peut transformer vos processus et automatiser vos tâches répétitives.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box rounded-3 p-3 me-3" style="background: rgba(21, 55, 57, 0.1);">
+                                <i class="fas fa-tools text-primary fs-4"></i>
+                            </div>
+                            <h3 class="h4 mb-0">Outils concrets</h3>
+                        </div>
+                        <p class="text-muted mb-0">Accédez à des templates, feuilles de route et exemples concrets prêts à l'emploi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box rounded-3 p-3 me-3" style="background: rgba(21, 55, 57, 0.1);">
+                                <i class="fas fa-chart-line text-primary fs-4"></i>
+                            </div>
+                            <h3 class="h4 mb-0">ROI Optimisé</h3>
+                        </div>
+                        <p class="text-muted mb-0">Apprenez à automatiser les tâches chronophages et à optimiser vos ressources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-4">Découvrez le contenu du guide</h2>
+                <p class="lead">Un programme complet en 7 parties pour réussir votre transformation IA</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="d-flex p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="step-number me-4 fs-4 fw-bold" style="color: #153739;">1</div>
+                    <div>
+                        <h4 class="h5 mb-3">Les fondamentaux de l'IA</h4>
+                        <p class="text-muted mb-0 small">Maîtrisez les concepts essentiels, comprendre les différents types d'IA et leurs applications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="d-flex p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="step-number me-4 fs-4 fw-bold" style="color: #153739;">2</div>
+                    <div>
+                        <h4 class="h5 mb-3">Mise en place de l'IA</h4>
+                        <p class="text-muted mb-0 small">Stratégies de déploiement, feuille de route détaillée et étapes de validation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="d-flex p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="step-number me-4 fs-4 fw-bold" style="color: #153739;">3</div>
+                    <div>
+                        <h4 class="h5 mb-3">Solutions techniques</h4>
+                        <p class="text-muted mb-0 small">Panorama des outils disponibles : chatbots, agents IA, automatisation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="d-flex p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="step-number me-4 fs-4 fw-bold" style="color: #153739;">4</div>
+                    <div>
+                        <h4 class="h5 mb-3">Gestion et formation</h4>
+                        <p class="text-muted mb-0 small">Préparer vos équipes et gérer le changement organisationnel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="d-flex p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="step-number me-4 fs-4 fw-bold" style="color: #153739;">5</div>
+                    <div>
+                        <h4 class="h5 mb-3">Impact sur l'entreprise</h4>
+                        <p class="text-muted mb-0 small">Mesure du ROI, analyse des performances et optimisation continue.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="d-flex p-4 bg-white rounded-4 shadow-sm h-100">
+                    <div class="step-number me-4 fs-4 fw-bold" style="color: #153739;">6</div>
+                    <div>
+                        <h4 class="h5 mb-3">Étapes d'intégration</h4>
+                        <p class="text-muted mb-0 small">Guide pratique pour une implémentation réussie étape par étape.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="extrait" class="section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h2 class="display-5 fw-bold mb-4">Un aperçu gratuit, ça vous tente ?</h2>
+                <p class="lead mb-4">Recevez les premières pages du guide et découvrez les bases de l'IA.</p>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <form class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Prénom</label>
+                                <input type="text" class="form-control form-control-lg" id="name" placeholder="Votre prénom">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email professionnel *</label>
+                                <input type="email" class="form-control form-control-lg" id="email" placeholder="vous@entreprise.com" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100" style="background: #BDA056; border: none;">
+                                Recevoir l'extrait gratuit
+                            </button>
+                            <div class="text-center mt-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-shield-alt me-1"></i>
+                                    Pas de spam, juste du contenu de qualité
+                                </small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="p-5 text-center">
+                    <img src="{{ url_for('static', filename='images/ebook-premium.png') }}"
+                         alt="Aperçu du guide"
+                         class="img-fluid"
+                         style="max-width: 80%; transform: rotate(5deg); filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-4">Foire aux questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Que contient l'extrait du guide ?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-start">
+                                L'extrait gratuit comprend l'introduction complète et le premier chapitre sur les fondamentaux de l'IA. Vous pourrez ainsi évaluer la pertinence du contenu pour vos besoins.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Ce guide est-il adapté aux débutants ?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-start">
+                                Absolument ! Le guide est conçu pour être accessible aux débutants tout en offrant des insights précieux aux utilisateurs plus avancés.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Est-ce une version PDF ou un livre physique ?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-start">
+                                C'est une version PDF interactive avec des liens cliquables et des ressources téléchargeables. Vous pouvez le lire sur tous vos appareils.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Puis-je obtenir un remboursement ?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-start">
+                                Oui, nous offrons une garantie satisfait ou remboursé de 30 jours. Si le guide ne répond pas à vos attentes, nous vous remboursons intégralement.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Compte à rebours
+    function updateCountdown() {
+        const endDate = new Date('2024-01-01T00:00:00');
+        const now = new Date();
+        const diff = endDate - now;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById('countdown').innerHTML = 
+            `${days}j ${hours}h ${minutes}m`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+</script>
 {% endblock %}
