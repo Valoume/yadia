@@ -97,27 +97,51 @@
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const container = document.getElementById('logoContainer');
-                    const numLogos = 15;
+                    const numLogos = 20;
                     const logoPath = "{{ url_for('static', filename='images/logo.png') }}";
+                    
+                    // Create a grid for more organized placement
+                    const gridSize = Math.ceil(Math.sqrt(numLogos));
+                    const cellWidth = 100 / gridSize;
+                    const cellHeight = 100 / gridSize;
                     
                     for (let i = 0; i < numLogos; i++) {
                         const logo = document.createElement('img');
                         logo.src = logoPath;
                         logo.className = 'floating-logo';
                         
-                        // Random starting positions
-                        const startX = Math.random() * 100;
-                        const startY = Math.random() * 100;
+                        // Calculate grid position
+                        const gridX = (i % gridSize) * cellWidth;
+                        const gridY = Math.floor(i / gridSize) * cellHeight;
                         
-                        // Random translations
-                        const translateX = (Math.random() - 0.5) * 200;
-                        const translateY = (Math.random() - 0.5) * 200;
+                        // Add some randomness within the grid cell
+                        const randomOffsetX = (Math.random() - 0.5) * cellWidth * 0.5;
+                        const randomOffsetY = (Math.random() - 0.5) * cellHeight * 0.5;
                         
+                        const startX = gridX + cellWidth/2 + randomOffsetX;
+                        const startY = gridY + cellHeight/2 + randomOffsetY;
+                        
+                        // Dynamic movement range based on position
+                        const moveRange = 50 + Math.random() * 50;
+                        const angle = Math.random() * Math.PI * 2;
+                        const translateX = Math.cos(angle) * moveRange;
+                        const translateY = Math.sin(angle) * moveRange;
+                        
+                        // Random animation properties
+                        const duration = 15 + Math.random() * 10;
+                        const delay = Math.random() * duration;
+                        const rotation = 180 + Math.random() * 360;
+                        const opacity = 0.3 + Math.random() * 0.3;
+                        
+                        // Apply styles
                         logo.style.left = `${startX}%`;
                         logo.style.top = `${startY}%`;
                         logo.style.setProperty('--tx', `${translateX}%`);
                         logo.style.setProperty('--ty', `${translateY}%`);
-                        logo.style.animationDelay = `${Math.random() * 10}s`;
+                        logo.style.setProperty('--rotation', `${rotation}deg`);
+                        logo.style.setProperty('--duration', `${duration}s`);
+                        logo.style.setProperty('--delay', `${delay}s`);
+                        logo.style.setProperty('--opacity', opacity);
                         
                         container.appendChild(logo);
                     }
