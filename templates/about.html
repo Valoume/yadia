@@ -91,12 +91,38 @@
                     <p>Nous développons des solutions éthiques et durables, alignées avec vos valeurs.</p>
                 </div>
             </div>
-            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" 
-                     alt="Collaboration et innovation" 
-                     class="img-fluid rounded-4 shadow-lg"
-                     loading="lazy">
+            <div class="col-lg-6 order-lg-1 position-relative" data-aos="fade-right" style="min-height: 400px;">
+                <div class="logo-animation-bg" id="logoContainer"></div>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const container = document.getElementById('logoContainer');
+                    const numLogos = 15;
+                    const logoPath = "{{ url_for('static', filename='images/logo.png') }}";
+                    
+                    for (let i = 0; i < numLogos; i++) {
+                        const logo = document.createElement('img');
+                        logo.src = logoPath;
+                        logo.className = 'floating-logo';
+                        
+                        // Random starting positions
+                        const startX = Math.random() * 100;
+                        const startY = Math.random() * 100;
+                        
+                        // Random translations
+                        const translateX = (Math.random() - 0.5) * 200;
+                        const translateY = (Math.random() - 0.5) * 200;
+                        
+                        logo.style.left = `${startX}%`;
+                        logo.style.top = `${startY}%`;
+                        logo.style.setProperty('--tx', `${translateX}%`);
+                        logo.style.setProperty('--ty', `${translateY}%`);
+                        logo.style.animationDelay = `${Math.random() * 10}s`;
+                        
+                        container.appendChild(logo);
+                    }
+                });
+            </script>
         </div>
     </div>
 </section>
