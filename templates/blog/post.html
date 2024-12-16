@@ -37,7 +37,37 @@
                     {% endif %}
                     
                     <div class="blog-content" data-aos="fade-up">
-                        {{ post.content | safe }}
+                        {% if post.content %}
+                            {% set paragraphs = post.content.split('\n\n') %}
+                            {% for paragraph in paragraphs %}
+                                {% if paragraph.startswith('•') %}
+                                    <div class="key-point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <div>{{ paragraph[2:] }}</div>
+                                    </div>
+                                {% elif 'Impact' in paragraph or 'Bénéfices' in paragraph %}
+                                    <div class="benefit-card">
+                                        <h4><i class="fas fa-chart-line me-2"></i>{{ paragraph }}</h4>
+                                        <div class="progress-bar">
+                                            <div class="fill" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                {% elif paragraph.startswith('#') %}
+                                    {% if paragraph.startswith('##') %}
+                                        <h3>{{ paragraph[2:] }}</h3>
+                                    {% else %}
+                                        <h2>{{ paragraph[1:] }}</h2>
+                                    {% endif %}
+                                {% elif '-' in paragraph and '%' in paragraph %}
+                                    <div class="stats-card">
+                                        <span class="stats-number">{{ paragraph.split(':')[0] }}</span>
+                                        <span class="stats-label">{{ paragraph.split(':')[1] if ':' in paragraph else paragraph }}</span>
+                                    </div>
+                                {% else %}
+                                    <p>{{ paragraph }}</p>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -101,11 +131,96 @@
         line-height: 1.8;
     }
     .blog-content h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #153739;
+        font-weight: 600;
+    }
+    .blog-content h3 {
         margin-top: 2rem;
         margin-bottom: 1rem;
+        color: #1a4446;
     }
     .blog-content p {
         margin-bottom: 1.5rem;
+        color: #2c3e50;
+    }
+    .blog-content ul {
+        margin-bottom: 1.5rem;
+        padding-left: 1.2rem;
+    }
+    .blog-content li {
+        margin-bottom: 0.75rem;
+        position: relative;
+        list-style: none;
+    }
+    .blog-content li:before {
+        content: "•";
+        color: #153739;
+        font-weight: bold;
+        position: absolute;
+        left: -1.2rem;
+    }
+    .stats-card {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .stats-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #153739;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    .stats-label {
+        color: #666;
+        font-size: 0.9rem;
+    }
+    .highlight-section {
+        background: linear-gradient(135deg, rgba(21,55,57,0.05) 0%, rgba(10,26,27,0.05) 100%);
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+    }
+    .key-point {
+        display: flex;
+        align-items: start;
+        margin-bottom: 1.5rem;
+    }
+    .key-point i {
+        color: #153739;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        margin-top: 0.2rem;
+    }
+    .benefit-card {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        border-left: 4px solid #153739;
+    }
+    .benefit-card h4 {
+        color: #153739;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    .progress-bar {
+        height: 8px;
+        background: #e9ecef;
+        border-radius: 4px;
+        margin: 1rem 0;
+        overflow: hidden;
+    }
+    .progress-bar .fill {
+        height: 100%;
+        background: linear-gradient(90deg, #153739 0%, #1a4446 100%);
+        border-radius: 4px;
+        transition: width 0.5s ease;
     }
 </style>
 {% endblock %}
