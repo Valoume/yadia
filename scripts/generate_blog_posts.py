@@ -50,10 +50,31 @@ def generate_seo_blog_posts():
                         unique_slug = f"{base_slug}-{counter}"
                         counter += 1
 
+                    # Format content with proper markers
+                    content_lines = post_data["content"].split('\n')
+                    formatted_content = []
+                    
+                    for line in content_lines:
+                        line = line.strip()
+                        if line:
+                            if line.startswith('1.') or line.startswith('2.') or line.startswith('3.'):
+                                # Convert numbered sections to markdown headers
+                                formatted_content.append(f"\n# {line.split('.', 1)[1].strip()}\n")
+                            elif line.startswith('•'):
+                                # Keep bullet points
+                                formatted_content.append(line)
+                            elif any(metric in line for metric in ['-80%', '-95%', '+30%', '-25%', '+35%']):
+                                # Format metrics
+                                formatted_content.append(f"\n{line}\n")
+                            else:
+                                formatted_content.append(line)
+                    
+                    formatted_content = '\n'.join(formatted_content)
+                    
                     new_post = BlogPost(
                         title=post_data["title"],
                         slug=unique_slug,
-                        content=post_data["content"],
+                        content=formatted_content,
                         sector=post_data["sector"],
                         meta_description=post_data["meta_description"],
                         keywords=post_data["keywords"],

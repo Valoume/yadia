@@ -77,5 +77,10 @@ def generate_audit():
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()
+        try:
+            db.create_all()
+            app.logger.info("Database tables created successfully")
+        except Exception as e:
+            app.logger.error(f"Error creating database tables: {str(e)}")
+    
     app.run(host='0.0.0.0', port=5000, debug=True)
