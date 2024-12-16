@@ -28,7 +28,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" style="height: 76px;">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('index') }}">Yadia</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="YADIA Logo" style="height: 40px; width: auto;">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
