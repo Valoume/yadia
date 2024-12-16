@@ -6,26 +6,24 @@
 <section class="hero d-flex align-items-center justify-content-center" 
          style="min-height: 100vh; background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%); position: relative; overflow: hidden;">
     
-    <!-- Video Background -->
-    <video class="video-bg" autoplay muted loop playsinline>
-        <source src="{{ url_for('static', filename='videos/11904073_3840_2160_30fps.mp4') }}" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture de vidéos.
-    </video>
-    <div class="video-overlay"></div>
+    <!-- Logo Animation Background -->
+    <div class="logo-animation-bg" id="logoContainer"></div>
     
     <div class="container position-relative" style="z-index: 2;">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center" data-aos="fade-up">
-                <span class="badge bg-primary-subtle text-primary mb-4 d-inline-block px-3 py-2">Solutions IA</span>
-                <h1 class="display-3 fw-bold text-white mb-4">
-                    Des solutions IA rapides, efficaces et sur mesure
-                </h1>
-                <p class="lead text-white-75 mb-5">
-                    Intégrez l'IA dans votre entreprise sans perte de temps, sans coûts superflus et avec un accompagnement de A à Z.
-                </p>
-                <a href="#audit" class="btn btn-primary btn-lg px-5 py-3">
-                    Obtenez votre audit gratuit
-                </a>
+                <div class="p-5" style="background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px); border-radius: 20px;">
+                    <span class="badge bg-primary-subtle text-primary mb-4 d-inline-block px-3 py-2">Solutions IA</span>
+                    <h1 class="display-3 fw-bold text-white mb-4">
+                        Des solutions IA rapides, efficaces et sur mesure
+                    </h1>
+                    <p class="lead text-white opacity-75 mb-5">
+                        Intégrez l'IA dans votre entreprise sans perte de temps, sans coûts superflus et avec un accompagnement de A à Z.
+                    </p>
+                    <a href="#audit" class="btn btn-primary btn-lg px-5 py-3">
+                        Obtenez votre audit gratuit
+                    </a>
+                </div>
             </div>
         </div>
     </div>
