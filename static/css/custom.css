@@ -222,15 +222,15 @@ blockquote footer {
     height: 100%;
     overflow: hidden;
     z-index: 0;
-    background: #ffffff;
+    background: rgba(21, 55, 57, 0.1);
     border-radius: 20px;
 }
 
 .floating-logo {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    opacity: 0.15;
+    width: 200px;
+    height: 200px;
+    opacity: 0.25;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
     will-change: transform;
     animation: float var(--duration, 20s) infinite ease-in-out;
