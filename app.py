@@ -1,32 +1,30 @@
+import os
+import logging
+from datetime import timedelta
 from flask import Flask, render_template, request, jsonify, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
-from sqlalchemy.orm import declarative_base
-import logging
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your-secret-key-here'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+from sqlalchemy.orm import DeclarativeBase
 
 # Configure logging
-logging.basicConfig(level=logging.INFO)
-app.logger.setLevel(logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
-# Initialize database
-db = SQLAlchemy(app)
-Base = declarative_base()
+class Base(DeclarativeBase):
+    pass
 
-# Configure server-side session
-app.config['SESSION_TYPE'] = 'filesystem'
-Session(app)
-import os
-import logging
-from flask import Flask, session
-from flask_sqlalchemy import SQLAlchemy
-from flask_session import Session
-from sqlalchemy.orm import DeclarativeBase
-from datetime import timedelta
+db = SQLAlchemy(model_class=Base)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
+
+# Configuration
+app.secret_key = os.environ.get("FLASK_SECRET_KEY") or "yadia_secret_key_2024"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL") or "sqlite:///yadia.db"
+app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+    "pool_recycle": 300,
+    "pool_pre_ping": True,
+}
+app.config["SESSION_TYPE"] = "filesystem"
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
+app.config["SESSION_FILE_DIR"] = "./.flask_session/"
 
 logging.basicConfig(level=logging.DEBUG)
 
