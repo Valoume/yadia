@@ -222,16 +222,16 @@ blockquote footer {
     height: 100%;
     overflow: hidden;
     z-index: 0;
-    background: linear-gradient(135deg, rgba(21, 55, 57, 0.1) 0%, rgba(21, 55, 57, 0.2) 100%);
+    background: #ffffff;
     border-radius: 20px;
 }
 
 .floating-logo {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    opacity: 0.4;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+    width: 120px;
+    height: 120px;
+    opacity: 0.15;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
     will-change: transform;
     animation: float var(--duration, 20s) infinite ease-in-out;
     animation-delay: var(--delay, 0s);
