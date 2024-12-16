@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <style>
     .hero {
         background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);
@@ -98,8 +100,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-4 fw-bold mb-4 text-white">Découvrez les possibilités offertes par l'IA pour votre entreprise</h1>
-                <p class="lead mb-4 text-white-75">Chez YADIA, notre mission est claire : démocratiser l'IA. Nous vous offrons un audit gratuit et automatisé, car nous croyons que chaque entreprise mérite de comprendre comment l'IA peut révolutionner ses process.</p>
+                <h1 class="display-4 fw-bold mb-4" style="color: #ffffff;">Découvrez les possibilités offertes par l'IA pour votre entreprise</h1>
+                <p class="lead mb-4" style="color: rgba(255, 255, 255, 0.85);">Chez YADIA, notre mission est claire : démocratiser l'IA. Nous vous offrons un audit gratuit et automatisé, car nous croyons que chaque entreprise mérite de comprendre comment l'IA peut révolutionner ses process.</p>
             </div>
         </div>
     </div>
@@ -550,6 +552,18 @@ document.addEventListener('DOMContentLoaded', function() {
             loader.style.display = 'none';
             resultatsSection.style.display = 'block';
             submitBtn.disabled = false;
+
+            // Ajouter le CTA Calendly
+            const ctaSection = document.createElement('div');
+            ctaSection.className = 'text-center mt-5 mb-4';
+            ctaSection.innerHTML = `
+                <h3 class="h4 mb-4">Passez à l'action</h3>
+                <p class="mb-4">Validez votre audit automatique et découvrez concrètement ce qu'il est possible de faire pour votre entreprise lors d'un appel de 30 minutes.</p>
+                <button class="btn btn-primary btn-lg px-5" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/valentin-chevaux/30min'});">
+                    Réserver mon appel découverte
+                </button>
+            `;
+            resultatsSection.appendChild(ctaSection);
             
             // Scroll vers les résultats
             resultatsSection.scrollIntoView({ behavior: 'smooth' });
