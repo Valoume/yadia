@@ -187,22 +187,25 @@ p.lead {
 }
 
 blockquote {
-    background: rgba(21, 55, 57, 0.9);
     max-width: 500px;
     margin: 0 auto;
-    padding: 1rem;
-    border-radius: 4px;
-    font-size: 1.1rem;
+    text-align: center;
+    color: white;
 }
 
 blockquote p {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
 }
 
 blockquote footer {
-    font-size: 0.9rem;
-    opacity: 0.8;
+    display: inline-block;
+    background: rgba(21, 55, 57, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .content-wrapper {
