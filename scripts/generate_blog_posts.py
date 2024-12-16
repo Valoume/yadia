@@ -8,6 +8,18 @@ import slugify
 
 def generate_seo_blog_posts():
     print("Starting blog post generation...")
+    # Remove existing posts for Finance and Logistique sectors
+    with app.app_context():
+        try:
+            existing_posts = BlogPost.query.filter(BlogPost.sector.in_(['Finance', 'Logistique'])).all()
+            for post in existing_posts:
+                db.session.delete(post)
+            db.session.commit()
+            print(f"Cleaned up {len(existing_posts)} existing posts")
+        except Exception as e:
+            print(f"Error cleaning up posts: {str(e)}")
+            db.session.rollback()
+    
     posts = [
         {
             "sector": "RH",
