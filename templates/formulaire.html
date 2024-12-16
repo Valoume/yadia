@@ -45,6 +45,15 @@
         border-radius: 0.25rem;
         margin-bottom: 1rem;
     }
+    .text-muted-light {
+        color: #9aa0a6;
+        font-size: 0.85rem;
+    }
+    .form-control::placeholder {
+        color: #9aa0a6;
+        opacity: 0.8;
+        font-size: 0.9rem;
+    }
 </style>
 {% endblock %}
 
@@ -64,8 +73,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-4 fw-bold mb-4">Découvrez les possibilités offertes par l'IA pour votre entreprise</h1>
-                <p class="lead mb-4">Chez YADIA, notre mission est claire : démocratiser l'IA. Nous vous offrons un audit gratuit et automatisé, car nous croyons que chaque entreprise mérite de comprendre comment l'IA peut révolutionner ses process.</p>
+                <h1 class="display-4 fw-bold mb-4 text-white">Découvrez les possibilités offertes par l'IA pour votre entreprise</h1>
+                <p class="lead mb-4 text-white-75">Chez YADIA, notre mission est claire : démocratiser l'IA. Nous vous offrons un audit gratuit et automatisé, car nous croyons que chaque entreprise mérite de comprendre comment l'IA peut révolutionner ses process.</p>
             </div>
         </div>
     </div>
@@ -149,32 +158,18 @@
                                 <h3 class="h4 mb-3">Votre expérience avec l'IA</h3>
                                 <div class="mb-3">
                                     <label for="experience" class="form-label">Avez-vous déjà utilisé l'IA ? Si oui, dans quel contexte ?</label>
-                                    <textarea class="form-control" id="experience" rows="3" placeholder="Exemples:
-- Utilisation de ChatGPT pour la rédaction de contenus marketing
-- Automatisation de la gestion des emails avec des outils IA
-- Tests d'applications de reconnaissance vocale pour le service client
-- Aucune expérience mais intéressé par les possibilités"></textarea>
-                                    <small class="text-muted">Même si vous n'avez pas d'expérience, décrivez votre intérêt pour l'IA.</small>
+                                    <textarea class="form-control" id="experience" rows="3" placeholder="Ex: Utilisation de ChatGPT, automatisation emails, ou aucune expérience"></textarea>
+                                    <small class="text-muted-light">Même si vous n'avez pas d'expérience, décrivez votre intérêt.</small>
                                 </div>
                                 <div class="mb-3">
                                     <label for="defis" class="form-label">Quels sont vos défis et problématiques ?</label>
-                                    <textarea class="form-control" id="defis" rows="3" placeholder="Exemples de défis courants:
-- Temps excessif passé sur le tri et la réponse aux emails
-- Difficulté à analyser efficacement les données clients
-- Besoin d'automatiser la génération de rapports mensuels
-- Gestion complexe des documents et contrats
-- Manque de personnalisation dans la relation client"></textarea>
-                                    <small class="text-muted">Plus vos défis seront précis, plus nos recommandations seront pertinentes.</small>
+                                    <textarea class="form-control" id="defis" rows="3" placeholder="Ex: Tri des emails chronophage, analyse des données clients, automatisation des rapports"></textarea>
+                                    <small class="text-muted-light">Plus vos défis seront précis, plus nos recommandations seront pertinentes.</small>
                                 </div>
                                 <div class="mb-3">
                                     <label for="objectifs" class="form-label">Quels sont vos objectifs ?</label>
-                                    <textarea class="form-control" id="objectifs" rows="3" placeholder="Exemples d'objectifs:
-- Réduire de 50% le temps de traitement des demandes clients
-- Automatiser la classification et l'archivage des documents
-- Améliorer la précision des prévisions de vente
-- Personnaliser la communication client à grande échelle
-- Optimiser la productivité des équipes"></textarea>
-                                    <small class="text-muted">Définissez des objectifs mesurables pour mieux évaluer le succès de l'intégration IA.</small>
+                                    <textarea class="form-control" id="objectifs" rows="3" placeholder="Ex: Réduire le temps de traitement, améliorer la précision, optimiser la productivité"></textarea>
+                                    <small class="text-muted-light">Définissez des objectifs mesurables pour mieux évaluer le succès.</small>
                                 </div>
                             </div>
 
