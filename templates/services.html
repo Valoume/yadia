@@ -226,5 +226,50 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('logoContainer');
+            const numLogos = 40;
+            const logoPath = "{{ url_for('static', filename='images/logo.png') }}";
+            
+            const gridSize = Math.ceil(Math.sqrt(numLogos));
+            const cellWidth = 100 / gridSize;
+            const cellHeight = 100 / gridSize;
+            
+            for (let i = 0; i < numLogos; i++) {
+                const logo = document.createElement('img');
+                logo.src = logoPath;
+                logo.className = 'floating-logo';
+                
+                const gridX = (i % gridSize) * (cellWidth * 0.8);
+                const gridY = Math.floor(i / gridSize) * (cellHeight * 0.8);
+                
+                const randomOffsetX = (Math.random() - 0.5) * cellWidth * 0.8;
+                const randomOffsetY = (Math.random() - 0.5) * cellHeight * 0.8;
+                
+                const startX = gridX + cellWidth/2 + randomOffsetX;
+                const startY = gridY + cellHeight/2 + randomOffsetY;
+                
+                const moveRange = 100 + Math.random() * 100;
+                const angle = Math.random() * Math.PI * 2;
+                const translateX = Math.cos(angle) * moveRange;
+                const translateY = Math.sin(angle) * moveRange;
+                
+                const duration = 25 + Math.random() * 15;
+                const delay = Math.random() * duration;
+                const rotation = 360 + Math.random() * 720;
+                
+                logo.style.left = `${startX}%`;
+                logo.style.top = `${startY}%`;
+                logo.style.setProperty('--tx', `${translateX}%`);
+                logo.style.setProperty('--ty', `${translateY}%`);
+                logo.style.setProperty('--rotation', `${rotation}deg`);
+                logo.style.setProperty('--duration', `${duration}s`);
+                logo.style.setProperty('--delay', `${delay}s`);
+                
+                container.appendChild(logo);
+            }
+        });
+    </script>
 </section>
 {% endblock %}
