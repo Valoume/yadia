@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Blog - Yadia AI Solutions{% endblock %}
+{% block title %}Blog IA Sectoriel{% endblock %}
 
 {% block content %}
 <section class="hero">
     <div class="container">
         <div class="row">
             <div class="col-lg-8" data-aos="fade-up">
-                <h1 class="display-4 fw-bold">Actualités & Insights IA</h1>
-                <p class="lead">Restez informé des dernières avancées en technologie IA et solutions d'entreprise</p>
+                <h1 class="display-4 fw-bold mb-4">Blog IA Sectoriel</h1>
+                <p class="lead">Découvrez nos articles sur l'IA par secteur d'activité</p>
             </div>
         </div>
     </div>
@@ -18,18 +18,29 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <div class="card shadow-sm" data-aos="fade-up">
+                <div class="card shadow-lg border-0" style="background: rgba(255, 255, 255, 0.95);" data-aos="fade-up">
                     <div class="card-body p-5">
-                        <i class="fas fa-tools display-4 text-primary mb-4"></i>
-                        <h2 class="h3 mb-4">Notre Blog est en Cours de Construction</h2>
-                        <p class="lead mb-4">Nous préparons du contenu de qualité pour vous tenir informé des dernières innovations en IA et de leur impact sur votre entreprise.</p>
-                        <hr class="my-4">
-                        <div class="mt-4">
+                        <div class="mb-5">
+                            <i class="fas fa-pencil-ruler display-1 text-primary mb-4"></i>
+                            <h2 class="display-6 fw-bold mb-4">Notre Blog est en Construction</h2>
+                            <p class="lead text-muted">Nous préparons des articles approfondis sur l'utilisation de l'IA dans différents secteurs d'activité.</p>
+                        </div>
+                        
+                        <div class="bg-light p-4 rounded-4 mb-5">
+                            <h3 class="h4 mb-3">Prochainement sur notre blog :</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Analyses sectorielles détaillées</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Cas d'usage concrets de l'IA</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Guides d'implémentation pratiques</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Retours d'expérience clients</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-primary text-white p-4 rounded-4">
                             <h3 class="h4 mb-3">En attendant, découvrez notre E-book !</h3>
                             <p class="mb-4">Guide complet sur l'implémentation de l'IA dans votre entreprise</p>
-                            <a href="{{ url_for('ebook') }}" class="btn btn-primary btn-lg">
-                                Découvrir l'E-book
-                                <i class="fas fa-arrow-right ms-2"></i>
+                            <a href="{{ url_for('ebook') }}" class="btn btn-light btn-lg">
+                                <i class="fas fa-book me-2"></i>Télécharger l'E-book
                             </a>
                         </div>
                     </div>
@@ -38,48 +49,4 @@
         </div>
     </div>
 </section>
-
-<!-- E-book Modal -->
-<div class="modal fade" id="ebookModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Purchase Our E-book ($29.99)</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <form id="ebookForm" class="needs-validation" novalidate>
-                    <div class="mb-3">
-                        <label for="ebook-name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="ebook-name" required>
-                        <div class="invalid-feedback">Please enter your name.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="ebook-email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="ebook-email" required>
-                        <div class="invalid-feedback">Please enter a valid email address.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="card-number" class="form-label">Card Number</label>
-                        <input type="text" class="form-control" id="card-number" required pattern="[0-9]{16}" placeholder="1234 5678 9012 3456">
-                        <div class="invalid-feedback">Please enter a valid card number.</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="expiry" class="form-label">Expiry Date</label>
-                            <input type="text" class="form-control" id="expiry" required pattern="[0-9]{2}/[0-9]{2}" placeholder="MM/YY">
-                            <div class="invalid-feedback">Please enter a valid expiry date.</div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="cvv" class="form-label">CVV</label>
-                            <input type="text" class="form-control" id="cvv" required pattern="[0-9]{3,4}" placeholder="123">
-                            <div class="invalid-feedback">Please enter a valid CVV.</div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-book w-100">Purchase Now ($29.99)</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}
