@@ -1,0 +1,86 @@
+Pour centrer un titre en CSS, voici les instructions précises et claires que tu peux donner à l’IA sur Replit :
+
+Étape 1 : Centrer le texte avec text-align: center
+
+La méthode la plus simple consiste à utiliser la propriété text-align: center dans CSS :
+
+h1 {
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+Étape 2 : Vérifier l’élément parent
+
+Si le titre n’est toujours pas centré, vérifie les styles de l’élément parent (ex : div, section) :
+	1.	Assure-toi que l’élément parent occupe bien toute la largeur :
+
+.parent {
+    width: 100%;
+    display: block; /* Ou flex si nécessaire */
+}
+
+	2.	Applique également text-align: center au parent si le titre est en position relative à lui :
+
+.parent {
+    text-align: center;
+}
+
+Puis dans le HTML :
+
+<div class="parent">
+    <h1>Mon Titre Centré</h1>
+</div>
+
+Étape 3 : Centrer avec Flexbox (méthode moderne)
+
+Si tu utilises Flexbox pour aligner les éléments, assure-toi d’appliquer les bonnes propriétés CSS :
+
+.parent {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement si nécessaire */
+}
+
+HTML correspondant :
+
+<div class="parent">
+    <h1>Mon Titre Centré</h1>
+</div>
+
+Étape 4 : Vérifier les marges par défaut
+
+Les navigateurs ajoutent des marges par défaut aux titres (h1, h2, etc.). Il faut parfois les réinitialiser :
+
+h1 {
+    margin: 0 auto; /* Supprime les marges et centre horizontalement */
+}
+
+Étape 5 : Utiliser text-align pour inline-block ou inline
+
+Si ton titre est en inline ou inline-block, assure-toi que text-align: center est défini sur son parent.
+
+Récapitulatif à donner à l’IA
+	1.	Utilise text-align: center sur le titre ou son parent.
+	2.	Vérifie que l’élément parent occupe toute la largeur (ex : width: 100%).
+	3.	Si Flexbox est utilisé, ajoute justify-content: center sur le parent.
+	4.	Réinitialise les marges par défaut des titres si nécessaire.
+	5.	Teste et utilise Inspecteur d’Éléments pour t’assurer qu’aucune autre règle CSS ne bloque le centrage.
+
+Exemple complet pour l’IA sur Replit :
+
+<div class="title-container">
+    <h1>Mon Titre Centré</h1>
+</div>
+
+<style>
+.title-container {
+    text-align: center; /* Centre le texte dans le conteneur */
+    width: 100%; /* Assure que le parent occupe toute la largeur */
+    margin: 0;
+}
+
+h1 {
+    margin: 0 auto; /* Réinitialise les marges */
+}
+</style>
+
+Cela couvre toutes les bases pour centrer un titre avec succès. 🚀
