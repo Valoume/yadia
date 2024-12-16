@@ -4,51 +4,138 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero position-relative overflow-hidden">
     <div class="container">
-        <div class="row">
-            <div class="col-12 text-start" data-aos="fade-up">
-                <h1 class="display-4 fw-bold mb-4">L'IA ne doit plus être un luxe réservé aux grandes entreprises</h1>
-                <p class="lead mb-4">Dans un monde où l'IA est souvent inaccessible en raison de coûts prohibitifs, notre mission est de la démocratiser. Les entreprises qui tardent à adopter l'IA risquent de perdre définitivement leur place sur le marché.</p>
-                <p class="text-light mb-4">Yadia rend l'IA accessible et abordable pour toutes les entreprises. Notre expertise vous accompagne dans cette transformation vitale pour votre survie et votre croissance.</p>
-                <!-- Boutons temporairement retirés -->
-                <div class="mt-4">
-                    <p class="text-muted">Nos services seront bientôt disponibles</p>
+        <div class="row align-items-center min-vh-75">
+            <div class="col-lg-6 text-start" data-aos="fade-up">
+                <span class="badge bg-primary-subtle text-primary mb-3">Solutions IA Innovantes</span>
+                <h1 class="display-3 fw-bold mb-4">Transformez votre entreprise avec l'IA accessible</h1>
+                <p class="lead mb-4 text-light">Accélérez votre croissance avec des solutions d'IA personnalisées et abordables. Notre expertise transforme vos défis en opportunités.</p>
+                <div class="hero-stats d-flex gap-5 mb-4">
+                    <div>
+                        <h3 class="text-primary mb-0">94%</h3>
+                        <p class="text-light-emphasis mb-0">Satisfaction client</p>
+                    </div>
+                    <div>
+                        <h3 class="text-primary mb-0">+40%</h3>
+                        <p class="text-light-emphasis mb-0">Gain en productivité</p>
+                    </div>
+                    <div>
+                        <h3 class="text-primary mb-0">200+</h3>
+                        <p class="text-light-emphasis mb-0">Projets réussis</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="position-relative">
+                    <div class="hero-image-wrapper">
+                        <img src="{{ url_for('static', filename='img/hero-illustration.svg') }}" 
+                             alt="IA Innovation" 
+                             class="img-fluid"
+                             loading="lazy">
+                    </div>
+                    <div class="floating-card shadow-lg bg-white p-4 rounded-4 position-absolute" style="bottom: 20%; right: -10%;">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="rounded-circle bg-primary p-3">
+                                <i class="fas fa-robot text-white"></i>
+                            </div>
+                            <div>
+                                <p class="fw-bold mb-0">Intelligence Artificielle</p>
+                                <p class="text-muted small mb-0">Solutions sur mesure</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="hero-shape position-absolute bottom-0 start-0 w-100">
+        <svg viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="var(--bs-light)" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,112C672,117,768,107,864,101.3C960,96,1056,96,1152,96C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
     </div>
 </section>
 
 <!-- Services Overview -->
 <section class="section section-light">
     <div class="container">
-        <h2 class="text-center mb-5" data-aos="fade-up">Nos Services</h2>
+        <div class="row mb-5">
+            <div class="col-lg-6 mx-auto text-center">
+                <span class="badge bg-primary-subtle text-primary mb-3">Nos Services</span>
+                <h2 class="display-5 fw-bold mb-3">Solutions IA sur mesure pour votre croissance</h2>
+                <p class="lead text-muted">Des solutions innovantes qui s'adaptent à vos besoins spécifiques</p>
+            </div>
+        </div>
         <div class="row g-4">
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3 class="card-title">Automatisation des Processus IA</h3>
-                        <p class="card-text">Réduisez vos coûts opérationnels jusqu'à 40% grâce à nos solutions d'automatisation intelligente. Transformez vos processus manuels en workflows efficaces et sans erreur.</p>
-                        <p class="text-muted"><small>*Basé sur les résultats moyens des clients sur 12 mois</small></p>
+                <div class="service-card card border-0 bg-white shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="card-body p-4">
+                        <div class="service-icon mb-4">
+                            <div class="rounded-circle bg-primary-subtle p-3 d-inline-block">
+                                <i class="fas fa-robot text-primary fa-2x"></i>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3">Automatisation IA</h3>
+                        <p class="mb-4">Réduisez vos coûts opérationnels jusqu'à 40% avec nos solutions d'automatisation intelligente.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Workflows automatisés</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Réduction des erreurs</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Gain de productivité</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center">
+                                <div class="h4 mb-0 text-primary">+40%</div>
+                                <span class="ms-2 text-muted">d'efficacité</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3 class="card-title">Analyse Prédictive</h3>
-                        <p class="card-text">Augmentez vos revenus de 20% grâce aux insights pilotés par l'IA. Nos clients prennent des décisions 3x plus rapidement avec 85% plus de précision.</p>
-                        <p class="text-muted"><small>*Basé sur les données de performance clients 2023</small></p>
+                <div class="service-card card border-0 bg-white shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="card-body p-4">
+                        <div class="service-icon mb-4">
+                            <div class="rounded-circle bg-primary-subtle p-3 d-inline-block">
+                                <i class="fas fa-chart-line text-primary fa-2x"></i>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3">Analyse Prédictive</h3>
+                        <p class="mb-4">Prenez des décisions éclairées grâce à nos modèles prédictifs de pointe.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Prévisions précises</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Insights en temps réel</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Optimisation continue</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center">
+                                <div class="h4 mb-0 text-primary">85%</div>
+                                <span class="ms-2 text-muted">de précision</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3 class="card-title">Conseil Stratégique en IA</h3>
-                        <p class="card-text">Rejoignez plus de 200 entreprises qui ont implémenté l'IA avec succès grâce à nos conseils. Obtenez des plans d'action personnalisés soutenus par notre expertise.</p>
-                        <p class="text-muted"><small>*Fait confiance par des entreprises du Fortune 500</small></p>
+                <div class="service-card card border-0 bg-white shadow-sm h-100 position-relative overflow-hidden">
+                    <div class="card-body p-4">
+                        <div class="service-icon mb-4">
+                            <div class="rounded-circle bg-primary-subtle p-3 d-inline-block">
+                                <i class="fas fa-brain text-primary fa-2x"></i>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3">Conseil IA Stratégique</h3>
+                        <p class="mb-4">Bénéficiez de notre expertise pour une transformation digitale réussie.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Stratégie personnalisée</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Accompagnement expert</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>ROI mesurable</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center">
+                                <div class="h4 mb-0 text-primary">200+</div>
+                                <span class="ms-2 text-muted">projets réussis</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
