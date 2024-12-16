@@ -1,59 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}Yadia - AI Solutions for Business{% endblock %}
+{% block title %}Yadia - Solutions IA Innovantes{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero position-relative overflow-hidden">
+<section class="hero position-relative overflow-hidden" style="background-color: #153739;">
     <div class="container">
-        <div class="row align-items-center min-vh-75">
-            <div class="col-lg-6 text-start" data-aos="fade-up">
-                <span class="badge bg-primary-subtle text-primary mb-3">Solutions IA Innovantes</span>
-                <h1 class="display-3 fw-bold mb-4">Transformez votre entreprise avec l'IA accessible</h1>
-                <p class="lead mb-4 text-light">Accélérez votre croissance avec des solutions d'IA personnalisées et abordables. Notre expertise transforme vos défis en opportunités.</p>
-                <div class="hero-stats d-flex gap-5 mb-4">
-                    <div>
-                        <h3 class="text-primary mb-0">94%</h3>
-                        <p class="text-light-emphasis mb-0">Satisfaction client</p>
-                    </div>
-                    <div>
-                        <h3 class="text-primary mb-0">+40%</h3>
-                        <p class="text-light-emphasis mb-0">Gain en productivité</p>
-                    </div>
-                    <div>
-                        <h3 class="text-primary mb-0">200+</h3>
-                        <p class="text-light-emphasis mb-0">Projets réussis</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="position-relative">
-                    <div class="hero-image-wrapper">
-                        <img src="{{ url_for('static', filename='img/hero-illustration.svg') }}" 
-                             alt="IA Innovation" 
-                             class="img-fluid"
-                             loading="lazy">
-                    </div>
-                    <div class="floating-card shadow-lg bg-white p-4 rounded-4 position-absolute" style="bottom: 20%; right: -10%;">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="rounded-circle bg-primary p-3">
-                                <i class="fas fa-robot text-white"></i>
-                            </div>
-                            <div>
-                                <p class="fw-bold mb-0">Intelligence Artificielle</p>
-                                <p class="text-muted small mb-0">Solutions sur mesure</p>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-8 mx-auto text-center text-white" data-aos="fade-up">
+                <h1 class="display-2 fw-bold mb-4">YADIA Solutions, bienvenue dans le futur</h1>
+                <p class="lead mb-5">Transformez votre entreprise avec nos solutions d'IA innovantes et accessibles</p>
+                <div class="d-flex justify-content-center gap-4">
+                    <a href="{{ url_for('formulaire') }}" class="btn btn-book">
+                        Obtenir Votre Audit IA Gratuit
+                    </a>
+                    <a href="{{ url_for('ebook') }}" class="btn btn-outline-light">
+                        Télécharger l'E-book (45€)
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="hero-shape position-absolute bottom-0 start-0 w-100">
-        <svg viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="var(--bs-light)" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,112C672,117,768,107,864,101.3C960,96,1056,96,1152,96C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-    </div>
+    <div class="hero-overlay"></div>
 </section>
 
 <!-- Services Overview -->

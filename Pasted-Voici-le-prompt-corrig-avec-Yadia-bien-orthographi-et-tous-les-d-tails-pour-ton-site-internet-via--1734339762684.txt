@@ -1,0 +1,87 @@
+Voici le prompt corrigé avec Yadia bien orthographié et tous les détails pour ton site internet via l’agent IA de Replit.
+
+Prompt :
+
+“Crée une nouvelle page d’accueil pour mon site internet en suivant la structure suivante pour Yadia :
+
+Section 1 : Accueil (Hero Section)
+	•	Affiche un titre centré en grand :
+“YADIA Solutions, bienvenue dans le futur”
+	•	Le fond doit être sobre : une couleur verte foncée (#153739) avec un léger dégradé ou texture subtile.
+	•	Le texte doit être blanc ou contrasté pour une lisibilité parfaite.
+
+Section 2 : Notre Mission
+	•	Ajoute deux carrés alignés horizontalement (style “cards” avec un léger effet d’ombre et un hover pour dynamisme) :
+	•	Carré 1 :
+	•	Titre : “1. Rendre l’information accessible”
+	•	Texte :
+“Nous avons mis en place un audit automatique et instantané pour que chaque entreprise sache ce qui est possible avec l’IA, à quel prix, et où se situe la frontière entre l’humain et l’IA.”
+	•	Carré 2 :
+	•	Titre : “2. Intégrer l’IA rapidement et efficacement”
+	•	Texte :
+“Nos solutions d’intégration sont en moyenne 30 à 40% moins chères que la concurrence, pour une adoption rapide et abordable de l’IA.”
+	•	Bouton : “Faire un devis” (style bouton doré, centrée en bas).
+	•	Assure-toi que les carrés sont alignés, équilibrés, et adaptatifs pour mobile.
+
+Section 3 : Comment nous procédons
+	•	Crée un schéma visuel vertical avec les 7 étapes numérotées :
+	1.	Audit en ligne gratuit instantané
+	2.	Call gratuit pour valider l’audit
+	3.	Sélection de l’accompagnement
+	4.	Proposition de la solution
+	5.	Mise en place et test
+	6.	Feedback et ajustement
+	7.	Amélioration et suivi continu
+	•	Chaque étape doit être représentée par une bulle numérotée avec une icône adaptée (exemple : loupe pour audit, téléphone pour call).
+	•	Le schéma doit être centré et fluide (scroll doux avec des animations d’apparition légère).
+
+Section 4 : Pourquoi intégrer de l’IA ?
+	•	Mets en valeur 4 chiffres clés sous forme de cartes ou blocs avec un visuel moderne :
+	•	“35% de gain de productivité”
+	•	“3 jours de travail gagnés par an”
+	•	“25% d’erreurs en moins”
+	•	“100% personnalisable”
+	•	En dessous des chiffres, ajoute un texte centré :
+“L’IA n’est plus une option. Elle est un levier essentiel pour se développer, rester compétitif et innover sur un marché en pleine évolution.”
+	•	Style : Les chiffres doivent être grands, gras et impactants pour capter l’attention.
+
+Section 5 : Pour Commencer - Promotion de l’E-book
+	•	Présente une bannière promotionnelle centrée avec :
+	•	Titre : “La meilleure façon de commencer avec l’IA”
+	•	Texte :
+“Notre e-book complet vous guide étape par étape pour comprendre et intégrer l’IA dans votre entreprise. Voici ce qu’il contient :
+	•	Templates prêts à l’emploi
+	•	Feuilles de route stratégiques
+	•	Checklists pratiques
+	•	Explications détaillées des concepts clés”*
+	•	Prix Promotionnel :
+	•	“42€ seulement (au lieu de 109€)”
+	•	Mention spéciale : ”-61% de réduction - Offre spéciale de Noël 🎄”
+	•	Bouton : “Télécharger l’E-book” (doré, en dessous du texte).
+
+Section 6 : Pourquoi choisir Yadia ?
+	•	Crée 4 petits arguments alignés horizontalement sous forme de cartes :
+	1.	“Solutions abordables”
+	2.	“Accompagnement personnalisé”
+	3.	“Adoption rapide et efficace”
+	4.	“Innovations sur mesure”
+	•	Associe chaque argument à une icône sobre et moderne (check, personne, fusée, outil).
+	•	L’ensemble doit être visuellement équilibré et adaptatif.
+
+Style Général :
+	•	Design sobre, moderne et professionnel. Utilise les couleurs de Yadia :
+	•	Vert foncé (#153739) pour le fond principal.
+	•	Doré (#BDA056) pour les boutons et accents.
+	•	Blanc pour les textes.
+	•	Animation légère au scroll et au survol des éléments interactifs (boutons, cartes).
+	•	Adapte la page pour une navigation fluide sur mobile et desktop.
+
+Optimisations Techniques :
+	•	Intégration des boutons fonctionnels :
+	•	“Faire un devis” → lien vers une page/formulaire d’audit.
+	•	“Télécharger l’e-book” → lien vers un téléchargement ou un paiement.
+	•	Performances optimisées :
+	•	Teste la page pour la vitesse de chargement et la compatibilité sur tous les navigateurs.
+	•	Assure-toi que les animations n’impactent pas les performances.
+
+“Crée ce design complet et prêt à être déployé, tout en gardant la structure adaptative (responsive). Utilise des animations légères pour dynamiser l’expérience utilisateur.”
