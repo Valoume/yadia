@@ -11,10 +11,14 @@
                 <img src="{{ url_for('static', filename='images/Logo.png') }}" 
                      alt="YADIA Logo" 
                      class="mb-4" 
-                     style="width: 120px; height: auto; background-color: transparent;
-                            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2)); transform: perspective(1000px) rotateY(-15deg); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
-                     onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)'; this.style.filter='drop-shadow(0 30px 40px rgba(0,0,0,0.3))'"
-                     onmouseout="this.style.transform='perspective(1000px) rotateY(-15deg)'; this.style.filter='drop-shadow(0 20px 30px rgba(0,0,0,0.2))'"
+                     style="width: 120px; height: auto; 
+                            background: transparent;
+                            mix-blend-mode: luminosity;
+                            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2)); 
+                            transform: perspective(1000px) rotateY(-15deg); 
+                            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
+                     onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)'; this.style.filter='drop-shadow(0 30px 40px rgba(0,0,0,0.3))'; this.style.mixBlendMode='normal'"
+                     onmouseout="this.style.transform='perspective(1000px) rotateY(-15deg)'; this.style.filter='drop-shadow(0 20px 30px rgba(0,0,0,0.2))'; this.style.mixBlendMode='luminosity'"
                      onerror="this.style.display='none';">
                 <h1 class="display-2 fw-bold mb-4">YADIA Solutions, bienvenue dans le futur</h1>
                 <p class="lead mb-5">Transformez votre entreprise avec nos solutions d'IA innovantes et accessibles</p>
