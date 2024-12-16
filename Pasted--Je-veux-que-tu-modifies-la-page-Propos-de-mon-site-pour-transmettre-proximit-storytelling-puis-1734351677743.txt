@@ -1,0 +1,67 @@
+
+“Je veux que tu modifies la page À Propos de mon site pour transmettre proximité, storytelling puissant et esthétique moderne. Voici mes instructions détaillées :
+
+1. Objectif principal :
+
+Créer une page À Propos engageante qui :
+	•	Montre notre engagement envers les entreprises dans l’adoption rapide de l’IA.
+	•	Insiste sur le besoin d’agir maintenant, car l’IA évolue à une vitesse exponentielle.
+	•	Inspire confiance et proximité grâce à un storytelling humain, authentique et accessible.
+
+2. Contenu textuel - Storytelling :
+
+Structure et écris les éléments suivants pour la page :
+
+A. Introduction accrocheuse
+Commence par une phrase qui capte immédiatement l’attention :
+
+	“L’IA change tout, et elle le fait plus vite que vous ne l’imaginez. Vous avez deux choix : avancer avec elle ou regarder vos concurrents vous dépasser.”
+
+B. Histoire et Mission
+Rédige un paragraphe qui raconte une histoire humaine sur :
+	•	Pourquoi notre entreprise a été créée : “L’IA avançait trop vite, et nous avons vu trop d’entreprises se faire dépasser. Nous ne voulions pas rester spectateurs.”
+	•	Notre mission : “Aider chaque entreprise, petite ou grande, à intégrer l’IA de manière simple, rapide et efficace.”
+
+C. Appel à l’action narratif
+Conclue en expliquant pourquoi il est urgent d’agir :
+
+	“Les entreprises qui adoptent l’IA aujourd’hui seront les leaders de demain. Celles qui hésitent seront les suiveurs. Quelle place voulez-vous occuper ?”
+
+D. Citations inspirantes
+Ajoute une citation inspirante :
+
+	“L’innovation distingue les leaders des suiveurs.” — Steve Jobs
+
+3. Design et mise en page :
+	•	Sections bien délimitées avec des espaces blancs pour une lecture aérée.
+	•	Utilise une typo moderne et élégante, par exemple, Montserrat ou Roboto.
+	•	Intègre des animations légères pour le texte, comme un effet de fade-in au défilement.
+	•	Alignement centré pour les citations et phrases clés pour les mettre en valeur.
+
+4. Images et illustrations :
+	•	Bannière d’en-tête : Une image futuriste montrant des technologies avancées avec des visuels doux (ex : bureaux modernes avec écrans holographiques).
+	•	Images d’illustration :
+	•	Des professionnels travaillant avec des robots ou des IA (représente l’avenir du travail).
+	•	Une horloge digitale qui symbolise la vitesse à laquelle l’IA avance.
+	•	Une courbe ascendante qui représente le progrès et l’innovation.
+
+Utilise des icônes minimalistes pour représenter :
+	•	Innovation (ampoule ou cerveau).
+	•	Vitesse (éclair ou fusée).
+	•	Soutien aux entreprises (poignée de main ou logo de croissance).
+
+5. Code final attendu :
+	•	La page doit être codée en HTML, CSS et JS, avec une section principale contenant :
+	1.	Un titre principal accrocheur.
+	2.	Une histoire captivante divisée en 3-4 paragraphes.
+	3.	Une section citation stylisée.
+	4.	Un appel à l’action clair avec des boutons (par ex., “Découvrir nos solutions IA”).
+
+Assure-toi que le design est responsive, agréable sur mobile et desktop.
+
+Exigences techniques :
+	•	Utilise des animations CSS pour le fade-in et hover sur les boutons.
+	•	Incorpore les couleurs #153739 (bleu-vert) et #BDA056 (or) pour maintenir la cohérence avec le reste du site.
+
+Génère tout le code complet pour cette page. Fournis-moi également les liens des images libres de droits que tu as sélectionnées pour le design.”
+
