@@ -22,9 +22,6 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     
-    <!-- Payhip Integration -->
-    <script type="text/javascript" src="https://payhip.com/embed-page.js?v=24u68984"></script>
-    
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -108,5 +105,15 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="{{ url_for('static', filename='js/parallax.js') }}"></script>
     {% block extra_js %}{% endblock %}
+    
+    <!-- Payhip Integration -->
+    <script type="text/javascript" src="https://payhip.com/embed-page.js?v=24u68984"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof Payhip !== 'undefined') {
+                Payhip.Embed.setup();
+            }
+        });
+    </script>
 </body>
 </html>
