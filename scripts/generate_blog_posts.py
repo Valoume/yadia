@@ -67,6 +67,64 @@ def generate_seo_blog_posts():
 """
         },
         {
+            "sector": "RH",
+            "title": "Prévenir le turnover avec l'IA : Analyse prédictive pour fidéliser vos équipes",
+            "meta_description": "Réduisez le turnover grâce à l'IA. Découvrez comment l'analyse prédictive peut vous aider à identifier les risques et fidéliser vos talents.",
+            "keywords": "turnover IA, rétention talents, analyse prédictive RH, fidélisation employés, satisfaction collaborateurs",
+            "featured_image": "/static/images/innovation.svg",
+            "content": """
+<h2>Le turnover : un défi majeur pour les entreprises en 2024</h2>
+<p>La rétention des talents est devenue un enjeu critique pour les entreprises. Le coût d'un départ peut représenter jusqu'à 200% du salaire annuel. L'IA offre des solutions innovantes pour anticiper et prévenir ces départs.</p>
+
+<h2>3 Applications de l'IA pour la rétention des talents</h2>
+<div class="solution-card mb-4">
+    <h3>1. Détection précoce des signaux de désengagement</h3>
+    <p>Notre IA analyse en continu les indicateurs clés pour identifier les risques :</p>
+    <ul>
+        <li>Analyse des patterns de communication</li>
+        <li>Suivi des variations de performance</li>
+        <li>Évaluation du niveau d'engagement</li>
+    </ul>
+</div>
+
+<div class="solution-card mb-4">
+    <h3>2. Analyse prédictive des facteurs de risque</h3>
+    <p>Identifiez les causes profondes du turnover :</p>
+    <ul>
+        <li>Cartographie des facteurs de stress</li>
+        <li>Analyse des parcours professionnels</li>
+        <li>Évaluation de la satisfaction au travail</li>
+    </ul>
+</div>
+
+<div class="solution-card mb-4">
+    <h3>3. Recommandations personnalisées</h3>
+    <p>Des actions concrètes pour fidéliser chaque collaborateur :</p>
+    <ul>
+        <li>Plans de développement sur mesure</li>
+        <li>Suggestions d'évolution de carrière</li>
+        <li>Ajustements des conditions de travail</li>
+    </ul>
+</div>
+
+<h2>Impact mesurable sur votre organisation</h2>
+<div class="results-section">
+    <ul>
+        <li><strong>-40%</strong> de turnover non désiré</li>
+        <li><strong>+35%</strong> de satisfaction employés</li>
+        <li><strong>-25%</strong> de coûts de recrutement</li>
+    </ul>
+</div>
+
+<h2>Agissez maintenant pour fidéliser vos talents</h2>
+<p>Ne laissez pas le turnover impacter votre performance. Découvrez comment notre solution IA peut vous aider à construire une stratégie de rétention efficace.</p>
+
+<div class="cta-section">
+    <a href="/formulaire" class="btn btn-primary">Obtenir mon audit personnalisé</a>
+</div>
+"""
+        },
+        {
             "sector": "Marketing",
             "title": "Personnalisation marketing avec l'IA : Optimisez vos campagnes pour chaque client",
             "meta_description": "Maximisez l'impact de vos campagnes marketing grâce à l'IA. Découvrez comment personnaliser chaque interaction client et augmenter vos conversions.",
@@ -121,6 +179,64 @@ def generate_seo_blog_posts():
 
 <div class="cta-section">
     <a href="/formulaire" class="btn btn-primary">Obtenir mon audit gratuit</a>
+</div>
+"""
+        },
+        {
+            "sector": "Marketing",
+            "title": "Génération de contenu automatisée : Boostez votre production avec l'IA",
+            "meta_description": "Optimisez votre production de contenu marketing grâce à l'IA. Découvrez comment automatiser et améliorer la qualité de vos contenus tout en gagnant du temps.",
+            "keywords": "génération contenu IA, marketing contenu, automation contenus, production automatisée, efficacité marketing",
+            "featured_image": "/static/images/innovation.svg",
+            "content": """
+<h2>La révolution du content marketing par l'IA</h2>
+<p>La création de contenu de qualité est chronophage et coûteuse. L'IA transforme radicalement ce processus en permettant une production massive de contenus personnalisés et optimisés.</p>
+
+<h2>3 Solutions IA pour votre stratégie de contenu</h2>
+<div class="solution-card mb-4">
+    <h3>1. Génération intelligente de contenus</h3>
+    <p>Créez rapidement des contenus pertinents avec :</p>
+    <ul>
+        <li>Rédaction automatisée d'articles</li>
+        <li>Création de newsletters personnalisées</li>
+        <li>Adaptation multilingue instantanée</li>
+    </ul>
+</div>
+
+<div class="solution-card mb-4">
+    <h3>2. Optimisation SEO en temps réel</h3>
+    <p>Maximisez votre visibilité grâce à :</p>
+    <ul>
+        <li>Analyse des tendances de recherche</li>
+        <li>Suggestions de mots-clés pertinents</li>
+        <li>Optimisation continue des contenus</li>
+    </ul>
+</div>
+
+<div class="solution-card mb-4">
+    <h3>3. Personnalisation à grande échelle</h3>
+    <p>Adaptez vos contenus à chaque audience :</p>
+    <ul>
+        <li>Segmentation automatique des lecteurs</li>
+        <li>Adaptation du ton et du style</li>
+        <li>Recommandations de contenus ciblés</li>
+    </ul>
+</div>
+
+<h2>Des résultats qui parlent d'eux-mêmes</h2>
+<div class="results-section">
+    <ul>
+        <li><strong>x5</strong> production de contenu</li>
+        <li><strong>+80%</strong> de trafic organique</li>
+        <li><strong>-60%</strong> de temps de production</li>
+    </ul>
+</div>
+
+<h2>Révolutionnez votre content marketing</h2>
+<p>Découvrez comment notre solution IA peut transformer votre stratégie de contenu et démultiplier votre impact marketing.</p>
+
+<div class="cta-section">
+    <a href="/formulaire" class="btn btn-primary">Demander une démonstration</a>
 </div>
 """
         }
