@@ -300,117 +300,423 @@ def generate_seo_blog_posts():
         },
         {
             "sector": "Finance",
-            "title": "Automatisation des factures et paiements : L'IA pour simplifier votre comptabilité",
-            "meta_description": "Optimisez votre gestion financière grâce à l'IA. Découvrez comment automatiser vos factures et paiements pour gagner en efficacité et réduire les erreurs.",
-            "keywords": "automatisation comptable, IA finance, facturation automatique, gestion paiements IA, comptabilité digitale",
+            "title": "La Révolution de la Comptabilité par l'IA : Automatisation et Précision en 2024",
+            "meta_description": "Découvrez comment l'IA transforme la comptabilité traditionnelle en processus automatisés et précis. Guide complet avec études de cas et ROI détaillé.",
+            "keywords": "automatisation comptable, IA finance, facturation automatique, comptabilité digitale, gestion financière IA",
             "featured_image": "/static/images/innovation.svg",
             "content": """
-<h2>La révolution de la comptabilité par l'IA</h2>
-<p>La gestion manuelle des factures et des paiements est chronophage et source d'erreurs. L'IA transforme ces processus en les automatisant de manière intelligente.</p>
-
-<h2>3 Solutions IA pour votre gestion financière</h2>
-<div class="solution-card mb-4">
-    <h3>1. Automatisation du traitement des factures</h3>
-    <p>Simplifiez votre comptabilité avec :</p>
-    <ul>
-        <li>Reconnaissance automatique des documents</li>
-        <li>Extraction intelligente des données</li>
-        <li>Catégorisation automatique des dépenses</li>
-    </ul>
+<div class="intro-section bg-light p-4 rounded-3 mb-5">
+    <h2>La comptabilité traditionnelle à l'ère de l'IA</h2>
+    <p class="lead mb-0">En 2024, les entreprises doivent moderniser leurs systèmes financiers pour rester compétitives. L'IA transforme la comptabilité traditionnelle, souvent manuelle et source d'erreurs, en un processus fluide, précis et automatisé.</p>
 </div>
 
-<div class="solution-card mb-4">
-    <h3>2. Gestion intelligente des paiements</h3>
-    <p>Optimisez vos flux financiers grâce à :</p>
-    <ul>
-        <li>Priorisation automatique des paiements</li>
-        <li>Détection des anomalies en temps réel</li>
-        <li>Réconciliation bancaire automatisée</li>
-    </ul>
+<div class="key-challenges mb-5">
+    <h3 class="h4 mb-4">Pourquoi moderniser votre gestion financière ?</h3>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-clock text-primary h2 mb-0 me-2"></i>
+                        <h4 class="h5 mb-0">Gain de temps</h4>
+                    </div>
+                    <p class="card-text">Réduisez drastiquement les tâches répétitives et chronophages.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-check-circle text-primary h2 mb-0 me-2"></i>
+                        <h4 class="h5 mb-0">Fiabilité accrue</h4>
+                    </div>
+                    <p class="card-text">Éliminez les erreurs humaines grâce à l'automatisation intelligente.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-chart-line text-primary h2 mb-0 me-2"></i>
+                        <h4 class="h5 mb-0">Décisions éclairées</h4>
+                    </div>
+                    <p class="card-text">Bénéficiez d'analyses financières en temps réel pour piloter votre activité.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="solution-card mb-4">
-    <h3>3. Reporting financier automatisé</h3>
-    <p>Pilotez votre activité avec précision :</p>
-    <ul>
-        <li>Génération automatique des rapports</li>
-        <li>Tableaux de bord en temps réel</li>
-        <li>Prévisions financières basées sur l'IA</li>
-    </ul>
+<div class="solutions-section mb-5">
+    <h3 class="h4 mb-4">3 Solutions IA pour révolutionner votre comptabilité</h3>
+    
+    <div class="solution-card bg-light p-4 rounded-3 mb-4">
+        <h4>1. Automatisation du traitement des factures</h4>
+        <div class="row">
+            <div class="col-md-8">
+                <h5 class="h6 mb-3">Technologies utilisées</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>OCR avancé pour la reconnaissance de documents</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Extraction intelligente des données clés</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Catégorisation automatique par Machine Learning</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="benefits-box bg-white p-3 rounded-3">
+                    <h6 class="mb-3">Impact mesurable</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-minus-circle text-danger me-2"></i>-80% temps de traitement</li>
+                        <li class="mb-2"><i class="fas fa-minus-circle text-danger me-2"></i>-95% erreurs de saisie</li>
+                        <li><i class="fas fa-plus-circle text-success me-2"></i>Productivité x5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-card bg-light p-4 rounded-3 mb-4">
+        <h4>2. Gestion intelligente des paiements</h4>
+        <div class="row">
+            <div class="col-md-8">
+                <h5 class="h6 mb-3">Fonctionnalités clés</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Priorisation automatique basée sur l'IA</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Détection des anomalies en temps réel</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Réconciliation bancaire automatisée</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="benefits-box bg-white p-3 rounded-3">
+                    <h6 class="mb-3">Avantages</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-chart-line text-success me-2"></i>Trésorerie optimisée</li>
+                        <li class="mb-2"><i class="fas fa-shield-alt text-primary me-2"></i>Risques minimisés</li>
+                        <li><i class="fas fa-eye text-info me-2"></i>Visibilité accrue</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-card bg-light p-4 rounded-3 mb-4">
+        <h4>3. Reporting financier automatisé</h4>
+        <div class="row">
+            <div class="col-md-8">
+                <h5 class="h6 mb-3">Capacités analytiques</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Génération automatique des états financiers</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Tableaux de bord dynamiques en temps réel</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Prévisions financières par IA</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="benefits-box bg-white p-3 rounded-3">
+                    <h6 class="mb-3">Bénéfices</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-tachometer-alt text-warning me-2"></i>Rapidité accrue</li>
+                        <li class="mb-2"><i class="fas fa-bullseye text-danger me-2"></i>Précision optimale</li>
+                        <li><i class="fas fa-lightbulb text-success me-2"></i>Insights stratégiques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<h2>Impact sur votre performance financière</h2>
-<div class="results-section">
-    <ul>
-        <li><strong>-80%</strong> de temps de traitement</li>
-        <li><strong>-95%</strong> d'erreurs de saisie</li>
-        <li><strong>+30%</strong> de productivité comptable</li>
-    </ul>
+<div class="results-metrics mb-5">
+    <h3 class="h4 mb-4">Impact financier mesurable</h3>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card border-0 bg-primary text-white">
+                <div class="card-body text-center">
+                    <h4 class="display-4 mb-2">-80%</h4>
+                    <p class="mb-0">Temps de traitement</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 bg-success text-white">
+                <div class="card-body text-center">
+                    <h4 class="display-4 mb-2">-95%</h4>
+                    <p class="mb-0">Erreurs de saisie</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 bg-info text-white">
+                <div class="card-body text-center">
+                    <h4 class="display-4 mb-2">+30%</h4>
+                    <p class="mb-0">Productivité</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<h2>Optimisez votre gestion financière</h2>
-<p>Transformez votre comptabilité en un processus fluide et automatisé. Découvrez comment notre solution IA peut révolutionner votre gestion financière.</p>
+<div class="case-study-section bg-light p-4 rounded-3 mb-5">
+    <h3 class="h4 mb-4">Cas Client : PME Secteur Distribution</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <h5 class="h6 mb-3">Avant l'IA</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>2 jours de traitement par lot de factures</li>
+                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Taux d'erreur de 5%</li>
+                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Retards de paiement fréquents</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h5 class="h6 mb-3">Après implémentation</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Traitement en moins de 2 heures</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Précision de 99.9%</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Économies de 45K€ annuels</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-<div class="cta-section">
-    <a href="/formulaire" class="btn btn-primary">Demander une démonstration</a>
+<div class="steps-section mb-5">
+    <h3 class="h4 mb-4">Mise en place en 4 étapes</h3>
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-search text-primary display-5"></i>
+                    </div>
+                    <h5>1. Audit initial</h5>
+                    <p class="text-muted small mb-0">Analyse de vos processus actuels</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-cogs text-primary display-5"></i>
+                    </div>
+                    <h5>2. Configuration</h5>
+                    <p class="text-muted small mb-0">Adaptation à vos besoins</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-graduation-cap text-primary display-5"></i>
+                    </div>
+                    <h5>3. Formation</h5>
+                    <p class="text-muted small mb-0">Accompagnement des équipes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-chart-line text-primary display-5"></i>
+                    </div>
+                    <h5>4. Optimisation</h5>
+                    <p class="text-muted small mb-0">Amélioration continue</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section text-center">
+    <h3 class="h4 mb-4">Transformez votre comptabilité dès maintenant</h3>
+    <p class="lead mb-4">Ne laissez plus les tâches manuelles ralentir votre croissance. Découvrez comment notre solution IA peut révolutionner votre gestion financière.</p>
+    <a href="/formulaire" class="btn btn-primary btn-lg">Demander mon audit gratuit</a>
 </div>
 """
         },
         {
             "sector": "Logistique",
-            "title": "Optimisation des itinéraires de livraison grâce à l'IA : Gagnez en efficacité",
-            "meta_description": "Optimisez vos circuits de livraison avec l'IA. Réduisez vos coûts logistiques et améliorez la satisfaction client grâce à des itinéraires intelligents.",
-            "keywords": "optimisation logistique, IA transport, itinéraires intelligents, livraison optimisée, efficacité logistique",
+            "title": "Optimisation Logistique en 2024 : L'IA pour Transformer Vos Opérations",
+            "meta_description": "Découvrez comment l'IA révolutionne la logistique en 2024. Solutions concrètes pour optimiser vos livraisons, réduire vos coûts et améliorer votre performance environnementale.",
+            "keywords": "optimisation logistique, IA transport, supply chain intelligente, efficacité livraison, logistique durable",
             "featured_image": "/static/images/innovation.svg",
             "content": """
-<h2>La logistique intelligente : Un enjeu majeur en 2024</h2>
-<p>Face à l'augmentation des coûts et des exigences clients, l'optimisation des itinéraires de livraison devient cruciale. L'IA offre des solutions innovantes pour relever ces défis.</p>
-
-<h2>3 Innovations IA pour votre logistique</h2>
-<div class="solution-card mb-4">
-    <h3>1. Optimisation dynamique des tournées</h3>
-    <p>Maximisez l'efficacité de vos livraisons avec :</p>
-    <ul>
-        <li>Calcul en temps réel des meilleurs itinéraires</li>
-        <li>Prise en compte du trafic et des contraintes</li>
-        <li>Adaptation automatique aux imprévus</li>
-    </ul>
+<div class="intro-section bg-light p-4 rounded-3 mb-5">
+    <h2>La logistique intelligente en 2024 : Un levier stratégique incontournable</h2>
+    <p class="lead mb-0">Dans un contexte marqué par la hausse des coûts, des attentes clients toujours plus exigeantes et une pression environnementale croissante, l'IA devient un allié indispensable pour optimiser vos opérations logistiques.</p>
 </div>
 
-<div class="solution-card mb-4">
-    <h3>2. Prévision de la demande</h3>
-    <p>Anticipez les besoins grâce à :</p>
-    <ul>
-        <li>Analyse prédictive des commandes</li>
-        <li>Optimisation des ressources</li>
-        <li>Planification intelligente des capacités</li>
-    </ul>
+<div class="challenges-section mb-5">
+    <h3 class="h4 mb-4">Pourquoi l'IA est-elle essentielle pour votre logistique ?</h3>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-chart-line text-primary h2 mb-0 me-2"></i>
+                        <h4 class="h5 mb-0">Complexité croissante</h4>
+                    </div>
+                    <p class="card-text">Gérez efficacement des chaînes d'approvisionnement de plus en plus complexes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-shopping-cart text-primary h2 mb-0 me-2"></i>
+                        <h4 class="h5 mb-0">E-commerce</h4>
+                    </div>
+                    <p class="card-text">Adaptez-vous à l'explosion des commandes en ligne et des délais courts.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-leaf text-primary h2 mb-0 me-2"></i>
+                        <h4 class="h5 mb-0">Enjeux écologiques</h4>
+                    </div>
+                    <p class="card-text">Réduisez votre empreinte carbone tout en optimisant vos coûts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="solution-card mb-4">
-    <h3>3. Suivi en temps réel</h3>
-    <p>Pilotez votre activité avec précision :</p>
-    <ul>
-        <li>Tracking GPS intelligent</li>
-        <li>Alertes automatiques d'incidents</li>
-        <li>Communication client automatisée</li>
-    </ul>
+<div class="solutions-section mb-5">
+    <h3 class="h4 mb-4">3 Solutions IA pour moderniser vos opérations</h3>
+    
+    <div class="solution-card bg-light p-4 rounded-3 mb-4">
+        <h4>1. Optimisation Dynamique des Tournées</h4>
+        <div class="row">
+            <div class="col-md-8">
+                <h5 class="h6 mb-3">Comment ça fonctionne ?</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Analyse en temps réel du trafic et des conditions routières</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Prise en compte des contraintes spécifiques (horaires, priorités)</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Adaptation automatique aux imprévus</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="benefits-box bg-white p-3 rounded-3">
+                    <h6 class="mb-3">Bénéfices</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-plus-circle text-success me-2"></i>Gain de temps</li>
+                        <li class="mb-2"><i class="fas fa-minus-circle text-danger me-2"></i>Réduction des coûts</li>
+                        <li><i class="fas fa-star text-warning me-2"></i>Satisfaction client</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-card bg-light p-4 rounded-3 mb-4">
+        <h4>2. Prévision de la Demande</h4>
+        <div class="row">
+            <div class="col-md-8">
+                <h5 class="h6 mb-3">Technologies utilisées</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Analyse prédictive avancée</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Machine Learning sur données historiques</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Optimisation temps réel des stocks</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="benefits-box bg-white p-3 rounded-3">
+                    <h6 class="mb-3">Impact</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-chart-bar text-info me-2"></i>Stocks optimisés</li>
+                        <li class="mb-2"><i class="fas fa-clock text-success me-2"></i>Livraisons plus rapides</li>
+                        <li><i class="fas fa-cog text-primary me-2"></i>Efficacité maximale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-card bg-light p-4 rounded-3 mb-4">
+        <h4>3. Suivi en Temps Réel</h4>
+        <div class="row">
+            <div class="col-md-8">
+                <h5 class="h6 mb-3">Fonctionnalités clés</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Tracking GPS intelligent et prédictif</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Alertes automatiques personnalisées</li>
+                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Communication client proactive</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="benefits-box bg-white p-3 rounded-3">
+                    <h6 class="mb-3">Avantages</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-bolt text-warning me-2"></i>Réactivité accrue</li>
+                        <li class="mb-2"><i class="fas fa-eye text-info me-2"></i>Transparence totale</li>
+                        <li><i class="fas fa-sync text-success me-2"></i>Amélioration continue</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<h2>Résultats prouvés</h2>
-<div class="results-section">
-    <ul>
-        <li><strong>-25%</strong> de coûts de transport</li>
-        <li><strong>+35%</strong> de livraisons par jour</li>
-        <li><strong>-30%</strong> d'émissions CO2</li>
-    </ul>
+<div class="results-section mb-5">
+    <h3 class="h4 mb-4">Résultats Mesurables avec l'IA</h3>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card border-0 bg-primary text-white">
+                <div class="card-body text-center">
+                    <h4 class="display-4 mb-2">-25%</h4>
+                    <p class="mb-0">Coûts de transport</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 bg-success text-white">
+                <div class="card-body text-center">
+                    <h4 class="display-4 mb-2">+35%</h4>
+                    <p class="mb-0">Livraisons par jour</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 bg-info text-white">
+                <div class="card-body text-center">
+                    <h4 class="display-4 mb-2">-30%</h4>
+                    <p class="mb-0">Émissions CO2</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<h2>Transformez votre logistique</h2>
-<p>Ne laissez pas les coûts logistiques éroder vos marges. Découvrez comment notre solution IA peut optimiser vos opérations de livraison.</p>
+<div class="case-study-section bg-light p-4 rounded-3 mb-5">
+    <h3 class="h4 mb-4">Exemple Concret : Transporteur National</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <h5 class="h6 mb-3">Situation initiale</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>20% d'incidents de livraison</li>
+                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Coûts de transport élevés</li>
+                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Satisfaction client en baisse</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h5 class="h6 mb-3">Après implémentation IA</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Réduction des incidents de 80%</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Économies de 2.3M€ par an</li>
+                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Score NPS amélioré de 45%</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-<div class="cta-section">
-    <a href="/formulaire" class="btn btn-primary">Obtenir mon audit gratuit</a>
+<div class="cta-section text-center">
+    <h3 class="h4 mb-4">Transformez Votre Logistique Maintenant</h3>
+    <p class="lead mb-4">Ne laissez pas les coûts logistiques freiner votre croissance. Notre audit IA gratuit analyse vos besoins et identifie les meilleures solutions d'optimisation.</p>
+    <a href="/formulaire" class="btn btn-primary btn-lg">Obtenir mon audit IA gratuit</a>
 </div>
 """
         },
