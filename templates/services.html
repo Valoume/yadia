@@ -60,11 +60,38 @@
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="p-5 bg-white rounded-4 shadow-sm">
-                    <img src="{{ url_for('static', filename='images/innovation.svg') }}" alt="Innovation" class="img-fluid mb-4">
-                    <blockquote class="blockquote text-center mb-0">
-                        <p class="mb-3">"L'innovation distingue les leaders des suiveurs."</p>
-                        <footer class="blockquote-footer">Steve Jobs</footer>
-                    </blockquote>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Type de projet</th>
+                                    <th scope="col">Durée estimée (heures)</th>
+                                    <th scope="col">Prix moyens sur le marché</th>
+                                    <th scope="col">Prix Yadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Projet simple</td>
+                                    <td>5-20</td>
+                                    <td>500-2000 €</td>
+                                    <td class="text-success">350-1400 €</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Projet moyen</td>
+                                    <td>20-50</td>
+                                    <td>2500-5000 €</td>
+                                    <td class="text-success">1400-3500 €</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Projet complexe</td>
+                                    <td>50-100</td>
+                                    <td>6000-10000 €</td>
+                                    <td class="text-success">3500-7000 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
