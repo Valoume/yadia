@@ -1,0 +1,46 @@
+	Crée un formulaire bien structuré avec les champs suivants :
+		•	Nom (input texte, obligatoire)
+	•	Prénom (input texte, obligatoire)
+	•	Email professionnel (input email, obligatoire)
+	•	Entreprise (input texte)
+	•	Poste (input texte)
+	•	Secteur (liste déroulante avec les options : RH, Marketing, Service Client, Finance, Logistique, Production, Juridique, IT, Vente, Stratégie)
+	•	Maîtrise de l’IA :
+	•	Utilise une jauge ou une liste déroulante avec les options : “Débutant”, “Intermédiaire”, “Avancé”, “Expert”.
+	•	Texte libre :
+	•	“Avez-vous déjà utilisé l’IA ? Si oui, dans quel contexte ?” (textarea).
+	•	“Quels sont vos défis et problématiques ?” (textarea).
+	•	“Quels sont vos objectifs ?” (textarea).
+	•	Bouton de soumission : “Obtenir mon audit IA”.
+	•	En dessous, affiche une note d’avertissement :
+	“⚠️ N’appuyez qu’une seule fois sur le bouton. L’audit est en cours. Cela peut prendre entre 30 secondes et 1 minute. Votre demande est sécurisée.”
+	•	Fonctionnalité :
+	•	Le formulaire doit envoyer les données via une requête POST à l’API prédéfinie (que l’IA de Replit connectera).
+	•	Utilise un loader ou une animation pendant le traitement (ex : spinner ou message “Votre audit est en cours…”).	3. Section 3 : Résultat de l’audit IA
+		•	Une fois les données envoyées, le résultat est récupéré sous forme JSON via l’API.
+	•	Structure des résultats affichés :
+	•	1. Description de l’analyse : Une phrase qui montre la compréhension de l’IA vis-à-vis de l’entreprise, du secteur et du poste.
+Exemple : “Nous avons analysé vos besoins dans le secteur Marketing pour une entreprise de taille moyenne. Le rôle de Responsable Communication présente des opportunités spécifiques.”
+	•	2. Possibilités d’intégration : Affiche une liste des intégrations possibles en fonction des données fournies (extraites depuis ta liste).
+	•	Exemple : “Personnalisation des campagnes marketing”, “Création de contenu automatisée”, etc.
+	•	3. Temps et coût estimés :
+	•	Affiche une fourchette :
+	•	Temps estimé : XX - YY heures
+	•	Coût estimé : Fourchette basse - Fourchette haute.
+Exemple :
+	“Temps estimé : 20-30 heures
+Coût estimé : 2 000€ - 4 000€”.
+	•	Style : Utilise des cards (cartes) pour chaque section avec des animations au chargement.	Fonctionnalité clé :
+		•	Le formulaire doit envoyer les données en JSON vers une API (déjà configurée).
+	•	L’IA retourne les résultats (description, possibilités, estimation temps/coût) dynamiquement.
+	•	Ajoute une sécurité pour éviter les multiples soumissions (désactive le bouton après clic).	Design :
+		•	Style moderne et professionnel.
+	•	Utilise des animations légères (fade-in, slide) avec une bibliothèque comme AOS pour rendre les transitions fluides.
+	•	Police sobre (ex : Poppins ou Open Sans), couleurs en accord avec #153739 (fond) et #BDA056 (boutons dorés).
+
+	Exigences techniques :
+		•	Formulaire interactif avec validation des champs.
+	•	Connexion API pour envoyer et recevoir les données.
+	•	Affichage dynamique des résultats avec des éléments structurés (cards, listes).
+	•	Responsive (mobile et desktop).
+	•	Utilise HTML, CSS, et JavaScript proprement organisé.

@@ -10,9 +10,6 @@
         padding: 6rem 0;
         color: white;
     }
-    .form-floating > label {
-        color: #495057;
-    }
     .form-control:focus {
         border-color: #BDA056;
         box-shadow: 0 0 0 0.25rem rgba(189, 160, 86, 0.25);
@@ -25,254 +22,153 @@
         background-color: #a88c45;
         border-color: #a88c45;
     }
-    .custom-checkbox .form-check-input:checked {
-        background-color: #153739;
-        border-color: #153739;
+    #loader {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+    }
+    .warning-message {
+        background-color: #fff3cd;
+        border: 1px solid #ffeeba;
+        color: #856404;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
     }
 </style>
 {% endblock %}
 
 {% block content %}
+<!-- Loading Spinner -->
+<div id="loader">
+    <div class="text-white text-center">
+        <div class="spinner-border mb-3" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+        <p>Votre audit est en cours de génération...</p>
+    </div>
+</div>
+
+<!-- Hero Section -->
 <section class="hero">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8" data-aos="fade-up">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
                 <h1 class="display-4 fw-bold mb-4">Découvrez les possibilités offertes par l'IA pour votre entreprise</h1>
                 <p class="lead mb-4">Chez YADIA, notre mission est claire : démocratiser l'IA. Nous vous offrons un audit gratuit et automatisé, car nous croyons que chaque entreprise mérite de comprendre comment l'IA peut révolutionner ses process.</p>
-                <div class="d-flex flex-wrap gap-3 mt-4">
-                    <div class="badge bg-light bg-opacity-10 text-white px-4 py-3 rounded-3">
-                        <i class="fas fa-clock me-2"></i>
-                        Temps estimé: 5-7 min
-                    </div>
-                    <div class="badge bg-light bg-opacity-10 text-white px-4 py-3 rounded-3">
-                        <i class="fas fa-shield-alt me-2"></i>
-                        100% Confidentiel
-                    </div>
-                    <div class="badge bg-light bg-opacity-10 text-white px-4 py-3 rounded-3">
-                        <i class="fas fa-robot me-2"></i>
-                        Analyse IA Instantanée
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4" data-aos="fade-left">
-                <div class="text-center">
-                    <i class="fas fa-brain text-primary" style="font-size: 8rem; opacity: 0.8;"></i>
-                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section">
+<!-- Formulaire Section -->
+<section class="section py-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <div class="card" data-aos="fade-up">
-                    <div class="card-body">
-                        <form class="needs-validation" novalidate method="POST">
-                            <!-- Company Information -->
-                            <div class="mb-5">
-                                <h3 class="mb-4">Informations de l'Entreprise</h3>
-                                <div class="row g-4">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <form id="auditForm" class="needs-validation" novalidate>
+                            <!-- Informations personnelles -->
+                            <div class="mb-4">
+                                <h3 class="h4 mb-3">Informations personnelles</h3>
+                                <div class="row g-3">
                                     <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="company-name" name="company-name" required>
-                                            <label for="company-name">Nom de l'entreprise *</label>
-                                            <div class="invalid-feedback">Veuillez entrer le nom de votre entreprise.</div>
-                                        </div>
+                                        <label for="nom" class="form-label">Nom *</label>
+                                        <input type="text" class="form-control" id="nom" required>
+                                        <div class="invalid-feedback">Le nom est requis.</div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="industry" name="industry" required>
-                                                <option value="">Sélectionnez votre secteur</option>
-                                                <!-- Technologies -->
-                                                <optgroup label="Technologies">
-                                                    <option value="tech_software">Développement Logiciel & Applications</option>
-                                                    <option value="tech_hardware">Matériel Informatique & IoT</option>
-                                                    <option value="tech_ai">Intelligence Artificielle & Machine Learning</option>
-                                                    <option value="tech_cloud">Cloud Computing & Services Web</option>
-                                                    <option value="tech_telecom">Télécommunications & Réseaux</option>
-                                                    <option value="tech_cybersec">Cybersécurité & Protection des Données</option>
-                                                    <option value="tech_robotics">Robotique & Automatisation</option>
-                                                </optgroup>
-                                                <!-- Finance -->
-                                                <optgroup label="Finance">
-                                                    <option value="finance_banking">Banque de Détail & Services Bancaires</option>
-                                                    <option value="finance_investment">Banque d'Investissement</option>
-                                                    <option value="finance_insurance">Assurance & Réassurance</option>
-                                                    <option value="finance_fintech">FinTech & Services Financiers Innovants</option>
-                                                    <option value="finance_asset">Gestion d'Actifs & Patrimoine</option>
-                                                    <option value="finance_crypto">Cryptomonnaies & Blockchain</option>
-                                                </optgroup>
-                                                <!-- Santé -->
-                                                <optgroup label="Santé & Sciences de la Vie">
-                                                    <option value="health_hospital">Hôpitaux & Cliniques</option>
-                                                    <option value="health_pharma">Industrie Pharmaceutique</option>
-                                                    <option value="health_biotech">Biotechnologie & Recherche</option>
-                                                    <option value="health_equipment">Équipement Médical & Diagnostic</option>
-                                                    <option value="health_digital">Santé Numérique & Télémédecine</option>
-                                                    <option value="health_wellness">Bien-être & Santé Préventive</option>
-                                                </optgroup>
-                                                <!-- Commerce -->
-                                                <optgroup label="Commerce & Distribution">
-                                                    <option value="retail_ecommerce">E-commerce & Commerce Digital</option>
-                                                    <option value="retail_store">Grande Distribution & Commerce de Détail</option>
-                                                    <option value="retail_luxury">Mode & Luxe</option>
-                                                    <option value="retail_food">Alimentation & Boissons</option>
-                                                    <option value="retail_specialized">Commerce Spécialisé</option>
-                                                    <option value="retail_marketplace">Marketplaces & Plateformes</option>
-                                                </optgroup>
-                                                <!-- Industrie -->
-                                                <optgroup label="Industrie & Manufacturing">
-                                                    <option value="industry_auto">Automobile & Mobilité</option>
-                                                    <option value="industry_aero">Aéronautique & Défense</option>
-                                                    <option value="industry_energy">Énergie & Utilities</option>
-                                                    <option value="industry_construction">Construction & BTP</option>
-                                                    <option value="industry_chemical">Chimie & Matériaux</option>
-                                                    <option value="industry_agri">Agroalimentaire</option>
-                                                    <option value="industry_green">Industrie Verte & Cleantech</option>
-                                                </optgroup>
-                                            </select>
-                                            <label for="industry">Secteur d'activité *</label>
-                                            <div class="invalid-feedback">Veuillez sélectionner votre secteur d'activité.</div>
-                                        </div>
+                                        <label for="prenom" class="form-label">Prénom *</label>
+                                        <input type="text" class="form-control" id="prenom" required>
+                                        <div class="invalid-feedback">Le prénom est requis.</div>
                                     </div>
-                                    <div class="col-md-12 mt-3">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="current-job" name="current-job" required>
-                                            <label for="current-job">Poste Actuel *</label>
-                                            <div class="invalid-feedback">Veuillez entrer votre poste actuel.</div>
-                                        </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email professionnel *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="invalid-feedback">Un email professionnel valide est requis.</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Current Technology Assessment -->
-                            <div class="mb-5">
-                                <h3 class="mb-4">Infrastructure Technologique Actuelle</h3>
-                                <div class="card bg-light border-0 p-4 mb-4">
-                                    <label class="form-label mb-3">Quelles technologies utilisez-vous actuellement ? (Sélectionnez tout ce qui s'applique)</label>
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <div class="form-check custom-checkbox">
-                                                <input class="form-check-input" type="checkbox" id="tech-crm" name="tech" value="crm">
-                                                <label class="form-check-label" for="tech-crm">Logiciel CRM</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-check custom-checkbox">
-                                                <input class="form-check-input" type="checkbox" id="tech-erp" name="tech" value="erp">
-                                                <label class="form-check-label" for="tech-erp">Système ERP</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-check custom-checkbox">
-                                                <input class="form-check-input" type="checkbox" id="tech-analytics" name="tech" value="analytics">
-                                                <label class="form-check-label" for="tech-analytics">Outils d'Analyse</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-check custom-checkbox">
-                                                <input class="form-check-input" type="checkbox" id="tech-automation" name="tech" value="automation">
-                                                <label class="form-check-label" for="tech-automation">Outils d'Automatisation</label>
-                                            </div>
-                                        </div>
+                            <!-- Informations entreprise -->
+                            <div class="mb-4">
+                                <h3 class="h4 mb-3">Informations entreprise</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="entreprise" class="form-label">Entreprise</label>
+                                        <input type="text" class="form-control" id="entreprise">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="poste" class="form-label">Poste</label>
+                                        <input type="text" class="form-control" id="poste">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="secteur" class="form-label">Secteur d'activité</label>
+                                        <select class="form-select" id="secteur">
+                                            <option value="">Sélectionnez un secteur</option>
+                                            <option value="RH">RH</option>
+                                            <option value="Marketing">Marketing</option>
+                                            <option value="Service Client">Service Client</option>
+                                            <option value="Finance">Finance</option>
+                                            <option value="Logistique">Logistique</option>
+                                            <option value="Production">Production</option>
+                                            <option value="Juridique">Juridique</option>
+                                            <option value="IT">IT</option>
+                                            <option value="Vente">Vente</option>
+                                            <option value="Stratégie">Stratégie</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Business Challenges -->
-                            <div class="mb-5">
-                                <h3 class="mb-4">Défis Actuels</h3>
-                                <div class="card bg-light border-0 p-4">
-                                    <div class="form-floating mb-4">
-                                        <textarea class="form-control" id="challenges" name="challenges" style="height: 150px" required></textarea>
-                                        <label for="challenges">Quels sont vos principaux défis business ? *</label>
-                                        <div class="invalid-feedback">Veuillez décrire vos défis business.</div>
-                                    </div>
-                                    <small class="text-muted">
-                                        Suggestions: Productivité, coûts opérationnels, expérience client, analyse des données, etc.
-                                    </small>
+                            <!-- Maîtrise de l'IA -->
+                            <div class="mb-4">
+                                <h3 class="h4 mb-3">Niveau de maîtrise de l'IA</h3>
+                                <select class="form-select" id="maitrise-ia">
+                                    <option value="">Sélectionnez votre niveau</option>
+                                    <option value="Débutant">Débutant</option>
+                                    <option value="Intermédiaire">Intermédiaire</option>
+                                    <option value="Avancé">Avancé</option>
+                                    <option value="Expert">Expert</option>
+                                </select>
+                            </div>
+
+                            <!-- Questions ouvertes -->
+                            <div class="mb-4">
+                                <h3 class="h4 mb-3">Votre expérience avec l'IA</h3>
+                                <div class="mb-3">
+                                    <label for="experience" class="form-label">Avez-vous déjà utilisé l'IA ? Si oui, dans quel contexte ?</label>
+                                    <textarea class="form-control" id="experience" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="defis" class="form-label">Quels sont vos défis et problématiques ?</label>
+                                    <textarea class="form-control" id="defis" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="objectifs" class="form-label">Quels sont vos objectifs ?</label>
+                                    <textarea class="form-control" id="objectifs" rows="3"></textarea>
                                 </div>
                             </div>
 
-                            <!-- AI Implementation Goals -->
-                            <div class="mb-5">
-                                <h3 class="mb-4">Objectifs d'Implémentation IA</h3>
-                                <div class="card bg-light border-0 p-4">
-                                    <label class="form-label mb-3">Quels sont vos objectifs prioritaires ? (Sélectionnez tout ce qui s'applique)</label>
-                                    <div class="row g-4">
-                                        <div class="col-md-6">
-                                            <div class="form-check custom-checkbox">
-                                                <input class="form-check-input" type="checkbox" id="goal-automation" name="goals" value="automation">
-                                                <label class="form-check-label" for="goal-automation">
-                                                    <strong>Automatisation des Processus</strong>
-                                                    <div class="text-muted small">Automatiser les tâches répétitives</div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-check custom-checkbox">
-                                                <input class="form-check-input" type="checkbox" id="goal-analytics" name="goals" value="analytics">
-                                                <label class="form-check-label" for="goal-analytics">
-                                                    <strong>Analyse de Données</strong>
-                                                    <div class="text-muted small">Extraire des insights business</div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-check custom-checkbox">
-                                                <input class="form-check-input" type="checkbox" id="goal-customer" name="goals" value="customer">
-                                                <label class="form-check-label" for="goal-customer">
-                                                    <strong>Expérience Client</strong>
-                                                    <div class="text-muted small">Améliorer la satisfaction utilisateur</div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-check custom-checkbox">
-                                                <input class="form-check-input" type="checkbox" id="goal-efficiency" name="goals" value="efficiency">
-                                                <label class="form-check-label" for="goal-efficiency">
-                                                    <strong>Efficacité Opérationnelle</strong>
-                                                    <div class="text-muted small">Optimiser les flux de travail</div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <!-- Message d'avertissement -->
+                            <div class="warning-message mb-4">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                N'appuyez qu'une seule fois sur le bouton. L'audit est en cours. Cela peut prendre entre 30 secondes et 1 minute. Votre demande est sécurisée.
                             </div>
 
-                            <!-- Contact Information -->
-                            <div class="mb-5">
-                                <h3 class="mb-4">Informations de Contact</h3>
-                                <div class="card bg-light border-0 p-4">
-                                    <div class="row g-4">
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="contact-name" name="contact-name" required>
-                                                <label for="contact-name">Nom Complet *</label>
-                                                <div class="invalid-feedback">Veuillez entrer votre nom.</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="contact-email" name="contact-email" required>
-                                                <label for="contact-email">Email Professionnel *</label>
-                                                <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <!-- Bouton de soumission -->
                             <div class="text-center">
-                                <button type="submit" class="btn btn-book btn-lg">
-                                    <span class="d-block">Générer mon Audit IA</span>
-                                    <small class="d-block mt-1">Analyse instantanée par IA</small>
+                                <button type="submit" class="btn btn-primary btn-lg px-5" id="submitBtn">
+                                    Obtenir mon audit IA
                                 </button>
-                                <div class="mt-3 text-muted small">
-                                    <i class="fas fa-lock me-1"></i> Vos données sont sécurisées et confidentielles
-                                </div>
                             </div>
                         </form>
                     </div>
@@ -282,40 +178,61 @@
     </div>
 </section>
 
-<section class="section section-light">
+<!-- Section résultats (initialement cachée) -->
+<section id="resultats" class="section py-5" style="display: none;">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 data-aos="fade-up">Et Après ?</h2>
-                <p class="lead mb-4" data-aos="fade-up">
-                    Notre système d'IA va analyser vos réponses et générer instantanément un rapport d'audit personnalisé. 
-                    Nos experts examineront ensuite ce rapport et vous contacteront sous 24h pour planifier une consultation détaillée.
-                </p>
-                <div class="row g-4 mt-4">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="d-flex align-items-center justify-content-center mb-3">
-                            <i class="fas fa-robot fs-1 text-primary"></i>
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="h3 mb-4">Résultats de votre audit IA</h2>
+                        <div id="analyse-description" class="mb-4">
+                            <!-- La description sera injectée ici -->
                         </div>
-                        <h5>Analyse IA</h5>
-                        <p class="text-muted">Rapport généré instantanément</p>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="d-flex align-items-center justify-content-center mb-3">
-                            <i class="fas fa-file-alt fs-1 text-primary"></i>
+                        <div id="possibilites-integration" class="mb-4">
+                            <!-- Les possibilités seront injectées ici -->
                         </div>
-                        <h5>Recommandations</h5>
-                        <p class="text-muted">Solutions personnalisées</p>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="d-flex align-items-center justify-content-center mb-3">
-                            <i class="fas fa-handshake fs-1 text-primary"></i>
+                        <div id="estimation" class="mb-4">
+                            <!-- L'estimation sera injectée ici -->
                         </div>
-                        <h5>Consultation</h5>
-                        <p class="text-muted">Discussion approfondie</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('auditForm');
+    const loader = document.getElementById('loader');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultatsSection = document.getElementById('resultats');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Validation du formulaire
+        if (!form.checkValidity()) {
+            e.stopPropagation();
+            form.classList.add('was-validated');
+            return;
+        }
+
+        // Désactiver le bouton et afficher le loader
+        submitBtn.disabled = true;
+        loader.style.display = 'flex';
+
+        // Simuler l'appel API (à remplacer par l'appel réel)
+        setTimeout(() => {
+            loader.style.display = 'none';
+            resultatsSection.style.display = 'block';
+            submitBtn.disabled = false;
+            
+            // Scroll vers les résultats
+            resultatsSection.scrollIntoView({ behavior: 'smooth' });
+        }, 2000);
+    });
+});
+</script>
 {% endblock %}
