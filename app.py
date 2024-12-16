@@ -1,3 +1,25 @@
+from flask import Flask, render_template, request, jsonify, session
+from flask_sqlalchemy import SQLAlchemy
+from flask_session import Session
+from sqlalchemy.orm import declarative_base
+import logging
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your-secret-key-here'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+app.logger.setLevel(logging.INFO)
+
+# Initialize database
+db = SQLAlchemy(app)
+Base = declarative_base()
+
+# Configure server-side session
+app.config['SESSION_TYPE'] = 'filesystem'
+Session(app)
 import os
 import logging
 from flask import Flask, session
