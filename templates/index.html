@@ -4,29 +4,58 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero position-relative overflow-hidden" style="background-color: #153739;">
-    <div class="container">
-        <div class="row align-items-center min-vh-100">
-            <div class="col-12 text-center" data-aos="fade-up">
-                <img src="{{ url_for('static', filename='Logo-removebg-preview.png') }}" 
-                     alt="YADIA Logo" 
-                     class="mb-4" 
-                     style="width: 180px; height: auto; 
-                            background: transparent;
-                            filter: brightness(1.2) drop-shadow(0 20px 30px rgba(255,255,255,0.15));
-                            transform: perspective(1000px) rotateY(-15deg);
-                            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
-                     onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)';
-                                this.style.filter='brightness(1.4) drop-shadow(0 30px 40px rgba(255,255,255,0.25))'"
-                     onmouseout="this.style.transform='perspective(1000px) rotateY(-15deg)';
-                                this.style.filter='brightness(1.2) drop-shadow(0 20px 30px rgba(255,255,255,0.15))'"
-                     loading="lazy">
-                <h1 class="display-2 fw-bold mb-4">YADIA Solutions, bienvenue dans le futur</h1>
-                <p class="lead mb-5">Transformez votre entreprise avec nos solutions d'IA innovantes et accessibles</p>
+<section class="hero position-relative overflow-hidden" style="background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);">
+    <!-- Animated background shapes -->
+    <div class="position-absolute w-100 h-100" style="overflow: hidden; z-index: 1;">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center justify-content-center min-vh-100">
+            <div class="col-lg-8 text-center" data-aos="fade-up">
+                <div class="logo-container mb-4 position-relative d-inline-block">
+                    <img src="{{ url_for('static', filename='images/Logo-removebg-preview.png') }}" 
+                         alt="YADIA Logo" 
+                         class="logo-img"
+                         style="width: 200px; height: auto; 
+                                filter: drop-shadow(0 0 20px rgba(255,255,255,0.2));
+                                transform: perspective(1000px) rotateY(-15deg);
+                                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
+                         onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)';
+                                    this.style.filter='drop-shadow(0 0 30px rgba(255,255,255,0.4))'"
+                         onmouseout="this.style.transform='perspective(1000px) rotateY(-15deg)';
+                                   this.style.filter='drop-shadow(0 0 20px rgba(255,255,255,0.2))'"
+                         loading="lazy">
+                    <div class="logo-glow"></div>
+                </div>
+                
+                <h1 class="hero-title display-2 fw-bold mb-4 position-relative">
+                    <span class="text-gradient">YADIA Solutions,</span><br>
+                    <span class="text-light">bienvenue dans le futur</span>
+                </h1>
+                
+                <p class="lead mb-5 text-light opacity-75">
+                    Transformez votre entreprise avec nos solutions d'IA<br>
+                    innovantes et accessibles
+                </p>
+                
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#audit" class="btn btn-primary btn-lg px-4 py-3 rounded-pill">
+                        Commencer l'audit IA
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <a href="#services" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
+                        Découvrir nos services
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="hero-overlay"></div>
+    
+    <!-- Gradient overlay -->
+    <div class="position-absolute bottom-0 w-100 h-25" style="background: linear-gradient(to top, #153739 0%, transparent 100%);"></div>
 </section>
 
 <!-- Notre Mission -->
