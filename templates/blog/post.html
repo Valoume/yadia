@@ -48,21 +48,23 @@
                                 'reporting': 'chart-bar'
                             } %}
                             
+                            {% set metrics = [] %}
+                            
                             {% for paragraph in paragraphs %}
-                                {% if paragraph.startswith('•') %}
+                                {% if paragraph.strip().startswith('•') %}
                                     <div class="key-point">
                                         <i class="fas fa-check-circle"></i>
-                                        <div>{{ paragraph[2:] }}</div>
+                                        <div>{{ paragraph.strip()[2:] }}</div>
                                     </div>
                                 {% elif 'Impact' in paragraph or 'Bénéfices' in paragraph %}
                                     <div class="benefit-card">
-                                        <h4><i class="fas fa-chart-line me-2"></i>{{ paragraph }}</h4>
+                                        <h4><i class="fas fa-chart-line me-2"></i>{{ paragraph.strip() }}</h4>
                                         <div class="progress-bar">
                                             <div class="fill" style="width: 75%"></div>
                                         </div>
                                     </div>
-                                {% elif paragraph.startswith('#') %}
-                                    {% if paragraph.startswith('##') %}
+                                {% elif paragraph.strip().startswith('#') %}
+                                    {% if paragraph.strip().startswith('##') %}
                                         <h3>
                                             {% set icon = 'info-circle' %}
                                             {% for key, value in section_icons.items() %}
@@ -71,7 +73,7 @@
                                                 {% endif %}
                                             {% endfor %}
                                             <i class="fas fa-{{ icon }} me-2"></i>
-                                            {{ paragraph[2:] }}
+                                            {{ paragraph.strip()[2:] }}
                                         </h3>
                                     {% else %}
                                         <div class="section-divider"></div>
@@ -83,7 +85,7 @@
                                                 {% endif %}
                                             {% endfor %}
                                             <i class="fas fa-{{ icon }} me-2"></i>
-                                            {{ paragraph[1:] }}
+                                            {{ paragraph.strip()[1:] }}
                                         </h2>
                                         {% if 'optimisation' in paragraph.lower() %}
                                             <div class="complexity-meter">
@@ -93,33 +95,33 @@
                                         {% endif %}
                                     {% endif %}
                                 {% elif '-' in paragraph and '%' in paragraph %}
-                                    {% if loop.index % 3 == 1 %}
-                                        <div class="metric-grid">
-                                    {% endif %}
-                                    
-                                    <div class="metric-card">
-                                        {% set stat_value = paragraph.split(':')[0].strip() %}
-                                        {% set stat_label = paragraph.split(':')[1] if ':' in paragraph else paragraph %}
-                                        {% set icon = 'chart-line' %}
-                                        {% if '-' in stat_value %}
-                                            {% set icon = 'arrow-down' %}
-                                        {% elif '+' in stat_value %}
-                                            {% set icon = 'arrow-up' %}
-                                        {% endif %}
-                                        <div class="metric-icon">
-                                            <i class="fas fa-{{ icon }}"></i>
-                                        </div>
-                                        <div class="metric-value">{{ stat_value }}</div>
-                                        <div class="metric-label">{{ stat_label }}</div>
-                                    </div>
-                                    
-                                    {% if loop.index % 3 == 0 or loop.last %}
-                                        </div>
-                                    {% endif %}
-                                {% else %}
-                                    <p>{{ paragraph }}</p>
+                                    {% if metrics.append(paragraph.strip()) %}{% endif %}
+                                {% elif paragraph.strip() %}
+                                    <p>{{ paragraph.strip() }}</p>
                                 {% endif %}
                             {% endfor %}
+                            
+                            {% if metrics %}
+                                <div class="metric-grid">
+                                    {% for metric in metrics %}
+                                        <div class="metric-card">
+                                            {% set stat_value = metric.split(':')[0].strip() %}
+                                            {% set stat_label = metric.split(':')[1].strip() if ':' in metric else metric.strip() %}
+                                            {% set icon = 'chart-line' %}
+                                            {% if '-' in stat_value %}
+                                                {% set icon = 'arrow-down' %}
+                                            {% elif '+' in stat_value %}
+                                                {% set icon = 'arrow-up' %}
+                                            {% endif %}
+                                            <div class="metric-icon">
+                                                <i class="fas fa-{{ icon }}"></i>
+                                            </div>
+                                            <div class="metric-value">{{ stat_value }}</div>
+                                            <div class="metric-label">{{ stat_label }}</div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
                         {% endif %}
                     </div>
                 </div>
