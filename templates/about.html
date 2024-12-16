@@ -39,31 +39,35 @@
         </div>
     </div>
 </section>
-<section id="notre-mission" class="section py-7 bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-                <span class="text-primary small text-uppercase">Notre Histoire</span>
-                <h2 class="display-4 fw-bold mb-4" style="color: #153739;">Notre Mission</h2>
-                <p class="lead">L'IA avançait trop vite, et nous avons vu trop d'entreprises se faire dépasser. Nous ne voulions pas rester spectateurs.</p>
-                <p>Notre mission est claire : aider chaque entreprise, petite ou grande, à intégrer l'IA de manière simple, rapide et efficace. Nous croyons fermement que l'innovation ne devrait pas être un privilège réservé aux grandes entreprises.</p>
-                <blockquote class="blockquote mb-4 p-4 border-start border-primary border-4">
-                    <p class="mb-0">"L'innovation distingue les leaders des suiveurs."</p>
-                    <footer class="blockquote-footer mt-2">Steve Jobs</footer>
-                </blockquote>
-                <div class="text-center mt-4">
-                    <p class="text-primary mb-4">Les entreprises qui adoptent l'IA aujourd'hui seront les leaders de demain. Celles qui hésitent seront les suiveurs. Quelle place voulez-vous occuper ?</p>
-                    <div class="bg-primary rounded-4 p-5">
-                        <!-- Le contenu ira ici -->
-                    </div>
+<section id="notre-mission" class="video-bg-section">
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="{{ url_for('static', filename='videos/background.mp4') }}" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+    </video>
+    <div class="video-overlay"></div>
+    
+    <div class="container content-wrapper">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="text-box mb-5">
+                    <span class="text-white-50 text-uppercase mb-3 d-block">Notre Histoire</span>
+                    <h2 class="display-4 fw-bold mb-4 text-white">Notre Mission</h2>
+                    <p class="lead mb-0">L'IA avançait trop vite, et nous avons vu trop d'entreprises se faire dépasser. Nous ne voulions pas rester spectateurs.</p>
                 </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="position-relative">
-                    <video class="w-100 rounded-4" autoplay muted loop playsinline>
-                        <source src="{{ url_for('static', filename='videos/background.mp4') }}" type="video/mp4">
-                        Votre navigateur ne supporte pas la lecture de vidéos.
-                    </video>
+                
+                <div class="text-box mb-5">
+                    <p class="mb-0">Notre mission est claire : aider chaque entreprise, petite ou grande, à intégrer l'IA de manière simple, rapide et efficace. Nous croyons fermement que l'innovation ne devrait pas être un privilège réservé aux grandes entreprises.</p>
+                </div>
+                
+                <div class="text-box mb-5">
+                    <blockquote class="mb-0">
+                        <p class="mb-2">"L'innovation distingue les leaders des suiveurs."</p>
+                        <footer class="text-white-50">— Steve Jobs</footer>
+                    </blockquote>
+                </div>
+                
+                <div class="text-box">
+                    <p class="lead mb-0">Les entreprises qui adoptent l'IA aujourd'hui seront les leaders de demain. Celles qui hésitent seront les suiveurs. Quelle place voulez-vous occuper ?</p>
                 </div>
             </div>
         </div>
