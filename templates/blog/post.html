@@ -158,7 +158,7 @@
     {% endif %}
 
     <!-- CTA Section -->
-    <section class="py-5">
+    <section class="cta-section py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
@@ -177,47 +177,134 @@
 <style>
     .bg-gradient {
         background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    .bg-gradient::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/static/images/pattern.svg') repeat;
+        opacity: 0.1;
     }
     .text-white-75 {
-        color: rgba(255, 255, 255, 0.75);
+        color: rgba(255, 255, 255, 0.85);
     }
     .blog-content {
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size: 1.15rem;
+        line-height: 1.9;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
     .blog-content h2 {
-        margin-top: 2.5rem;
+        margin-top: 3rem;
         margin-bottom: 1.5rem;
         color: #153739;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+        font-weight: 700;
+        font-size: 2.2rem;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+    .blog-content h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: #153739;
+        border-radius: 2px;
     }
     .blog-content h3 {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.2rem;
         color: #1a4446;
+        font-weight: 600;
+        font-size: 1.8rem;
     }
     .blog-content p {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.8rem;
         color: #2c3e50;
+        letter-spacing: 0.3px;
     }
     .blog-content ul {
-        margin-bottom: 1.5rem;
-        padding-left: 1.2rem;
+        background: #f8f9fa;
+        padding: 2rem 3rem;
+        border-radius: 10px;
+        margin: 2rem 0;
     }
     .blog-content li {
-        margin-bottom: 0.75rem;
+        margin-bottom: 1rem;
         position: relative;
-        list-style: none;
+        padding-left: 1.5rem;
     }
-    .blog-content li:before {
+    .blog-content li::before {
         content: "•";
         color: #153739;
         font-weight: bold;
         position: absolute;
-        left: -1.2rem;
+        left: 0;
+    }
+    .metric-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 1.5rem 0;
+        border: 1px solid #e9ecef;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .metric-card:hover {
+        transform: translateY(-5px);
+    }
+    .metric-title {
+        font-size: 1.2rem;
+        color: #153739;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    .metric-value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #153739;
+        margin-bottom: 0.5rem;
+    }
+    .metric-description {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    /* Améliorations pour la section CTA */
+    .cta-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 4rem 0;
+        border-radius: 15px;
+        margin-top: 4rem;
+    }
+    .cta-section h2 {
+        color: #153739;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .btn-primary {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #153739 0%, #1a4446 100%);
+        border: none;
+        box-shadow: 0 4px 15px rgba(21,55,57,0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(21,55,57,0.25);
     }
     .key-point {
         display: flex;
@@ -281,45 +368,12 @@
         gap: 1.5rem;
         margin: 2rem 0;
     }
-    
-    .metric-card {
-        background: white;
-        border-radius: 12px;
-        padding: 2rem;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        border: 1px solid #e9ecef;
-        transition: transform 0.3s ease;
-    }
-    
-    .metric-card:hover {
-        transform: translateY(-5px);
-    }
-    
-    .metric-icon {
-        font-size: 2rem;
-        color: #153739;
-        margin-bottom: 1rem;
-    }
-    
-    .metric-value {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #153739;
-        line-height: 1;
-        margin-bottom: 0.5rem;
-    }
-    
-    .metric-label {
-        color: #666;
-        font-size: 0.9rem;
-    }
-
     .section-divider {
         height: 3px;
         background: linear-gradient(90deg, #153739 0%, transparent 100%);
         margin: 3rem 0;
         width: 100%;
     }
+
 </style>
 {% endblock %}
