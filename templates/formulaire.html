@@ -2,16 +2,61 @@
 
 {% block title %}Audit IA Personnalisé - Yadia{% endblock %}
 
+{% block head %}
+{{ super() }}
+<style>
+    .hero {
+        background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);
+        padding: 6rem 0;
+        color: white;
+    }
+    .form-floating > label {
+        color: #495057;
+    }
+    .form-control:focus {
+        border-color: #BDA056;
+        box-shadow: 0 0 0 0.25rem rgba(189, 160, 86, 0.25);
+    }
+    .btn-primary {
+        background-color: #BDA056;
+        border-color: #BDA056;
+    }
+    .btn-primary:hover {
+        background-color: #a88c45;
+        border-color: #a88c45;
+    }
+    .custom-checkbox .form-check-input:checked {
+        background-color: #153739;
+        border-color: #153739;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 <section class="hero">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-lg-8" data-aos="fade-up">
-                <h1 class="display-4 fw-bold">Évaluation AI Readiness</h1>
-                <p class="lead">Complétez ce formulaire pour recevoir une analyse personnalisée de vos besoins en IA, générée par notre système d'intelligence artificielle avancé</p>
-                <div class="mt-4">
-                    <span class="badge bg-light text-dark me-2">Temps estimé: 5-7 min</span>
-                    <span class="badge bg-light text-dark">100% Confidentiel</span>
+                <h1 class="display-4 fw-bold mb-4">Découvrez les possibilités offertes par l'IA pour votre entreprise</h1>
+                <p class="lead mb-4">Chez YADIA, notre mission est claire : démocratiser l'IA. Nous vous offrons un audit gratuit et automatisé, car nous croyons que chaque entreprise mérite de comprendre comment l'IA peut révolutionner ses process.</p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <div class="badge bg-light bg-opacity-10 text-white px-4 py-3 rounded-3">
+                        <i class="fas fa-clock me-2"></i>
+                        Temps estimé: 5-7 min
+                    </div>
+                    <div class="badge bg-light bg-opacity-10 text-white px-4 py-3 rounded-3">
+                        <i class="fas fa-shield-alt me-2"></i>
+                        100% Confidentiel
+                    </div>
+                    <div class="badge bg-light bg-opacity-10 text-white px-4 py-3 rounded-3">
+                        <i class="fas fa-robot me-2"></i>
+                        Analyse IA Instantanée
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-left">
+                <div class="text-center">
+                    <i class="fas fa-brain text-primary" style="font-size: 8rem; opacity: 0.8;"></i>
                 </div>
             </div>
         </div>
