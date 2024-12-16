@@ -13,48 +13,47 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-4 fw-bold text-white mb-4" data-aos="fade-up">Blog IA Sectoriel</h1>
-                <p class="lead text-white-75 mb-0" data-aos="fade-up" data-aos-delay="100">
-                    Explorez nos articles spécialisés par secteur d'activité et découvrez comment l'IA peut transformer votre entreprise.
+                <h1 class="display-4 fw-bold text-white mb-4">Blog IA Sectoriel</h1>
+                <p class="lead text-white-75 mb-0">
+                    Découvrez nos articles sur l'IA par secteur d'activité
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Articles par Secteur -->
+<!-- Sections des Articles -->
 <section class="py-5">
     <div class="container">
-        {% for sector, posts in posts_by_sector.items() %}
-        <div class="sector-block mb-5" data-aos="fade-up">
-            <h2 class="h3 mb-4">{{ sector }}</h2>
+        <!-- RH -->
+        <div class="sector-block mb-5">
+            <h2 class="h3 mb-4">Ressources Humaines</h2>
             <div class="row g-4">
-                {% for post in posts %}
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
-                    <article class="card h-100 border-0 shadow-sm">
-                        {% if post.featured_image %}
-                        <img src="{{ post.featured_image }}" class="card-img-top" alt="{{ post.title }}" loading="lazy">
-                        {% endif %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body">
-                            <h3 class="h5 card-title">
-                                <a href="{{ url_for('blog.blog_post', slug=post.slug) }}" class="text-decoration-none text-dark stretched-link">
-                                    {{ post.title }}
-                                </a>
-                            </h3>
-                            <p class="card-text text-muted">{{ post.meta_description }}</p>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <small class="text-muted">
-                                    <i class="fas fa-clock me-1"></i> {{ post.reading_time }} min
-                                </small>
-                                <small class="text-muted">{{ post.created_at.strftime('%d/%m/%Y') }}</small>
-                            </div>
+                            <h3 class="h5">Optimisation du Recrutement avec l'IA</h3>
+                            <p class="text-muted">Zone réservée pour l'article sur le recrutement</p>
                         </div>
-                    </article>
+                    </div>
                 </div>
-                {% endfor %}
             </div>
         </div>
-        {% endfor %}
+
+        <!-- Marketing -->
+        <div class="sector-block mb-5">
+            <h2 class="h3 mb-4">Marketing</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5">Personnalisation Marketing avec l'IA</h3>
+                            <p class="text-muted">Zone réservée pour l'article sur le marketing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -63,8 +62,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="h3 mb-4">Prêt à transformer votre entreprise avec l'IA ?</h2>
-                <p class="mb-4">Découvrez comment l'IA peut s'adapter à vos besoins spécifiques grâce à notre audit gratuit.</p>
+                <h2 class="h3 mb-4">Besoin d'un audit IA personnalisé ?</h2>
                 <a href="{{ url_for('formulaire') }}" class="btn btn-primary btn-lg">Obtenir mon audit gratuit</a>
             </div>
         </div>

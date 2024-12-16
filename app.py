@@ -45,6 +45,22 @@ def about():
 def services():
     return render_template('services.html')
 
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
+
+@app.route('/formulaire')
+def formulaire():
+    return render_template('formulaire.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/blog')
+def blog():
+    return redirect(url_for('blog.blog_index'))
+
 @app.route('/generate_audit', methods=['POST'])
 def generate_audit():
     try:
