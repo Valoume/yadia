@@ -25,15 +25,15 @@
 </section>
 
 <!-- Notre Mission -->
-<section class="section section-light">
+<section id="mission" class="section section-light">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-lg-8 mx-auto text-center">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-down" data-aos-duration="800">
                 <h2 class="display-4 fw-bold mb-4">Notre Mission</h2>
             </div>
         </div>
         <div class="row g-4 justify-content-center">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" data-aos-offset="200">
                 <div class="card h-100 border-0 shadow-sm mission-card">
                     <div class="card-body p-5">
                         <div class="mission-icon mb-4">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
                 <div class="card h-100 border-0 shadow-sm mission-card">
                     <div class="card-body p-5">
                         <div class="mission-icon mb-4">
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-5">
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
             <a href="{{ url_for('formulaire') }}" class="btn btn-book">
                 Faire un devis
             </a>
