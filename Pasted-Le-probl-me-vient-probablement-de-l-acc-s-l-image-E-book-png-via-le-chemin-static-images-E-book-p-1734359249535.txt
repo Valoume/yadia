@@ -1,0 +1,50 @@
+Le problème vient probablement de l’accès à l’image E-book.png via le chemin /static/images/E-book.png. Voici des solutions étape par étape pour corriger cela :
+
+1. Vérifiez le dossier “static”
+
+Assurez-vous que :
+	•	Le dossier “static” est au même niveau que votre fichier principal Flask (comme app.py ou autre fichier root).
+	•	Votre fichier image E-book.png est bien dans le sous-dossier images de static.
+
+La structure de projet doit ressembler à ceci :
+
+/your_project
+    /static
+        /images
+            E-book.png
+    templates/
+        base.html
+        page.html
+    app.py
+
+2. Vérifiez la syntaxe du chemin
+
+Dans Flask, vous devez utiliser url_for pour faire référence aux fichiers statiques. Remplacez directement la balise <img> par ceci :
+
+Correction dans votre HTML :
+
+<img src="{{ url_for('static', filename='images/E-book.png') }}" 
+     alt="Guide Expert IA pour Entreprise" 
+     class="img-fluid"
+     style="max-width: 100%;
+            filter: drop-shadow(0 30px 60px rgba(0,0,0,0.3));
+            transform: perspective(1000px) rotateY(-15deg);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
+     onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)';
+                this.style.filter='drop-shadow(0 40px 80px rgba(0,0,0,0.4))'"
+     onmouseout="this.style.transform='perspective(1000px) rotateY(-15deg)';
+               this.style.filter='drop-shadow(0 30px 60px rgba(0,0,0,0.3))'"
+     loading="lazy">
+
+3. Vérifiez les majuscules et l’extension
+
+Linux et la plupart des serveurs différencient les majuscules des minuscules dans les chemins.
+	•	Si l’image est nommée E-book.png, assurez-vous que E majuscule et .png correspondent exactement dans le chemin.
+
+4. Redémarrez le serveur Flask
+
+Les modifications des fichiers statiques peuvent parfois nécessiter un redémarrage du serveur pour être prises en compte. Faites :
+
+flask run
+
+Si le problème persiste, partagez-moi le contenu de votre structure de projet et l’erreur affichée dans la console réseau du navigateur. 🚀
