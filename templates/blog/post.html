@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} | Blog Yadia{% endblock %}
+
+{% block meta %}
+<meta name="description" content="{{ post.meta_description }}">
+<meta name="keywords" content="{{ post.keywords }}">
+{% endblock %}
+
+{% block content %}
+<article class="blog-post">
+    <!-- Hero Section -->
+    <header class="hero py-5 bg-gradient">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="text-white-75 mb-2" data-aos="fade-up">{{ post.sector }}</p>
+                    <h1 class="display-4 fw-bold text-white mb-4" data-aos="fade-up" data-aos-delay="100">
+                        {{ post.title }}
+                    </h1>
+                    <div class="d-flex justify-content-center text-white-75 gap-3" data-aos="fade-up" data-aos-delay="200">
+                        <span><i class="fas fa-clock me-1"></i> {{ post.reading_time }} min</span>
+                        <span><i class="fas fa-calendar me-1"></i> {{ post.created_at.strftime('%d/%m/%Y') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    {% if post.featured_image %}
+                    <img src="{{ post.featured_image }}" class="img-fluid rounded mb-4" alt="{{ post.title }}" data-aos="fade-up">
+                    {% endif %}
+                    
+                    <div class="blog-content" data-aos="fade-up">
+                        {{ post.content | safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Posts -->
+    {% if related_posts %}
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="h3 text-center mb-4">Articles similaires</h2>
+            <div class="row g-4">
+                {% for related in related_posts %}
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                    <article class="card h-100 border-0 shadow-sm">
+                        {% if related.featured_image %}
+                        <img src="{{ related.featured_image }}" class="card-img-top" alt="{{ related.title }}" loading="lazy">
+                        {% endif %}
+                        <div class="card-body">
+                            <h3 class="h5 card-title">
+                                <a href="{{ url_for('blog.blog_post', slug=related.slug) }}" class="text-decoration-none text-dark stretched-link">
+                                    {{ related.title }}
+                                </a>
+                            </h3>
+                            <p class="card-text text-muted">{{ related.meta_description }}</p>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- CTA Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="h3 mb-4">Vous souhaitez mettre en place ces solutions dans votre entreprise ?</h2>
+                    <p class="mb-4">Découvrez comment l'IA peut s'adapter à vos besoins spécifiques grâce à notre audit gratuit.</p>
+                    <a href="{{ url_for('formulaire') }}" class="btn btn-primary btn-lg">Obtenir mon audit gratuit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<style>
+    .bg-gradient {
+        background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);
+    }
+    .text-white-75 {
+        color: rgba(255, 255, 255, 0.75);
+    }
+    .blog-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    .blog-content h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .blog-content p {
+        margin-bottom: 1.5rem;
+    }
+</style>
+{% endblock %}

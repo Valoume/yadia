@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Blog IA par Secteur - Solutions et Innovations | Yadia{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Découvrez nos articles spécialisés sur l'IA par secteur d'activité. Conseils, innovations et solutions concrètes pour transformer votre entreprise.">
+<meta name="keywords" content="blog IA, intelligence artificielle entreprise, solutions IA sectorielles, transformation digitale">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero py-5 bg-gradient">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold text-white mb-4" data-aos="fade-up">Blog IA Sectoriel</h1>
+                <p class="lead text-white-75 mb-0" data-aos="fade-up" data-aos-delay="100">
+                    Explorez nos articles spécialisés par secteur d'activité et découvrez comment l'IA peut transformer votre entreprise.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Articles par Secteur -->
+<section class="py-5">
+    <div class="container">
+        {% for sector, posts in posts_by_sector.items() %}
+        <div class="sector-block mb-5" data-aos="fade-up">
+            <h2 class="h3 mb-4">{{ sector }}</h2>
+            <div class="row g-4">
+                {% for post in posts %}
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                    <article class="card h-100 border-0 shadow-sm">
+                        {% if post.featured_image %}
+                        <img src="{{ post.featured_image }}" class="card-img-top" alt="{{ post.title }}" loading="lazy">
+                        {% endif %}
+                        <div class="card-body">
+                            <h3 class="h5 card-title">
+                                <a href="{{ url_for('blog.blog_post', slug=post.slug) }}" class="text-decoration-none text-dark stretched-link">
+                                    {{ post.title }}
+                                </a>
+                            </h3>
+                            <p class="card-text text-muted">{{ post.meta_description }}</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i> {{ post.reading_time }} min
+                                </small>
+                                <small class="text-muted">{{ post.created_at.strftime('%d/%m/%Y') }}</small>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="h3 mb-4">Prêt à transformer votre entreprise avec l'IA ?</h2>
+                <p class="mb-4">Découvrez comment l'IA peut s'adapter à vos besoins spécifiques grâce à notre audit gratuit.</p>
+                <a href="{{ url_for('formulaire') }}" class="btn btn-primary btn-lg">Obtenir mon audit gratuit</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<style>
+    .bg-gradient {
+        background: linear-gradient(135deg, #153739 0%, #0a1a1b 100%);
+    }
+    .text-white-75 {
+        color: rgba(255, 255, 255, 0.75);
+    }
+</style>
+{% endblock %}
