@@ -1,0 +1,84 @@
+Prompt pour Replit – Page Services Yadia
+
+“Je souhaite que tu crées une page Services qui soit à la fois engageante, professionnelle et inspirante. L’objectif est de valoriser les services de Yadia tout en gardant l’énergie, le storytelling et l’approche minimaliste que nous avons utilisés précédemment.
+
+La page doit :
+	1.	Mettre en avant la valeur ajoutée de Yadia : une approche agile, des résultats concrets et des solutions sur mesure.
+	2.	Inspirer confiance et inciter à l’action : le lecteur doit comprendre clairement pourquoi travailler avec nous.
+	3.	S’inspirer de la structure du e-book pour une présentation fluide et agréable.
+
+Structure de la page :
+
+1. En-tête accrocheur (Hero Section)
+	•	Titre principal : “Des solutions IA rapides, efficaces et sur mesure.”
+	•	Sous-titre :
+
+	“Intégrez l’IA dans votre entreprise sans perte de temps, sans coûts superflus et avec un accompagnement de A à Z.”
+
+	•	Bouton d’appel à l’action : “Obtenez votre audit gratuit”.
+	•	Visuel : Une image futuriste (technologie, IA) ou une vidéo en arrière-plan pour une expérience immersive.
+
+2. Section 1 : L’approche Yadia – Rapide, agile et transparente
+	•	Texte narratif :
+
+	“On ne va pas se mentir : intégrer l’IA peut coûter cher. Les grandes agences facturent des fortunes pour des PowerPoints et des rapports interminables. Chez Yadia, on va droit à l’essentiel. On ne facture pas des présentations, on facture des résultats.”
+
+	•	Points clés sous forme d’icônes et listes :
+	•	🚀 Des résultats rapides grâce à une approche lean.
+	•	💸 30 à 40% moins cher que les agences traditionnelles.
+	•	⏱️ Moins de réunions, plus d’actions concrètes.
+
+3. Section 2 : Une approche sur mesure
+	•	Titre : “Chaque entreprise est unique. Votre IA doit l’être aussi.”
+	•	Texte narratif :
+
+	“Chez Yadia, nous analysons vos besoins spécifiques pour vous offrir une solution IA parfaitement adaptée. Pas de ‘copier-coller’, mais une stratégie pensée pour vous.”
+
+	•	Points clés avec des icônes :
+	•	📋 Audit personnalisé pour identifier vos points de friction.
+	•	🛠️ Feuille de route sur mesure pour un déploiement adapté.
+	•	📊 Des indicateurs de performance clairs et mesurables.
+
+4. Section 3 : L’accompagnement Yadia – De l’idée à l’autonomie totale
+	•	Titre : “Vous n’êtes pas seul : on vous accompagne à chaque étape.”
+	•	Texte narratif :
+
+	“Contrairement à d’autres, nous ne nous arrêtons pas après le déploiement. Nous formons vos équipes, assurons le suivi et optimisons les résultats en continu.”
+
+	•	Sous-sections avec 3 blocs :
+	1.	Formation des équipes : Vos collaborateurs maîtrisent l’IA au quotidien.
+	2.	Maintenance et optimisation : On ajuste en continu pour des résultats durables.
+	3.	Support technique : Un expert IA à votre disposition, sans délai.
+
+5. Section 4 : Comment ça marche concrètement ?
+	•	Titre : “Prêt à passer à l’action ? Voici notre méthode en 5 étapes.”
+	•	Présente chaque étape dans un style visuellement agréable (comme une timeline ou des cartes) :
+	1.	Prise de contact : Un premier échange gratuit pour comprendre vos besoins.
+	2.	Audit express : On identifie les opportunités rapides pour générer des résultats immédiats.
+	3.	Feuille de route et devis : Transparence totale : pas de coûts cachés.
+	4.	Déploiement rapide : On commence petit, on prouve la valeur, puis on élargit.
+	5.	Suivi et optimisation continue : On surveille les performances pour un ROI maximal.
+
+6. Section finale : Appel à l’action
+	•	Texte inspirant :
+
+	“L’IA n’est plus une option. C’est un levier essentiel pour rester compétitif. Avec Yadia, vous gagnez du temps, réduisez les risques et obtenez des résultats concrets.”
+
+	•	Bouton d’appel à l’action clair : “Planifiez un audit gratuit dès maintenant”.
+
+Design et mise en page
+	•	Utilise un design clair, aéré et moderne avec beaucoup d’espaces blancs.
+	•	Encadrés flous semi-transparents pour les textes clés (comme la page précédente).
+	•	Intègre des icônes modernes pour illustrer les points clés (ex : fusée, outils, graphique).
+	•	Ajoute des animations légères pour un effet dynamique (effet de fade-in au scroll).
+	•	Images à inclure :
+	•	Des visuels d’équipes travaillant avec des outils technologiques.
+	•	Une illustration de processus (timeline ou étapes).
+	•	Une image futuriste pour l’en-tête (ex : bureaux avec écrans holographiques).
+
+Ton et style du texte :
+	•	Utilise un ton proche et direct, sans jargon complexe.
+	•	Rédige des phrases courtes, impactantes et engageantes.
+	•	Crée des titres forts et accrocheurs pour chaque section.
+
+Avec ces instructions, Replit doit générer une page Services moderne, visuellement agréable et alignée sur l’énergie de Yadia. L’objectif est de convaincre les visiteurs que travailler avec nous est rapide, efficace et indispensable pour réussir leur transformation IA. 🚀
