@@ -16,7 +16,7 @@
         <div class="row align-items-center justify-content-center min-vh-100">
             <div class="col-lg-8 text-center" data-aos="fade-up">
                 <div class="logo-container mb-4 position-relative d-inline-block">
-                    <img src="{{ url_for('static', filename='images/Logo-removebg-preview.png') }}" 
+                    <img src="{{ url_for('static', filename='Logo-removebg-preview.png') }}" 
                          alt="YADIA Logo" 
                          class="logo-img"
                          style="width: 200px; height: auto; 
@@ -42,11 +42,11 @@
                 </p>
                 
                 <div class="d-flex justify-content-center gap-3">
-                    <a href="#audit" class="btn btn-primary btn-lg px-4 py-3 rounded-pill">
+                    <a href="{{ url_for('formulaire') }}" class="btn btn-primary btn-lg px-4 py-3 rounded-pill">
                         Commencer l'audit IA
                         <i class="fas fa-arrow-right ms-2"></i>
                     </a>
-                    <a href="#services" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
+                    <a href="#mission" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
                         Découvrir nos services
                     </a>
                 </div>
