@@ -509,17 +509,19 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <div class="benefit-item">
                                         <i class="fas fa-check-circle text-success me-2"></i>
                                         Bénéfice direct : ${
-                                            complexityText === 'Simple' ? 'Automatisation rapide des tâches répétitives' :
-                                            complexityText === 'Intermédiaire' ? 'Optimisation des processus existants' :
+                                            rec.titre.includes('Automatisation des factures') ? 'Transformation complète de votre workflow de facturation' :
+                                            rec.titre.includes('Détection de fraudes') ? 'Sécurisation en temps réel de vos transactions' :
+                                            rec.titre.includes('Prévision des flux') ? 'Anticipation précise de votre trésorerie' :
                                             'Transformation complète de votre workflow'
                                         }
                                     </div>
                                     <div class="benefit-item">
                                         <i class="fas fa-chart-line text-primary me-2"></i>
                                         Impact mesurable : ${
-                                            complexityText === 'Simple' ? 'Réduction de 30% du temps de traitement' :
-                                            complexityText === 'Intermédiaire' ? 'Amélioration de 50% de la productivité' :
-                                            'Optimisation globale de 70% des performances'
+                                            rec.titre.includes('Automatisation des factures') ? 'Réduction de 75% du temps de traitement des factures' :
+                                            rec.titre.includes('Détection de fraudes') ? 'Détection de 95% des tentatives de fraude' :
+                                            rec.titre.includes('Prévision des flux') ? 'Précision de 90% dans les prévisions à 3 mois' :
+                                            'Optimisation globale des performances'
                                         }
                                     </div>
                                 </div>
